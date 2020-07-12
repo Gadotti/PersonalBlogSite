@@ -1,0 +1,64 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <%- partial('post/category') %>
+  </div>
+  <div class="article-inner">
+    <%- partial('post/gallery') %>
+    
+    <header id="header">
+      <div id="banner"></div>
+      <div id="header-outer" class="hd logodiv">
+
+        <div class="hd logodiv">
+          <img src="/img/logo.png" class="logopng">
+          <p class="logot"><span class="logo_1">&lt;</span><span class="logo_2">/</span><span class="logo_3">#</span> <a href="<%- url_for() %>" id="logo"><%= config.title %></a> <span class="logo_3">#</span><span class="logo_2">/</span><span class="logo_1">&gt;</span></p>
+        </div>
+
+        <div id="header-inner" class="inner">
+          <nav id="main-nav" >
+            <a id="main-nav-toggle"></a>
+            <ol class="breadcrumb">
+              <% for (var i in theme.menu){ %>        
+                <li>
+                  <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+                </li>
+            <% } %>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
+    
+    <div class="hd posts" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+    <footer class="article-footer">      
+      <% if (post.comments && config.disqus_shortname){ %>
+        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+      <% } %>
+      <%- partial('post/tag') %>
+    </footer>
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>
