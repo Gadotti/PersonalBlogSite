@@ -24,5 +24,5 @@ Se quiser saber como fazer um também, segue os passos que executei:
 10. Para criar posts > **hexo new "My First Post with hexo"**
 
 ### Referencias:
-    <https://malekbenz.com/blog/2016/09/10/Create-Host-Blog-for-free-with-Hexo-Github>
-    <https://hexo.io/docs/>
+- <https://malekbenz.com/blog/2016/09/10/Create-Host-Blog-for-free-with-Hexo-Github>
+- <https://hexo.io/docs/>
