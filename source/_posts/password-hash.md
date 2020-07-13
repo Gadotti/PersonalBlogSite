@@ -95,7 +95,7 @@ De forma randômica, verdadeiramente randômica.
 
 Quero dizer quando destaco "***verdadeiramente randômico***", é que existem bibliotecas para geração número randômicos de algumas linguagens que não cumprem muito bem esse papel para o nosso objetivo. Um exemplo é a classe "*Random*" do .Net Framework, esta classe não é segura para ser utilizada para o que precisamos. Eis uma citação da própria Microsoft sobre essa classe:
 
-> "Os números escolhidos não são completamente aleatórios porque um algoritmo matemático é usado para selecioná-los" [Referência](https//docs.microsoft.com/pt-br/dotnet/api/system.random?view=netcore-3.1).
+> "Os números escolhidos não são completamente aleatórios porque um algoritmo matemático é usado para selecioná-los" [Referência](https://docs.microsoft.com/pt-br/dotnet/api/system.random?view=netcore-3.1).
 
 Neste mesmo artigo é sugerida a solução para o nosso caso, a utilização da classe "**System.Security.Cryptography.RNGCryptoServiceProvider**" para este fim.
 
