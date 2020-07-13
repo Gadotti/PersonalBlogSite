@@ -1,9 +1,12 @@
 ---
 title: USB Hacking. O poder do Arduino Digispark
 date: 2019-11-20 17:50:14
-tags: 
+tags: ["arduino", "hacking"]
+cover: /imgs/digispark/banner.jfif
+author: Eduardo Gadotti
 ---
-![Privilégios de usuário](/imgs/digispark/banner.jfif)
+# USB Hacking. O poder do Arduino Digispark
+
 Imagine que simplesmente plugando um USB, em questão de segundos, poderia ser instalado um *backdoor*, roubar senhas dos navegadores, senhas do *wifi*, extrair ou excluir documentos, criar usuários administradores, instalar *malwares* ou *loggers* em uma máquina.
 
 Agora imagine que o agente não precisaria necessariamente ser a pessoa a fazer o trabalho sujo, basta persuadir a pessoa certa para verificar um suposto pendrive, utilizar um inocente mouse ou apenas carregar um powerbank.

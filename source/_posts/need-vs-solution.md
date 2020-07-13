@@ -1,9 +1,11 @@
 ---
 title: Need vs. Solution
 date: 2017-04-11 19:29:12
-tags:
+tags: ["patterns"]
+cover: /imgs/need_vs_solution.jfif
+author: Eduardo Gadotti
 ---
-![Need Vs Solution](/imgs/need_vs_solution.jfif)
+# Need vs. Solution
 
 In a world where the customer is always right, the competitiveness is high and the need for client retention is imperative, it’s easy to get lost in the middle of concessions and the fear of saying ‘no’. The problem is that it becomes a trap for the companies that gives custom solutions, mainly when there isn’t enough knowledge about the business rules of the area, depending only and exclusively on the necessities and solutions informed by the client.
 

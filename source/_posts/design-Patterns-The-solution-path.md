@@ -1,9 +1,11 @@
 ---
 title: 'Design Patterns: The solution path'
 date: 2017-03-08 18:32:42
-tags:
+tags: ["patterns"]
+cover: /imgs/design-patterns.jfif
+author: Eduardo Gadotti
 ---
-![Letter Soup](/imgs/design-patterns.jfif)
+# Design Patterns: The solution path
 
 How do you develop softwares? Which patterns or techniques do you use? Maybe TDD, DDD, BDD, DAO, three or four layers, MVC, Web API, WFC, SVC, WS, this or that framework or another letter soup?
 

@@ -1,9 +1,11 @@
 ---
 title: How does the browser know my location
 date: 2019-07-27 19:44:50
-tags:
+tags: ["privacy"]
+cover: /imgs/location/banner.jfif
+author: Eduardo Gadotti
 ---
-![My location](/imgs/location/banner.jfif)
+# How does the browser know my location
 
 When your browser asks if you want to share your location, do you have any idea how it gets this information? Even if your computer is a desktop, no built-in GPS, or even if you have taken any other action that might indicate the location of the computer? Hold this question as we try to build this path together.
 

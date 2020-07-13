@@ -1,9 +1,12 @@
 ---
 title: A senha do seu usuário está segura? Tem certeza?
 date: 2020-07-05 18:20:57
-tags:
+tags: ["security", "password"]
+cover: /imgs/hash_password/banner.jfif
+author: Eduardo Gadotti
 ---
-![Padlock](/imgs/hash_password/banner.jfif "https://pixabay.com/pt/photos/cadeado-bloqueado-antigo-fechar-428549/")
+# A senha do seu usuário está segura? Tem certeza?
+
 Todo mundo já passou ou ainda trabalha com sistemas que utilizam o próprio meio de autenticação. Isto implica em armazenar senhas de usuários ou uma representação delas no banco de dados.
 
 Você segue todas as boas práticas possíveis para manter o mais protegido possível este importante dado? Existem diversos fatores que devem ser considerados e vou tentar esclarecer quais são as preocupações a considerar, quais algoritmos e práticas utilizar.
