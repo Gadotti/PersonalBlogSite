@@ -3,7 +3,6 @@ title: A senha do seu usuário está segura? Tem certeza?
 date: 2020-07-05 18:20:57
 tags: ["security", "password"]
 cover: /imgs/hash_password/banner.jfif
-author: Eduardo Gadotti
 ---
 # A senha do seu usuário está segura? Tem certeza?
 

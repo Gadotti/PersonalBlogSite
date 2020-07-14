@@ -3,7 +3,6 @@ title: Need vs. Solution
 date: 2017-04-11 19:29:12
 tags: ["patterns"]
 cover: /imgs/need_vs_solution.jfif
-author: Eduardo Gadotti
 ---
 # Need vs. Solution
 

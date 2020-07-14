@@ -3,7 +3,6 @@ title: USB Hacking. O poder do Arduino Digispark
 date: 2019-11-20 17:50:14
 tags: ["arduino", "hacking"]
 cover: /imgs/digispark/banner.jfif
-author: Eduardo Gadotti
 ---
 # USB Hacking. O poder do Arduino Digispark
 
