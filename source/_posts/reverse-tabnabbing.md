@@ -49,18 +49,6 @@ if (window.opener) {
 }
 ```
 
-## Isso não é comigo!
-
-Será mesmo? Você pode pensar:
-> "Não permito na minha aplicação que os usuário informe endereços url em nenhum lugar"
-
-Tudo bem, mas e se sua aplicação possuir uma vulnerabilidade XSS, onde é possível manipular a informação? Ou se possui uma outra vulnerabilidade de SQL Injection onde é possível manipular a url que é carregada a partir de um banco de dados?
-
-E você pode ainda pensar:
-> "Garanto que meu sistema não terá nenhuma dessas vulnerabilidades de XSS ou SQL Injection"
-
-OK, mas se a página que sua aplicação está abrindo possui uma vulnerabilidade de XSS e é possível executar códigos JS inseridos arbitrariamente? Você também garante a segurança da aplicação de um terceiro?
-
 ## Mitigação
 
 Para os dois tipos de chamadas, basta adicionar as duas propriedades **'noopener,noreferrer'** que impedirão que o destino tenha controle sobre o opener location.
@@ -76,6 +64,17 @@ JS
 //Note que aqui é o terceiro parâmetro
 window.open('https://site_malicioso.com', '', 'noopener,noreferrer');
 ```
+## Isso não é comigo!
+
+Será mesmo? Você pode pensar:
+> "Não permito na minha aplicação que os usuário informe endereços url em nenhum lugar"
+
+Tudo bem, mas e se sua aplicação possuir uma vulnerabilidade XSS, onde é possível manipular a informação? Ou se possui uma outra vulnerabilidade de SQL Injection onde é possível manipular a url que é carregada a partir de um banco de dados?
+
+E você pode ainda pensar:
+> "Garanto que meu sistema não terá nenhuma dessas vulnerabilidades de XSS ou SQL Injection"
+
+OK, mas se a página que sua aplicação está abrindo possui uma vulnerabilidade de XSS e é possível executar códigos JS inseridos arbitrariamente? Você também garante a segurança da aplicação de um terceiro?
 
 ## Conclusão
 
