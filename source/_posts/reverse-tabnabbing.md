@@ -1,7 +1,7 @@
 ---
 title: 'Já ouviu falar em Reverse Tabnabbing?'
 date: 2020-10-02 18:08:53
-cover: /imgs/reverse_tabnabbing/cover.png
+cover: /imgs/reverse_tabnabbing/cover.jpg
 tags: ["hacking", "security"]
 ---
 
@@ -59,7 +59,7 @@ Tudo bem, mas e se sua aplicação possuir uma vulnerabilidade XSS, onde é poss
 E você pode ainda pensar:
 > "Garanto que meu sistema não terá nenhuma dessas vulnerabilidades de XSS ou SQL Injection"
 
-OK, mas se a página que sua aplicação está abrindo possui uma vulnerabilidade de XSS e é possível executar códigos JS inseridos arbitrariamente? Você também garanta a segurança da aplicação de um terceiro?
+OK, mas se a página que sua aplicação está abrindo possui uma vulnerabilidade de XSS e é possível executar códigos JS inseridos arbitrariamente? Você também garante a segurança da aplicação de um terceiro?
 
 ## Mitigação
 
