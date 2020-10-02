@@ -99,7 +99,7 @@ Quero dizer quando destaco "***verdadeiramente randômico***", é que existem bi
 Neste mesmo artigo é sugerida a solução para o nosso caso, a utilização da classe "**System.Security.Cryptography.RNGCryptoServiceProvider**" para este fim.
 
 Deixo nesse repositório <https://github.com/Gadotti/CSharpUtils> exemplo de implemetação para gerar uma string de forma totalmente aleatória:
-```
+```c#
 public static string GetRandomString(int size = 16)
 {
     const string validCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
