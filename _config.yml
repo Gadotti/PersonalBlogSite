@@ -99,3 +99,18 @@ theme: clean-blog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+## Configure the feed rss of the blog
+feed:
+  enable: true
+  type: rss2
+  path: rss2.xml
+  limit: 0
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
