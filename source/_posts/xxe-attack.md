@@ -93,6 +93,8 @@ Assim como injeções via *SQL, DOM e javascripts*, também existem outros tipos
 
 A forma de mitigação apresentada é simples e eficaz, porém é necessário disseminar a cultura do desenvolvimento seguro, para que ações deste tipo se tornem triviais.
 
+Visite o vídeo que fiz especialmente para demonstrar o que foi apresentado aqui: [XXE simulation attack with C# - How to prevent](https://youtu.be/twGXAtuX9VI)
+
 # Referências
 
 - https://medium.com/@ismailtasdelen/xml-external-entity-xxe-injection-payload-list-937d33e5e116
