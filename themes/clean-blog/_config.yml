@@ -12,6 +12,9 @@ menu:
   Youtube:
     url: https://www.youtube.com/user/chervesblezz
     icon: youtube
+  RSS:
+    url: https://eduardogadotti.com/rss2.xml
+    icon: rss
 
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: 'Home'
