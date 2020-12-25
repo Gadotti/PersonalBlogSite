@@ -97,6 +97,10 @@ https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
 **Coleção de relatórios de pentestes**
 https://github.com/juliocesarfort/public-pentesting-reports
 
+**Eventos**
+https://security.christmas/
+https://tryhackme.com/room/25daysofchristmas
+
 ## Guias
 
 **Guia - Critérios de segurança no código**
