@@ -58,6 +58,12 @@ https://security.christmas/2019/12
 https://owasp.org/www-community/attacks/Reverse_Tabnabbing
 https://github.com/OWASP/www-community/blob/master/pages/attacks/Reverse_Tabnabbing.md
 
+**CSP**
+https://cspscanner.com
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CSP
+https://owasp.org/www-community/attacks/Content_Security_Policy
+https://csper.io/
+
 **Lax vs Strict**
 https://blog.benpri.me/blog/2019/05/13/samesite-cookies-in-practice/
 
