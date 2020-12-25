@@ -1,6 +1,6 @@
 ---
 title: Links Úteis
-date: 2020-12-13 15:51:07
+date: 2020-12-25 15:51:07
 ---
 
 **Blogs**
@@ -10,10 +10,12 @@ https://cgreinhold.dev/
 
 **Scanners**
 https://www.ssllabs.com/ssltest/
-https://hstspreload.org
+https://hstspreload.org/
+https://observatory.mozilla.org/
 https://caniuse.com/
 https://www.securityscore.com.br/
 https://www.shhgit.com/ (Monitoramento em tempo real de possíveis informações sensíveis sendo commitadas no GitHub, GitLab e BitBucket)
+https://haveibeenpwned.com/
 
 **Verificação de DNS**
 https://toolbox.googleapps.com/apps/dig/
@@ -33,6 +35,13 @@ https://www.telerik.com/fiddler
 https://www.wireshark.org/
 https://www.postman.com/
 https://dbeaver.io/
+https://nordvpn.com/
+
+**Test bed for automated web application security scanners**
+http://public-firing-range.appspot.com/
+
+**Vulnerability Scanning Tools**
+https://owasp.org/www-community/Vulnerability_Scanning_Tools
 
 **Mapas mentais, diagramas e prototipação**
 https://www.mindmeister.com/
@@ -43,6 +52,11 @@ https://letsencrypt.org/
 
 **CORS ByPass**
 https://cors-anywhere.herokuapp.com/
+
+**Reverse Tabnabbing**
+https://security.christmas/2019/12
+https://owasp.org/www-community/attacks/Reverse_Tabnabbing
+https://github.com/OWASP/www-community/blob/master/pages/attacks/Reverse_Tabnabbing.md
 
 **Lax vs Strict**
 https://blog.benpri.me/blog/2019/05/13/samesite-cookies-in-practice/
@@ -59,6 +73,7 @@ https://iknowwhatyoudownload.com/en/peer/
 **Comparador de hashs**
 https://hashdecryption.com/
 https://emn178.github.io/online-tools/
+https://hashes.org/search.php/
 
 **Regras de boas práticas do Sonar**
 https://rules.sonarsource.com/csharp
@@ -73,7 +88,7 @@ SQLi: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
 https://www.first.org/cvss/calculator/3.0
 https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
 
-**Coleção de relatórios de pentes de todos os lugares do mundo**
+**Coleção de relatórios de pentestes**
 https://github.com/juliocesarfort/public-pentesting-reports
 
 ## Guias
@@ -89,6 +104,28 @@ https://www.apriorit.com/dev-blog/622-qa-web-application-pen-testing-owasp-check
 
 **Security Design Guidelines for Web Services**
 https://msdn.microsoft.com/en-us/library/ff649737.aspx
+
+**Sobre HSTS**
+https://www.troyhunt.com/understanding-http-strict-transport
+
+**12 Discas contra DDoS**
+https://blog.4linux.com.br/12-metodos-para-prevenir-ddos/
+
+**Como implementar corretamente o Salt**
+https://crackstation.net/hashing-security.htm
+
+**Dicas para quem programa em .Net**
+https://cheatsheetseries.owasp.org/cheatsheets/DotNet_Security_Cheat_Sheet.html (Verificar tópico 'ASP NET Web Forms Guidance', sobre CSRF e ViewState)
+
+**Comunicação segura: Jitsi, Signal ou Wire**
+https://thehackernews.com/2020/04/zoom-cybersecurity-hacking.html
+> For everything else that requires sharing sensitive information, there are more secure options like self-hosted Jitsi, Signal and Wire.
+
+**WCF: Dicas de client**
+https://www.oreilly.com/library/view/programming-wcf-services/9781449382476/ch01s13.html
+
+**Fundamentos do GC**
+https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals?redirectedfrom=MSDN#background_server_garbage_collection
 
 ## Tricks
 jQuery Version:
