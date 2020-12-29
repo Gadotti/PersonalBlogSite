@@ -1,17 +1,26 @@
 ---
 title: Links Úteis
-date: 2020-12-25 15:51:07
+date: 2020-12-28 15:51:07
 ---
 
 **Blogs**
 https://thehackernews.com/
 https://www.elemarjr.com/pt/blog/
 https://cgreinhold.dev/
+https://snyk.io/blog/
+https://www.troyhunt.com/
+https://samy.pl/
+https://www.malwaretech.com/
+
+**Youtubers**
+https://youtube.com/LiveOverflowCTF
+https://www.youtube.com/stokfredrik
 
 **Scanners**
 https://www.ssllabs.com/ssltest/
 https://hstspreload.org/
 https://observatory.mozilla.org/
+https://securityheaders.com/
 https://caniuse.com/
 https://www.securityscore.com.br/
 https://www.shhgit.com/ (Monitoramento em tempo real de possíveis informações sensíveis sendo commitadas no GitHub, GitLab e BitBucket)
@@ -36,6 +45,10 @@ https://www.wireshark.org/
 https://www.postman.com/
 https://dbeaver.io/
 https://nordvpn.com/
+
+**Web Tools**
+https://www.routerpasswords.com/ (Lista de senhas padrões de dispositivos)
+https://www.processlibrary.com/en/ (Busca de dlls e processos)
 
 **Test bed for automated web application security scanners**
 http://public-firing-range.appspot.com/
@@ -70,9 +83,6 @@ https://blog.benpri.me/blog/2019/05/13/samesite-cookies-in-practice/
 **XSS Game**
 https://xss-game.appspot.com
 
-**Busca de dlls e processos**
-https://www.processlibrary.com/en/
-
 **I Know What You Download**
 https://iknowwhatyoudownload.com/en/peer/
 
@@ -98,6 +108,7 @@ https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
 https://github.com/juliocesarfort/public-pentesting-reports
 
 **Eventos**
+https://bekk.christmas/
 https://security.christmas/
 https://tryhackme.com/room/25daysofchristmas
 
