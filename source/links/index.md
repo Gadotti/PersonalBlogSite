@@ -1,6 +1,6 @@
 ---
 title: Links Úteis
-date: 2020-12-28 15:51:07
+date: 2020-12-29 15:51:07
 ---
 
 **Blogs**
@@ -14,7 +14,8 @@ https://www.malwaretech.com/
 
 **Youtubers**
 https://youtube.com/LiveOverflowCTF
-https://www.youtube.com/stokfredrik
+https://youtube.com/stokfredrik
+https://youtube.com/c/GabrielPato/
 
 **Scanners**
 https://www.ssllabs.com/ssltest/
@@ -23,12 +24,14 @@ https://observatory.mozilla.org/
 https://securityheaders.com/
 https://caniuse.com/
 https://www.securityscore.com.br/
-https://www.shhgit.com/ (Monitoramento em tempo real de possíveis informações sensíveis sendo commitadas no GitHub, GitLab e BitBucket)
+https://gf.dev/toolbox/
 https://haveibeenpwned.com/
+https://www.shodan.io/
+https://censys.io/
+https://www.shhgit.com/ (Monitoramento em tempo real de possíveis informações sensíveis sendo commitadas no GitHub, GitLab e BitBucket)
 
-**Verificação de DNS**
-https://toolbox.googleapps.com/apps/dig/
-https://dnslytics.com/
+**Sec Lists**
+https://github.com/danielmiessler/SecLists
 
 **Tools**
 http://sqlmap.org/
@@ -47,18 +50,29 @@ https://dbeaver.io/
 https://nordvpn.com/
 
 **Web Tools**
+https://gchq.github.io/CyberChef/ (Diversos 'utils', scrab, estractor, etc)
 https://www.routerpasswords.com/ (Lista de senhas padrões de dispositivos)
 https://www.processlibrary.com/en/ (Busca de dlls e processos)
+https://id-ransomware.malwarehunterteam.com/ (Identificar ransomware)
+
+**Comparador de hashs**
+https://hashdecryption.com/
+https://emn178.github.io/online-tools/
+https://hashes.org/search.php/
 
 **Test bed for automated web application security scanners**
 http://public-firing-range.appspot.com/
+
+**Verificação de DNS**
+https://toolbox.googleapps.com/apps/dig/
+https://dnslytics.com/
 
 **Vulnerability Scanning Tools**
 https://owasp.org/www-community/Vulnerability_Scanning_Tools
 
 **Mapas mentais, diagramas e prototipação**
 https://www.mindmeister.com/
-https://miro.com/app
+https://miro.com/app/
 
 **Emissão de certificado Https baixo ou nenhum custo**
 https://letsencrypt.org/
@@ -86,19 +100,19 @@ https://xss-game.appspot.com
 **I Know What You Download**
 https://iknowwhatyoudownload.com/en/peer/
 
-**Comparador de hashs**
-https://hashdecryption.com/
-https://emn178.github.io/online-tools/
-https://hashes.org/search.php/
-
 **Regras de boas práticas do Sonar**
 https://rules.sonarsource.com/csharp
 
 **CheatSheets e prevenções**
-Geral: https://cheatsheetseries.owasp.org/index.html
-XSS: https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
-DOM XSS: https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.md
-SQLi: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+
+|               |                                                                                                           |
+| :------------ | :-------------------------------------------------------------------------------------------------------- |
+| Geral         | https://cheatsheetseries.owasp.org/index.html                                                             |
+| XSS           | https://portswigger.net/web-security/cross-site-scripting/cheat-sheet                                     |
+| XSS           | https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet                                            |
+| DOM XSS       | https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.md |
+| SQLi          | https://portswigger.net/web-security/sql-injection/cheat-sheet                                            |
+| SQLi          | https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/                                   |
 
 **Calcular nível de vulnerabilidades**
 https://www.first.org/cvss/calculator/3.0
@@ -114,13 +128,13 @@ https://tryhackme.com/room/25daysofchristmas
 
 ## Guias
 
-**Guia - Critérios de segurança no código**
+**Critérios de segurança no código**
 https://security-code-scan.github.io/
 
-**Guia - 4 coisas que todo relatório deve ter**
+**4 coisas que todo relatório deve ter**
 https://rhinosecuritylabs.com/penetration-testing/four-things-every-penetration-test-report/
 
-**Guia - Focar nos itens importantes do guide, como e o que utilizar**
+**Focar nos itens importantes do guide, como e o que utilizar**
 https://www.apriorit.com/dev-blog/622-qa-web-application-pen-testing-owasp-checklist
 
 **Security Design Guidelines for Web Services**
@@ -136,7 +150,7 @@ https://blog.4linux.com.br/12-metodos-para-prevenir-ddos/
 https://crackstation.net/hashing-security.htm
 
 **Dicas para quem programa em .Net**
-https://cheatsheetseries.owasp.org/cheatsheets/DotNet_Security_Cheat_Sheet.html (Verificar tópico 'ASP NET Web Forms Guidance', sobre CSRF e ViewState)
+https://cheatsheetseries.owasp.org/cheatsheets/DotNet_Security_Cheat_Sheet.html (Tópico 'ASP NET Web Forms Guidance', sobre CSRF e ViewState)
 
 **Comunicação segura: Jitsi, Signal ou Wire**
 https://thehackernews.com/2020/04/zoom-cybersecurity-hacking.html
