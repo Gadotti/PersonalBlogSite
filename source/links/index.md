@@ -5,7 +5,6 @@ date: 2021-01-05 15:51:07
 
 **Blogs**
 https://thehackernews.com/
-https://www.elemarjr.com/pt/blog/
 https://cgreinhold.dev/
 https://snyk.io/blog/
 https://www.troyhunt.com/
@@ -15,6 +14,8 @@ https://minutodaseguranca.blog.br/
 
 **Youtubers**
 https://youtube.com/LiveOverflowCTF
+https://youtube.com/c/DavidBombal/
+https://youtube.com/c/JohnHammond010/
 https://youtube.com/stokfredrik
 https://youtube.com/c/GabrielPato/
 
@@ -81,6 +82,7 @@ https://emn178.github.io/online-tools/
 https://hashtoolkit.com/
 https://www.perturb.org/content/hashes/
 http://hashmash.info/
+https://md5hashing.net/
 https://sha1.gromweb.com/
 https://www.boxentriq.com/code-breaking/cipher-identifier/ (Analisador de possível tipo de cifra utilizado)
 
