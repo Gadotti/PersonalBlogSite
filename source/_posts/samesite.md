@@ -10,6 +10,17 @@ Quando busquei explicações sobre a definição do atributo, fiquei sem ter cer
 
 Então minha proposta é: explicar o que é de uma forma clara, demonstrar com exemplos e esclarecer para que realmente serve.
 
+# Sumário
+- [Super resumo](#Super-resumo)
+- [Fluxograma](#Fluxograma)
+- [Contextualizando](#Contextualizando)
+- [Exemplificando](#Exemplificando)
+- [SameSite = None](#SameSite-None)
+- [SameSite = Lax](#SameSite-Lax)
+- [SameSite = Strict](#SameSite-Strict)
+- [Conclusão](#Conclusao)
+- [Referências](#Referencias)
+
 # Super resumo
 
 O atributo possui 3 possíveis valores: **None, Lax e Strict**. Cada atributo controla se o *cookie* é enviado ou não em contextos diferentes de requisição.
