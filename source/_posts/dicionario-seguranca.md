@@ -58,6 +58,8 @@ Pensando nisso, iniciei um mini dicionário de termos que eu utilizo no dia-a-di
 - **CSRF** ou XSRF: Sigla para Cross-Site Request Forgery. Nome dado a requisições falsas montadas em um ambiente confiável da aplicação para induzir a ações maliciosas.
 - **MitM**: Sigla para Man in the Middle. Ato de interceptar mensagens entre dois destinos, podendo ou não interferir nas mensagens trafegadas.
 - **SQLi**: Abreviação para SQL Injection
+- **RCE**: Remote Code Execution
+- **RFI**: Remote File Inclusion
  
 #### Tipos de ataques e vírus
 - **Malware**: Programa de computador malicioso e nocivo. Intuito de causar danos, roubar ou espionar informações.
