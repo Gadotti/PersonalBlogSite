@@ -13,6 +13,9 @@ menu:
   Youtube:
     url: https://www.youtube.com/user/chervesblezz
     icon: youtube
+  Twitter:
+    url: https://twitter.com/gadottieduardo
+    icon: twitter
   RSS:
     url: https://eduardogadotti.com/rss2.xml
     icon: rss
@@ -39,7 +42,7 @@ addthis:
 favicon: favicon.ico
 
 # Social Accounts
-twitter_url:
+twitter_url: https://twitter.com/gadottieduardo
 twitter_handle:
 facebook_url:
 github_url: https://github.com/gadotti
