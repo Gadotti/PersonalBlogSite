@@ -13,6 +13,7 @@ https://samy.pl/
 https://www.malwaretech.com/
 https://minutodaseguranca.blog.br/
 https://www.welivesecurity.com
+https://secnhack.in/
 
 **Youtubers**
 https://youtube.com/LiveOverflowCTF
@@ -25,6 +26,7 @@ https://youtube.com/c/GabrielPato/
 https://github.com/carlospolop
 https://github.com/KingOfBugbounty
 https://github.com/helviojunior
+https://github.com/NESCAU-UFLA
 
 **Web Scanners**
 https://gf.dev/toolbox/ (Canivete suiço para ambientes Web)
@@ -61,6 +63,7 @@ https://id-ransomware.malwarehunterteam.com/ (Identificar ransomware)
 https://caniuse.com/ (Verificação de compatibilidade de browsers)
 https://grabify.link/ (Encurtado de links com IP logger)
 https://archive.org/web/ (Way back machine - Histórico das páginas antigas)
+https://beautifier.io/ (Transforma um js minificado para legível)
 
 **Desktop Tools**
 https://beefproject.com/
@@ -75,6 +78,10 @@ https://nordvpn.com/ (VPN para comunicação segura - Pago)
 https://github.com/assetnote/kiterunner (Endpoint spider)
 https://github.com/KingOfBugbounty/SecretFinder (Procura por possíveis chaves em arquivos HTML ou Js)
 https://github.com/lirantal/is-website-vulnerable (Alternativa open source para auditar as tecnologias front end de um sistema web, com resultados objetivos e claros indicando os problemas)
+https://github.com/projectdiscovery/nuclei
+https://github.com/skavngr/rapidscan (multi-tool web vulnerability scanner)
+https://github.com/NESCAU-UFLA/FuzzingTool
+
 
 **Browser plugins**
 KeyFinder
