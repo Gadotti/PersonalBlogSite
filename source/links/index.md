@@ -26,7 +26,7 @@ https://youtube.com/c/GabrielPato/
 https://github.com/carlospolop
 https://github.com/KingOfBugbounty
 https://github.com/helviojunior
-https://github.com/NESCAU-UFLA
+https://github.com/VitorOriel
 
 **Web Scanners**
 https://gf.dev/toolbox/ (Canivete suiço para ambientes Web)
