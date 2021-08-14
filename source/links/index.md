@@ -14,6 +14,7 @@ https://www.malwaretech.com/
 https://minutodaseguranca.blog.br/
 https://www.welivesecurity.com
 https://secnhack.in/
+https://www.syhunt.com/pt/?n=News.2021-Leaks&key=lucy17 (Leaks Feed)
 
 **Youtubers**
 https://youtube.com/LiveOverflowCTF
@@ -144,6 +145,7 @@ https://www.nuget.org/packages/Audit.NET/ (Extensão para Visual Studio)
 **Verificação de DNS**
 https://toolbox.googleapps.com/apps/dig/
 https://dnslytics.com/
+https://mxtoolbox.com/
 
 **Mapas mentais, diagramas e prototipação**
 https://www.mindmeister.com/
@@ -190,10 +192,11 @@ https://rules.sonarsource.com/csharp
 | :------------ | :-|:-------------------------------------------------------------------------------------------------------- |
 | Geral         | - |*[OWASP cheatsheetseries link](https://cheatsheetseries.owasp.org/index.html)*                                   |
 | XSS           | - |*[Portswigger XSS cheatsheet link](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)*           |
-| XSS           | - | *[OWASP XSS cheatsheet link](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)*                                            |
+| XSS           | - |*[OWASP XSS cheatsheet link](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)*                                            |
 | DOM XSS       | - |*[OWASP DOM XSS cheatsheet link](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.md)* |
 | XSS           | - |*[XSS payloads além do alert link](http://www.xss-payloads.com)*                                                                               |
-| XSS           | - | *[PayloadsAllTheThings payloads link](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)* |
+| XSS           | - |*[PayloadsAllTheThings payloads link](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)* |
+| Markdown XSS  | - |*https://github.com/cujanovic/Markdown-XSS-Payloads/blob/master/Markdown-XSS-Payloads.txt* |
 | SQLi          | - |*[Portswigger SQLi cheatsheet link](https://portswigger.net/web-security/sql-injection/cheat-sheet)*                                            |
 | SQLi          | - |*[Netsparker SQLi cheatsheet link](https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/)*                                   |
 | Privilege Escalation          | - |https://github.com/Ignitetechnologies/Privilege-Escalation/                                   |
@@ -336,4 +339,10 @@ X-Remote-IP:localhost
 X-Remote-Addr:localhost
 X-Host:localhost
 True-Client-Ip:localhost
+```
+
+Insecure Deserialization
+```
+Payloads: https://github.com/pwntester/ysoserial.net
+Json insercure deserialization: https://medium.com/r3d-buck3t/insecure-deserialization-with-json-net-c70139af011a
 ```
