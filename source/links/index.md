@@ -5,6 +5,7 @@ date: 2021-01-05 15:51:07
 
 **Blogs**
 https://thehackernews.com/
+https://www.cisoadvisor.com.br/
 https://threatpost.com/
 https://cgreinhold.dev/
 https://snyk.io/blog/
