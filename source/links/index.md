@@ -14,7 +14,7 @@ https://samy.pl/
 https://www.malwaretech.com/
 https://minutodaseguranca.blog.br/
 https://www.welivesecurity.com
-https://secnhack.in/
+https://secnhack.in/ **
 https://www.syhunt.com/pt/?n=News.2021-Leaks&key=lucy17 (Leaks Feed)
 
 **Youtubers**
@@ -54,7 +54,6 @@ https://wigle.net/ (Mapeamento mundial de redes wifi)
 https://www.exploit-db.com/google-hacking-database/ (Google dorking)
 https://www.shhgit.com/ (Monitoramento em tempo real de possíveis informações sensíveis sendo commitadas no GitHub, GitLab e BitBucket)
 https://osintframework.com/ (Grande indexador de ferramentas e OSINT's para reconhecimento e pentest)
-https://netbootcamp.org/osinttools/ (Agregador de ferramentas de reconhecimento de domínio e social)
 https://community.riskiq.com/ (Scanner de informações públicas, encontra bastante subdomínios e só serve para isso na conta gratuíta)
 http://securitytrails.com (Eficiente para encontrar subdomínios)
 https://gf.dev/whois-hosting (Descobrir caminhos de IPs de um site)
@@ -67,24 +66,25 @@ https://caniuse.com/ (Verificação de compatibilidade de browsers)
 https://grabify.link/ (Encurtado de links com IP logger)
 https://archive.org/web/ (Way back machine - Histórico das páginas antigas)
 https://beautifier.io/ (Transforma um js minificado para legível)
+https://bgp.he.net (BGP Check)
 
 **Desktop Tools**
 https://beefproject.com/
 http://sqlmap.org/
 https://docs.microsoft.com/en-us/sysinternals/ (Canivete suiço de ferramentas de análise de ambiente)
-https://pentestbox.org/pt/ (Várias ferramentas em sandobox sem necessidade de subir uma VM)
 https://github.com/globocom/huskyCI (Ferramenta feito pela Globo. Orquestrador de análise de código de repositório para rodar junto com um CI)
 https://github.com/Genymobile/scrcpy (Solução para transmitir a tela do celular para o computador)
 https://www.postman.com/ (Monta requisições Http sob demanda)
 https://dbeaver.io/ (Conector com banco de dados universal)
-https://nordvpn.com/ (VPN para comunicação segura - Pago)
 https://github.com/assetnote/kiterunner (Endpoint spider)
 https://github.com/KingOfBugbounty/SecretFinder (Procura por possíveis chaves em arquivos HTML ou Js)
 https://github.com/lirantal/is-website-vulnerable (Alternativa open source para auditar as tecnologias front end de um sistema web, com resultados objetivos e claros indicando os problemas)
 https://github.com/projectdiscovery/nuclei
 https://github.com/skavngr/rapidscan (multi-tool web vulnerability scanner)
 https://github.com/NESCAU-UFLA/FuzzingTool
-
+https://github.com/Abdulrahman-Kamel/tokenScanner (Token Scanner - Passa um token para o scanner e ele identifica de que tipo que é o token. Ferramenta boa... é simples, informa do que se trata possivelmente o token e já passa uma url de como fazer o exploit e testar)
+https://github.com/Abdulrahman-Kamel/extract-comments (Extrai comentários das páginas - Testado e funciona. Bom se achar um crowler para pegar todas as urls de um domínio para depois passar como parâmetro)
+https://github.com/Abdulrahman-Kamel/xssHeaders (Testa Blind XSS Headers - Tem que fazer um conta no site https://xsshunter.com/ para ter o profile no XssHunter.)
 
 **Browser plugins**
 KeyFinder
@@ -134,6 +134,10 @@ https://www.openwall.com/john/ (John the Ripper password cracker)
 https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm (Base para download)
 https://hstrike.com/ (Algumas ferremantes para análise de criptografias e senhas)
 
+**Wordlists**
+https://wordlists.assetnote.io/
+https://github.com/Abdulrahman-Kamel/httpAuth
+
 **Aplicação para validação de web scanners**
 http://public-firing-range.appspot.com/
 
@@ -162,6 +166,7 @@ https://letsencrypt.org/
 
 **CORS ByPass**
 https://cors-anywhere.herokuapp.com/
+https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties
 
 **Reverse Tabnabbing**
 https://security.christmas/2019/12
@@ -173,7 +178,6 @@ https://cspscanner.com/ (Teste simples para CSP)
 https://csper.io/evaluator (Avaliador para CPS)
 https://csper.io/generator/ (Gerador de CSP)
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CSP
-https://owasp.org/www-community/attacks/Content_Security_Policy
 
 **Lax vs Strict**
 https://blog.benpri.me/blog/2019/05/13/samesite-cookies-in-practice/
@@ -203,10 +207,30 @@ https://rules.sonarsource.com/csharp
 | Privilege Escalation          | - |https://github.com/Ignitetechnologies/Privilege-Escalation/                                   |
 | Burp          | - | https://github.com/Ignitetechnologies/BurpSuite-For-Pentester |
 
+**Sniping Insecure Cookies with XSS**
+https://breakdev.org/sniping-insecure-cookies-with-xss/
+
 **Angular template injection**
 * https://portswigger.net/research/xss-without-html-client-side-template-injection-with-angularjs
 * Procurar por 'ng-app'.
 * https://www.youtube.com/watch?v=19gqZU953pY
+
+**Web Cache Deception**
+http://omergil.blogspot.com/2017/02/web-cache-deception-attack.html
+*Examples for some of the past vulnerable pages:*
+```
+- https://www.paypal.com/myaccount/home/attack.css
+- https://www.paypal.com/myaccount/settings/notifications/attack.css
+- https://history.paypal.com/cgi-bin/webscr/attack.css?cmd=_history-details
+```
+
+**Metadada in Files**
+https://github.com/loseys/Goblyn
+https://www.kaspersky.com.br/blog/office-documents-metadata/7192/
+
+**Services**
+https://www.kvstore.io/ (a simple key/value API based storage service)
+https://nordvpn.com/ (VPN para comunicação segura - Pago)
 
 **.Net**
 https://github.com/pwntester/ysoserial.net (Exploit unsafe .NET object deserialization)
@@ -248,9 +272,8 @@ https://github.com/KingOfBugbounty/KingOfBugBountyTips
 **Verificação de assinaturas de arquivos**
 https://www.garykessler.net/library/file_sigs.html
 
-**Livros**
-https://book.hacktricks.xyz/
-https://www.manning.com/books/api-security-in-action
+**Analisando mensagens HTTP com Burp Suite e FoxyProxy**
+https://luan-cf-bnu.medium.com/analisando-mensagens-http-com-burp-suite-e-foxyproxy-9fb0a32d6fa4
 
 **4 coisas que todo relatório deve ter**
 https://rhinosecuritylabs.com/penetration-testing/four-things-every-penetration-test-report/
