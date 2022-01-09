@@ -68,6 +68,7 @@ https://archive.org/web/ (Way back machine - Histórico das páginas antigas)
 https://beautifier.io/ (Transforma um js minificado para legível)
 https://bgp.he.net (BGP Check)
 https://www.100security.com.br/rsg (Reverse shell generator)
+https://report-uri.com/home/tools (CSP Analyse, CSP Builder, CSP Hash, Header Analyser, SRI HAsh, PEM Decoder)
 
 **Desktop Tools**
 https://beefproject.com/
