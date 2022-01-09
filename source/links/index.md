@@ -67,6 +67,7 @@ https://grabify.link/ (Encurtado de links com IP logger)
 https://archive.org/web/ (Way back machine - Histórico das páginas antigas)
 https://beautifier.io/ (Transforma um js minificado para legível)
 https://bgp.he.net (BGP Check)
+https://www.100security.com.br/rsg (Reverse shell generator)
 
 **Desktop Tools**
 https://beefproject.com/
@@ -206,6 +207,7 @@ https://rules.sonarsource.com/csharp
 | SQLi          | - |*[Netsparker SQLi cheatsheet link](https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/)*                                   |
 | Privilege Escalation          | - |https://github.com/Ignitetechnologies/Privilege-Escalation/                                   |
 | Burp          | - | https://github.com/Ignitetechnologies/BurpSuite-For-Pentester |
+| Malware       | - | https://github.com/malwares |
 
 **Sniping Insecure Cookies with XSS**
 https://breakdev.org/sniping-insecure-cookies-with-xss/
@@ -262,6 +264,9 @@ https://phishingquiz.withgoogle.com/
 https://security-code-scan.github.io/
 
 ## Guides
+
+**The National Cyber Security Centre**
+https://www.ncsc.gov.uk/
 
 **CTO Security Checklist/Guide**
 https://www.goldfiglabs.com/guide/saas-cto-security-checklist/
@@ -369,4 +374,12 @@ Insecure Deserialization
 ```
 Payloads: https://github.com/pwntester/ysoserial.net
 Json insercure deserialization: https://medium.com/r3d-buck3t/insecure-deserialization-with-json-net-c70139af011a
+```
+
+CVE-2021-44228 - Log4j
+```
+https://youtu.be/7qoPDq41xhQ
+
+Exploit Demo: https://github.com/leonjza/log4jpwn
+Shell Check: https://log4shell.huntress.com/
 ```
