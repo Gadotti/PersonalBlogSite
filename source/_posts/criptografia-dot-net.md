@@ -36,12 +36,12 @@ private static void KeyAndVectorValidation(string key, string vector)
 {
     if (string.IsNullOrEmpty(key))
     {
-        throw new ArgumentNullException(key);
+        throw new ArgumentNullException(nameof(key));
     }
 
     if (string.IsNullOrEmpty(vector))
     {
-        throw new ArgumentNullException(vector);
+        throw new ArgumentNullException(nameof(vector));
     }
 
     if (key.Length != 16 && key.Length != 24 && key.Length != 32)
@@ -100,7 +100,7 @@ public static string Decrypt(string encryptedData, string key, string vector, st
 
     if (string.IsNullOrEmpty(authTag))
     {
-        throw new ArgumentNullException(authTag);
+        throw new ArgumentNullException(nameof(authTag));
     }
 
     var padL = encryptedData.Length + (encryptedData.Length % 4);
