@@ -17,6 +17,7 @@ https://www.welivesecurity.com
 https://secnhack.in/ **
 https://www.syhunt.com/pt/?n=News.2021-Leaks&key=lucy17 (Leaks Feed)
 https://eskelsen.medium.com/
+https://www.adico.me/
 
 **Youtubers**
 https://youtube.com/LiveOverflowCTF
@@ -52,12 +53,15 @@ https://breached.to/ (Antigo raidforums.com desativado - Forum com exposição d
 https://search.censys.io/ (Scan de IPs e portas)
 https://www.shodan.io/ (Scan de IPs e portas)
 https://wigle.net/ (Mapeamento mundial de redes wifi)
-https://www.exploit-db.com/google-hacking-database/ (Google dorking)
 https://www.shhgit.com/ (Monitoramento em tempo real de possíveis informações sensíveis sendo commitadas no GitHub, GitLab e BitBucket)
 https://osintframework.com/ (Grande indexador de ferramentas e OSINT's para reconhecimento e pentest)
 https://community.riskiq.com/ (Scanner de informações públicas, encontra bastante subdomínios e só serve para isso na conta gratuíta)
 http://securitytrails.com (Eficiente para encontrar subdomínios)
 https://gf.dev/whois-hosting (Descobrir caminhos de IPs de um site)
+
+**Dork**
+https://www.exploit-db.com/google-hacking-database/
+https://www.googleguide.com/advanced_operators_reference.html
 
 **Web Tools**
 https://gchq.github.io/CyberChef/ (Canivete suiço. Diversos 'utils', scrab, estractor, etc)
@@ -88,6 +92,7 @@ https://github.com/NESCAU-UFLA/FuzzingTool
 https://github.com/Abdulrahman-Kamel/tokenScanner (Token Scanner - Passa um token para o scanner e ele identifica de que tipo que é o token. Ferramenta boa... é simples, informa do que se trata possivelmente o token e já passa uma url de como fazer o exploit e testar)
 https://github.com/Abdulrahman-Kamel/extract-comments (Extrai comentários das páginas - Testado e funciona. Bom se achar um crowler para pegar todas as urls de um domínio para depois passar como parâmetro)
 https://github.com/Abdulrahman-Kamel/xssHeaders (Testa Blind XSS Headers - Tem que fazer um conta no site https://xsshunter.com/ para ter o profile no XssHunter.)
+https://github.com/hktalent/scan4all (Projeto com vulnerabilidades para testar ferramentas de scan)
 
 **Browser plugins**
 - DotGit
@@ -154,6 +159,7 @@ https://snyk.io/vuln |
 https://ossindex.sonatype.org/
 https://cve.mitre.org/cve/search_cve_list.html
 https://www.nuget.org/packages/Audit.NET/ (Extensão para Visual Studio)
+https://cve.circl.lu/ (CVE Search database)
 
 **Verificação de DNS**
 https://toolbox.googleapps.com/apps/dig/
@@ -269,8 +275,10 @@ https://github.com/Lissy93/personal-security-checklist
 **Cofre de senhas**
 https://bitwarden.com/
 
-**Quiz do Google sobre phishing** 
-https://phishingquiz.withgoogle.com/
+**Phishing** 
+https://phishingquiz.withgoogle.com/ (Quiz do Google sobre phishing)
+https://github.com/mrd0x/BITB (Phishing - Browser inside a Browser - https://mrd0x.com/browser-in-the-browser-phishing-attack/)
+
 
 **Critérios de segurança no código**
 https://security-code-scan.github.io/
