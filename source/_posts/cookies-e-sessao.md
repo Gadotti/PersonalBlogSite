@@ -57,7 +57,7 @@ O controle de sessão ainda pode ser realizada de outras formas, basicamente men
  
 Vale lembrar que o uso de cookies para o gerenciamento de sessões não são inseguros, seu uso incorreto é que o fazem.
  
-# Possíveis propriedade dos Cookies
+# Possíveis propriedades dos Cookies
 Os cookies possuem 3 propriedades que são possíveis gerenciar, sendo todas para o tratamento de questões de segurança.
 - HttpOnly
 - Secure
