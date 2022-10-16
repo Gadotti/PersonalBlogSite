@@ -3,7 +3,6 @@ title: Links Úteis
 date: 2021-01-05 15:51:07
 ---
 
-*deploy teste*
 **Blogs**
 https://thehackernews.com/
 https://www.cisoadvisor.com.br/
