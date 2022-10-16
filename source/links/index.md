@@ -3,6 +3,7 @@ title: Links Úteis
 date: 2021-01-05 15:51:07
 ---
 
+*deploy teste*
 **Blogs**
 https://thehackernews.com/
 https://www.cisoadvisor.com.br/
@@ -85,7 +86,6 @@ https://www.postman.com/ (Monta requisições Http sob demanda)
 https://dbeaver.io/ (Conector com banco de dados universal)
 https://github.com/assetnote/kiterunner (Endpoint spider)
 https://github.com/KingOfBugbounty/SecretFinder (Procura por possíveis chaves em arquivos HTML ou Js)
-https://github.com/lirantal/is-website-vulnerable (Alternativa open source para auditar as tecnologias front end de um sistema web, com resultados objetivos e claros indicando os problemas)
 https://github.com/projectdiscovery/nuclei
 https://github.com/skavngr/rapidscan (multi-tool web vulnerability scanner)
 https://github.com/NESCAU-UFLA/FuzzingTool
