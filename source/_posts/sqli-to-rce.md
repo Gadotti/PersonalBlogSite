@@ -155,7 +155,7 @@ Algumas sugestões de possíveis impactos:
 
 Não basta atentarmos que as aplicações não estejam vulneráveis à SQLi, para uma melhor eficiência nas mitigações de segurança, é preciso trabalhar para que o *attack chain* seja quebrado, ou seja, impedir um possível ataque evolua em vários pontos.
 
-Isto quer dizer que qualquer um desses casos abaixo iriam mitigar a exploração e os impactos sofridos:
+Isto quer dizer que qualquer um desses casos abaixo iria mitigar a exploração e os impactos sofridos:
 
 - Não utilização do usuário 'sa' ou com altos privilégios de alteração de configurações do banco de dados, como usuário que a aplicação se conecta.
 - Isolamento do servidor do database do resto da estrutura - DMZ.
