@@ -18,6 +18,8 @@ date: 2022-11-02 18:29:07
 * https://www.syhunt.com/pt/?n=News.2021-Leaks&key=lucy17 (Leaks Feed)
 * https://eskelsen.medium.com/
 * https://www.adico.me/
+* https://mayfly277.github.io/
+* https://www.kitploit.com/
 
 **Youtubers**
 * https://youtube.com/LiveOverflowCTF
@@ -52,7 +54,8 @@ date: 2022-11-02 18:29:07
 * https://spycloud.com | Verifica os vazamentos associados a sua conta com a informação das senhas abertas
 * https://intelx.io/ | Consulta à base de dados de vazamentos
 * http://pwndb2am4tzkvold.onion/ | Consulta à base de vazamentos
-* http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion | Consulta à base de vazamentos
+* http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion/ | Consulta à base de vazamentos (DeepSearch)
+* http://ransomwr3tsydeii4q43vazm7wofla5ujdajquitomtd47cxjtfgwyyd.onion/| Ransomware Group Sites 
 * https://breached.to/ | Antigo raidforums.com desativado - Forum com exposição de vazamentos 
 
 **OSINT**
@@ -105,6 +108,8 @@ Artigo sobre importância dos metadados para a segurança: https://www.kaspersky
 * https://github.com/Abdulrahman-Kamel/tokenScanner | Token Scanner - Passa um token para o scanner e ele identifica que tipo de token é de forma simples, informa do que se possivelmente trata o token e já passa uma url de como fazer o exploit e testar
 
 **Pentest & Recon**
+* https://www.kali.org/tools/sublist3r/ / https://github.com/aboul3la/Sublist3r | Procura por subdomínios. Exemplo ```sublist3r -d kali.org```
+* https://github.com/six2dez/reconftw | Poderosa ferramenta de recon, utiliza 35 diretas + 24 outras ferramentas por baixo, entre elas o nuclei. Não obtive muitos resultados consistentes nos testes mas não descartar em um serviço de recon, porém não se basear só nele - executar diretamente os serviços que ele diz usar, no repo tem todas as referências
 * https://github.com/Abdulrahman-Kamel/extract-comments | Extrai comentários das páginas - Bom se achar um crowler para pegar todas as urls de um domínio para depois passar como parâmetro
 * https://github.com/hktalent/scan4all | Projeto com vulnerabilidades para testar ferramentas de scan
 * https://github.com/Abdulrahman-Kamel/xssHeaders | Testa Blind XSS Headers - Tem que fazer um conta no site https://xsshunter.com/ para ter o profile no XssHunter.
@@ -185,7 +190,10 @@ Artigo sobre importância dos metadados para a segurança: https://www.kaspersky
 **Verificação de DNS**
 * https://toolbox.googleapps.com/apps/dig/
 * https://dnslytics.com/
+
+**E-mail Analysis**
 * https://mxtoolbox.com/
+* https://github.com/m4ll0k/Infoga | Coleta de e-mails sobre um domínio e coleta dados sobre eles. Só identifica e coleta e-mails que estejam expostos, cujo endereço já tenha sido postado em algum lugar.
 
 **Malware Analysis**
 * https://app.any.run | Interactive Malware Analysis
@@ -320,6 +328,12 @@ https://www.ncsc.gov.uk/
 **CTO Security Checklist/Guide**
 https://www.goldfiglabs.com/guide/saas-cto-security-checklist/
 
+**OWASP Top 10 controle proativos**
+https://owasp.org/www-project-proactive-controls/
+
+**IoT Security**
+https://www.bekk.christmas/post/2021/14/segment-your-home-network-today
+
 **Bugbounty Tips**
 https://github.com/KingOfBugbounty/KingOfBugBountyTips
 
@@ -367,3 +381,10 @@ https://youtu.be/7qoPDq41xhQ
 Exploit Demo: https://github.com/leonjza/log4jpwn
 Shell Check: https://log4shell.huntress.com/
 ```
+
+**Kali Linux Commands**
+https://ethicalhackersacademy.com/blogs/ethical-hackers-academy/kali-linux-commands
+
+**Livros**
+The Code Book: The Secrets Behind Codebreaking
+The Art of Deception (Kevin Mitnick)

