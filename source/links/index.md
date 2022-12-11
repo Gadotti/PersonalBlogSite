@@ -38,7 +38,7 @@ date: 2022-11-02 18:29:07
 * Kali: https://www.kali.org/
 * Whonix | Navegação anônima - https://www.whonix.org/
 * Tails | Navegação anônima - https://tails.boum.org/index.pt.html
-* REMnux | Malware Analysis - https://remnux.org/
+* REMnux | Malware Analysis - https://remnux.org/ (doc tools https://docs.remnux.org, eg. https://docs.remnux.org/discover-the-tools/analyze+documents/pdf)
 * VMs com CVE exploitable - https://www.vulnmachines.com/about
 
 **Web Scanners**
@@ -118,8 +118,27 @@ Artigo sobre importância dos metadados para a segurança: https://www.kaspersky
 * https://github.com/assetnote/kiterunner | Endpoint spider
 * https://github.com/projectdiscovery/nuclei | Multitool para fazer o scanner de exploits
 * https://github.com/skavngr/rapidscan | Multitool web vulnerability scanner
-* https://github.com/NESCAU-UFLA/FuzzingTool | Ferramenta para fuzzing
 * https://github.com/t3l3machus/psudohash | Gerador de lista de senhas para orquestrar ataques de força bruta, baseado em uma string inicial
+
+**Fuzz**
+* Wfuzz
+```
+- Enumera subdiretórios baseado em wordlist
+- Exemplo => wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt --hc 404 http://192.168.56.102/dvwa/FUZZ
+- Tem que ter o "FUZZ" no final, não é só exemplo
+```
+
+* ffuf
+```
+- Comando exemplo => ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-big.txt -u http://198.211.107.250:1337/FUZZ --fs 169
+```
+* Feroxbuster
+```
+- Repo: https://github.com/epi052/feroxbuster
+- Comandos
+`sudo apt install -y feroxbuster`
+`feroxbuster -u https://some-example-site.com`
+```
 
 **Browser plugins**
 * DotGit
@@ -128,6 +147,7 @@ Artigo sobre importância dos metadados para a segurança: https://www.kaspersky
 * JS Beautifier
 * **KeyFinder**
 * Web scan
+* Wappalyzer
 
 **Pentest (DAST)**
 * https://www.zaproxy.org/ ([scripts link](https://github.com/zaproxy/community-scripts))
@@ -319,6 +339,7 @@ https://rules.sonarsource.com/csharp
 * https://phishingquiz.withgoogle.com/ | Quiz do Google
 * https://github.com/mrd0x/BITB | Browser inside a Browser - https://mrd0x.com/browser-in-the-browser-phishing-attack/
 * https://getgophish.com/ | Gerenciamento de campanhas de phishing
+* https://github.com/thewhiteh4t/seeker | Criação de phishing que colate localização de GPS precisas
 
 **IA geradore de perfis que não existem**
 * https://thispersondoesnotexist.com/
