@@ -316,6 +316,7 @@ https://rules.sonarsource.com/csharp
 * https://github.com/pwntester/ysoserial.net | Exploit unsafe .NET object deserialization
 
 **Calcular nível de vulnerabilidades**
+* https://www.owasp-risk-rating.com/
 * https://www.first.org/cvss/calculator/3.0
 * https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
 
