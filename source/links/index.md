@@ -20,6 +20,8 @@ date: 2022-11-02 18:29:07
 * https://www.adico.me/
 * https://mayfly277.github.io/
 * https://www.kitploit.com/
+* https://www.felipeprado1975.com/
+* https://securityonline.info/
 
 **Youtubers**
 * https://youtube.com/LiveOverflowCTF
@@ -34,11 +36,13 @@ date: 2022-11-02 18:29:07
 * https://github.com/helviojunior
 * https://github.com/VitorOriel
 
-**VMs**
+**VMs & Distros**
 * Kali: https://www.kali.org/
+* Kali purple: https://gitlab.com/kalilinux/documentation/kali-purple?s=08
 * Whonix | Navegação anônima - https://www.whonix.org/
 * Tails | Navegação anônima - https://tails.boum.org/index.pt.html
 * REMnux | Malware Analysis - https://remnux.org/ (doc tools https://docs.remnux.org, eg. https://docs.remnux.org/discover-the-tools/analyze+documents/pdf)
+* Santoku | Distro focada em forense para mobile - https://santoku-linux.com/about-santoku/
 * VMs com CVE exploitable - https://www.vulnmachines.com/about
 
 **Web Scanners**
@@ -81,10 +85,6 @@ date: 2022-11-02 18:29:07
 * [goblyn](https://github.com/loseys/Goblyn) | Captura de metada em arquivo de um website files
 
 Artigo sobre importância dos metadados para a segurança: https://www.kaspersky.com.br/blog/office-documents-metadata/7192/
-
-**Dorks**
-* https://www.exploit-db.com/google-hacking-database/
-* https://www.googleguide.com/advanced_operators_reference.html
 
 **Web Tools**
 * https://gchq.github.io/CyberChef/ | Canivete suiço. Diversos 'utils', scrab, estractor, etc
@@ -183,8 +183,9 @@ ls -lh /usr/share/seclists/
 * https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks
 * https://community.turgensec.com/finding-hidden-api-keys-how-to-use-them/
 
-**Sobre AWS Buckets**
-* https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/AWS%20Amazon%20Bucket%20S3
+**Sobre AWS**
+* Buckets: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/AWS%20Amazon%20Bucket%20S3
+* Security Check: https://awscheck.fyi/
 
 **Criptografia, Hash databases e crackers**
 * https://hashdecryption.com/
@@ -328,6 +329,15 @@ https://rules.sonarsource.com/csharp
 * https://security.christmas/
 * https://tryhackme.com/room/25daysofchristmas
 
+**Eventos/Conferências Brasileiras de SI**
+* https://www.h2hc.com.br/
+* **https://bhack.com.br**
+* https://www.ysts.org/
+* https://www.roadsec.com.br/
+* https://www.mindthesec.com.br/
+* https://www.cybersecuritysummit.com.br/
+* **https://nullbyte-con.org/**
+
 ## Security Awareness
 
 **Personal Security Checklist**
@@ -416,3 +426,11 @@ https://ethicalhackersacademy.com/blogs/ethical-hackers-academy/kali-linux-comma
 **Livros**
 The Code Book: The Secrets Behind Codebreaking
 The Art of Deception (Kevin Mitnick)
+
+**Cursos e certificados Free**
+Cursos Grátis: https://codered.eccouncil.org/ (Ethical Hacking Essentials [EHE])
+Threat Hunting: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-threat-hunting
+Darkweb Operations: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-dark-web-operations
+Digital Forensics: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-digital-forensics
+OSINT: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-osint
+Network Analysis: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-network-analysis
