@@ -1,6 +1,6 @@
 ---
 title: Links Úteis
-date: 2022-11-02 18:29:07
+date: 2023-09-10 20:47:07
 ---
 
 **Blogs**
@@ -54,14 +54,15 @@ date: 2022-11-02 18:29:07
 * https://www.securityscore.com.br/ | Scan que vai além do sistema web, consulta e-mails e portas associadas ao domínio
 * https://spyse.com/ | Scanner de informações públicas do site, crawler, url de js e css's
 
-**Vazamento de Senhas e Dados**
+**Vazamento de Senhas e Dados - Leaks - Threat Intelligence**
 * https://haveibeenpwned.com/ | Verificação de vazamento de senhas
 * https://spycloud.com | Verifica os vazamentos associados a sua conta com a informação das senhas abertas
 * https://intelx.io/ | Consulta à base de dados de vazamentos
 * http://pwndb2am4tzkvold.onion/ | Consulta à base de vazamentos
 * http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion/ | Consulta à base de vazamentos (DeepSearch)
 * http://ransomwr3tsydeii4q43vazm7wofla5ujdajquitomtd47cxjtfgwyyd.onion/| Ransomware Group Sites 
-* https://breached.to/ | Antigo raidforums.com desativado - Forum com exposição de vazamentos 
+* https://breached.vc/ | Antigo raidforums.com desativado - Forum com exposição de vazamentos 
+* **https://www.ransomlook.io/recent** - Melhor site que está centralizando notícias de vários grupos e empresas afetadas.
 
 **OSINT**
 * https://search.censys.io/ | Scan de IPs e portas
@@ -323,6 +324,7 @@ https://rules.sonarsource.com/csharp
 
 **Coleção de relatórios de pentestes**
 * https://github.com/juliocesarfort/public-pentesting-reports
+* https://github.com/hmaverickadams/TCM-Security-Sample-Pentest-Report/tree/master
 
 **Eventos**
 * https://bekk.christmas/
@@ -359,6 +361,9 @@ https://rules.sonarsource.com/csharp
 * https://security-code-scan.github.io/
 
 ## Guides
+
+**HackTricks**
+https://book.hacktricks.xyz
 
 **The National Cyber Security Centre**
 https://www.ncsc.gov.uk/
@@ -423,14 +428,59 @@ Shell Check: https://log4shell.huntress.com/
 **Kali Linux Commands**
 https://ethicalhackersacademy.com/blogs/ethical-hackers-academy/kali-linux-commands
 
-**Livros**
+## Livros
 The Code Book: The Secrets Behind Codebreaking
 The Art of Deception (Kevin Mitnick)
 
-**Cursos e certificados Free**
-Cursos Grátis: https://codered.eccouncil.org/ (Ethical Hacking Essentials [EHE])
-Threat Hunting: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-threat-hunting
-Darkweb Operations: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-dark-web-operations
-Digital Forensics: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-digital-forensics
-OSINT: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-osint
-Network Analysis: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-network-analysis
+## Cursos, certificados e conteúdos gratuítos
+- Cursos Grátis: https://codered.eccouncil.org/ (Ethical Hacking Essentials [EHE])
+- Threat Hunting: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-threat-hunting
+- Darkweb Operations: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-dark-web-operations
+- Digital Forensics: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-digital-forensics
+- OSINT: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-osint
+- Network Analysis: https://elearning.securityblue.team/home/courses/free-courses/introduction-to-network-analysis
+- Cyber Threat Intelligence 101: https://arcx.io/courses/cyber-threat-intelligence-101
+
+```
+Great Free Cyber Security Courses
+
+↓  Core ↓
+Cisco Network Essentials - https://www.netacad.com/courses/networking/networking-essentials
+Palo Alto - https://www.paloaltonetworks.com/cyberpedia/free-cybersecurity-education-courses
+AWS Cloud - https://explore.skillbuilder.aws/learn/signin
+Azure Cloud - https://learn.microsoft.com/en-us/training/azure/
+GCP Cloud - https://cloud.google.com/learn/training
+
+↓  Fundamentals ↓
+SANS Aces - https://www.sans.org/cyberaces/
+ISC(2) Certified in Cyber - https://www.isc2.org/Certifications/CC
+Coursera - https://www.coursera.org/learn/foundations-cybersecurity
+EC-Council - https://www.eccouncil.org/cybersecurity-exchange/cyber-novice/free-cybersecurity-courses-beginners/
+Cyber Security - https://www.classcentral.com/course/swayam-cyber-security-13978
+Cisco Cyber Induction - https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity
+Fortinet NSE - https://www.fortinet.com/training/cybersecurity-professionals
+
+↓ Penetration Testing ↓
+TCM-Security - https://academy.tcm-sec.com/p/learn-penetration-testing-free
+PortSwigger Web Hacking - https://portswigger.net/web-security
+CodeRed Hacking Essentials - https://codered.eccouncil.org/course/ethical-hacking-essentials
+RedTeaming - https://taggartinstitute.org/p/responsible-red-teaming
+METASPLOIT UNLEASHED - https://www.offsec.com/metasploit-unleashed/
+Hacker101 - https://www.hackerone.com/hackers/hacker101
+
+↓ Vulnerability Management ↓
+Qualys - https://www.qualys.com/training/
+Class Central - https://www.classcentral.com/course/get-started-with-vulnerability-assessment-70775
+
+↓ SIEM ↓
+Splunk - https://www.splunk.com/en_us/training/free-courses/overview.html
+QRadar - https://www.securitylearningacademy.com/local/navigator/index.php?level=siem01&roadmapId=65
+Elastic - https://www.elastic.co/training/elastic-security-fundamentals-siem
+XPERT - https://www.siemxpert.com/online-cybersecurity-courses.html
+
+↓ Engineering ↓
+Oxford - https://www.oxfordhomestudy.com/courses/cyber-security-courses/free-cyber-security-courses
+IoT Privacy - https://www.edx.org/course/cybersecurity-and-privacy-in-the-iot
+Secure Software Development - https://training.linuxfoundation.org/training/developing-secure-software-lfd121/
+Maryland Software Security - https://www.classcentral.com/course/software-security-1728
+```
