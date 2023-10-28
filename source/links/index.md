@@ -52,23 +52,20 @@ date: 2023-09-10 20:47:07
 * https://observatory.mozilla.org/ | Diversas verificações para sistemas Web
 * https://securityheaders.com/ | Verificações focadas em HTTP Headers necessários
 * https://www.securityscore.com.br/ | Scan que vai além do sistema web, consulta e-mails e portas associadas ao domínio
-* https://spyse.com/ | Scanner de informações públicas do site, crawler, url de js e css's
 
 **Vazamento de Senhas e Dados - Leaks - Threat Intelligence**
+* **https://www.ransomlook.io/recent** - Melhor site que está centralizando notícias de vários grupos e empresas afetadas.
 * https://haveibeenpwned.com/ | Verificação de vazamento de senhas
-* https://spycloud.com | Verifica os vazamentos associados a sua conta com a informação das senhas abertas
 * https://intelx.io/ | Consulta à base de dados de vazamentos
 * http://pwndb2am4tzkvold.onion/ | Consulta à base de vazamentos
 * http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion/ | Consulta à base de vazamentos (DeepSearch)
 * http://ransomwr3tsydeii4q43vazm7wofla5ujdajquitomtd47cxjtfgwyyd.onion/| Ransomware Group Sites 
 * https://breached.vc/ | Antigo raidforums.com desativado - Forum com exposição de vazamentos 
-* **https://www.ransomlook.io/recent** - Melhor site que está centralizando notícias de vários grupos e empresas afetadas.
 
 **OSINT**
 * https://search.censys.io/ | Scan de IPs e portas
 * https://www.shodan.io/ | Scan de IPs e portas
 * https://wigle.net/ | Mapeamento mundial de redes wifi
-* https://www.shhgit.com/ | Monitoramento em tempo real de possíveis informações sensíveis sendo commitadas no GitHub, GitLab e BitBucket
 * https://osintframework.com/ | Grande indexador de ferramentas e OSINT's para reconhecimento e pentest
 * https://gf.dev/whois-hosting | Descobrir caminhos de IPs de um site
 * https://github.com/sherlock-project/sherlock | Busca de usuário em várias redes sociais públicas
@@ -84,8 +81,7 @@ date: 2023-09-10 20:47:07
 * [strings](https://www.howtogeek.com/427805/how-to-use-the-strings-command-on-linux/) | Comando *strings*, ferramenta linux que analisa possíveis strings de arquivos, locais, etc
 * [exiftool](https://github.com/exiftool/exiftool) | Comando/ferramenta linux que analisa as informações EXIF de um arquivo
 * [goblyn](https://github.com/loseys/Goblyn) | Captura de metada em arquivo de um website files
-
-Artigo sobre importância dos metadados para a segurança: https://www.kaspersky.com.br/blog/office-documents-metadata/7192/
+* Artigo sobre importância dos metadados para a segurança: https://www.kaspersky.com.br/blog/office-documents-metadata/7192/
 
 **Web Tools**
 * https://gchq.github.io/CyberChef/ | Canivete suiço. Diversos 'utils', scrab, estractor, etc
@@ -156,14 +152,20 @@ Artigo sobre importância dos metadados para a segurança: https://www.kaspersky
 * https://github.com/1N3/Sn1per/
 * https://owasp.org/www-community/Vulnerability_Scanning_Tools | Lista de várias ferramentas pagas e free
 
-
 **Analisadores de tráfego**
 * https://portswigger.net/burp/
 * https://www.charlesproxy.com/
 * https://www.telerik.com/fiddler
 * https://www.wireshark.org/
 
+**Mobile**
+* https://github.com/Genymobile/scrcpy | Solução para transmitir a tela do celular para o computador
+* Santoku | Distro focada em forense para mobile - https://santoku-linux.com/about-santoku/
+* **https://www.youtube.com/watch?v=hFSuMySq2dA&ab_channel=HackingnaWeb | Como interceptar tráfego de app android, fazendo repack tranpondo seguraça compilação com certificado.**
+
 **Listas**
+* **https://github.com/nixawk/pentest-wiki | Indexador e guia para recon e pentests**
+* **https://github.com/enaqx/awesome-pentest | Github para pentesters**
 * https://www.kali.org/tools/seclists | SecLists
 ```
 sudo apt install seclists
@@ -177,8 +179,6 @@ ls -lh /usr/share/seclists/
 * https://github.com/sbilly/awesome-security#web | Indexador de materiais para pentest, recon, etc
 * https://www.routerpasswords.com/ | Lista de senhas padrões de dispositivos
 * https://minutodaseguranca.blog.br/lista-completa-de-ferramentas-de-teste-de-penetracao-e-hacking/
-* https://github.com/nixawk/pentest-wiki | Indexador e guia para recon e pentests
-* https://github.com/enaqx/awesome-pentest | Github para pentesters
 
 **Sobre API keys**
 * https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks
@@ -193,13 +193,11 @@ ls -lh /usr/share/seclists/
 * https://emn178.github.io/online-tools/
 * https://hashtoolkit.com/
 * https://www.perturb.org/content/hashes/
-* http://hashmash.info/
 * https://md5hashing.net/
 * https://sha1.gromweb.com/
 * https://www.boxentriq.com/code-breaking/cipher-identifier/ | Analisador de possível tipo de cifra utilizado
 * https://www.openwall.com/john/ | John the Ripper password cracker
 * https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm | Base para download
-* https://hstrike.com/ | Algumas ferremantes para análise de criptografias e senhas
 
 **Wordlists**
 * https://wordlists.assetnote.io/
@@ -221,7 +219,6 @@ ls -lh /usr/share/seclists/
 
 **E-mail Analysis**
 * https://mxtoolbox.com/
-* https://github.com/m4ll0k/Infoga | Coleta de e-mails sobre um domínio e coleta dados sobre eles. Só identifica e coleta e-mails que estejam expostos, cujo endereço já tenha sido postado em algum lugar.
 
 **Malware Analysis**
 * https://app.any.run | Interactive Malware Analysis
@@ -246,7 +243,6 @@ ls -lh /usr/share/seclists/
 * https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties
 
 **Reverse Tabnabbing**
-* https://security.christmas/2019/12
 * https://owasp.org/www-community/attacks/Reverse_Tabnabbing
 * https://github.com/OWASP/www-community/blob/master/pages/attacks/Reverse_Tabnabbing.md
 
@@ -256,7 +252,6 @@ ls -lh /usr/share/seclists/
 * https://www.srihash.org/
 
 **CSP**
-* https://cspscanner.com/ | Teste simples para CSP
 * https://csper.io/evaluator | Avaliador para CSP
 * https://csper.io/generator/ | Gerador de CSP
 * https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CSP
@@ -264,11 +259,11 @@ ls -lh /usr/share/seclists/
 **Lax vs Strict**
 https://blog.benpri.me/blog/2019/05/13/samesite-cookies-in-practice/
 
-**XSS Game**
-https://xss-game.appspot.com
-
-**CTF**
-https://tryhackme.com/room/ohsint
+**CTF - Security Games & Learning**
+* https://tryhackme.com/room/ohsint
+* https://xss-game.appspot.com | XSS Game
+* https://overthewire.org/wargames/natas/natas0.html | Natas: Web Hacking
+* https://overthewire.org/wargames/bandit/bandit0.html | Bandit: Linux SSH Enviroment Hacking
 
 **I Know What You Download**
 https://iknowwhatyoudownload.com/en/peer/
@@ -284,7 +279,6 @@ https://rules.sonarsource.com/csharp
 | XSS           | - |*[Portswigger XSS cheatsheet link](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)*           |
 | XSS           | - |*[OWASP XSS cheatsheet link](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)*                                            |
 | DOM XSS       | - |*[OWASP DOM XSS cheatsheet link](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.md)* |
-| XSS           | - |*[XSS payloads além do alert link](http://www.xss-payloads.com)*                                                                               |
 | XSS           | - |*[PayloadsAllTheThings payloads link](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)* |
 | Markdown XSS  | - |*https://github.com/cujanovic/Markdown-XSS-Payloads/blob/master/Markdown-XSS-Payloads.txt* |
 | SQLi          | - |*[Portswigger SQLi cheatsheet link](https://portswigger.net/web-security/sql-injection/cheat-sheet)*                                            |
@@ -328,7 +322,6 @@ https://rules.sonarsource.com/csharp
 
 **Eventos**
 * https://bekk.christmas/
-* https://security.christmas/
 * https://tryhackme.com/room/25daysofchristmas
 
 **Eventos/Conferências Brasileiras de SI**
@@ -425,9 +418,6 @@ Exploit Demo: https://github.com/leonjza/log4jpwn
 Shell Check: https://log4shell.huntress.com/
 ```
 
-**Kali Linux Commands**
-https://ethicalhackersacademy.com/blogs/ethical-hackers-academy/kali-linux-commands
-
 ## Livros
 The Code Book: The Secrets Behind Codebreaking
 The Art of Deception (Kevin Mitnick)
@@ -483,4 +473,19 @@ Oxford - https://www.oxfordhomestudy.com/courses/cyber-security-courses/free-cyb
 IoT Privacy - https://www.edx.org/course/cybersecurity-and-privacy-in-the-iot
 Secure Software Development - https://training.linuxfoundation.org/training/developing-secure-software-lfd121/
 Maryland Software Security - https://www.classcentral.com/course/software-security-1728
+```
+
+#### 𝗙𝗿𝗲𝗲 𝗩𝗶𝗱𝗲𝗼𝘀: ISO 27001, SOC 2, and PCI DSS Full Framework Reviews
+```
+𝟭. 𝗜𝗦𝗢 𝟮𝟳𝟬𝟬𝟭 𝗙𝘂𝗹𝗹 𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸 𝗥𝗲𝘃𝗶𝗲𝘄 (https://youtu.be/Ou8cFdjMYWw?si=TeTT47YGVYCzCb3n)
+
+We spend an hour covering every control in ISO 27001 Annex A line by line. We offer advice on how you can implement, what the auditor will look for, and a few tips.
+
+𝟮. 𝗦𝗢𝗖 𝟮 𝗙𝘂𝗹𝗹 𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸 𝗥𝗲𝘃𝗶𝗲𝘄 (https://www.youtube.com/watch?v=2rAz9VohEdE&ab_channel=risk3sixty)
+
+This is one I did myself. SOC 2 criteria up on the screen. I cover every point of focus and common controls that will meet the SOC 2 criteria. I also give some tips on how to implement and what and auditor would look for.
+
+𝟯. 𝗣𝗖𝗜 𝗗𝗦𝗦 𝗙𝘂𝗹𝗹 𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸 𝗥𝗲𝘃𝗶𝗲𝘄 (https://www.youtube.com/watch?v=OIRrDbuRfO8&ab_channel=risk3sixty)
+
+We spend an hour covering all 12 PCI DSS requirements. There is also a great breakdown of common assessment findings we see often during audits.
 ```
