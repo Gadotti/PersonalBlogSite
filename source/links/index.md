@@ -1,6 +1,6 @@
 ---
 title: Links Úteis
-date: 2023-10-28 20:47:07
+date: 2024-07-17 00:00:00
 ---
 
 **Blogs**
@@ -71,6 +71,8 @@ date: 2023-10-28 20:47:07
 * https://github.com/sherlock-project/sherlock | Busca de usuário em várias redes sociais públicas
 * https://start.me/p/BnBb5v/jornadas-osint | Reune vários links OSINTs, buscadores de nicks, de imagens, de pessoas, etc
 * https://www.osintessentials.com/
+* https://www.whois.com/whois/site.com.br | Ferramenta recomendada de **whois**
+* https://labs.tib.eu/geoestimation/ | Estimativa de localização de imagens
 
 **Steganography / Esteganografia**
 * https://www.aperisolve.com | Reune várias ferramentas de análise de imagem e uma única requisição web)
@@ -116,6 +118,11 @@ date: 2023-10-28 20:47:07
 * https://github.com/projectdiscovery/nuclei | Multitool para fazer o scanner de exploits
 * https://github.com/skavngr/rapidscan | Multitool web vulnerability scanner
 * https://github.com/t3l3machus/psudohash | Gerador de lista de senhas para orquestrar ataques de força bruta, baseado em uma string inicial
+* https://github.com/EnableSecurity/wafw00f | Identificação de WAFs: wafw00f (W00f)
+```
+- Exemplo comando kali > 
+wafw00f -a 'https://enderecosistemas.com.br'
+```
 
 **Fuzz**
 * Wfuzz
@@ -131,13 +138,14 @@ date: 2023-10-28 20:47:07
 ```
 * Feroxbuster
 ```
+- Enumeração recursiva similar ao gobuster
 - Repo: https://github.com/epi052/feroxbuster
 - Comandos
 `sudo apt install -y feroxbuster`
 `feroxbuster -u https://some-example-site.com`
 ```
 
-**Browser plugins**
+**Browser plugins/extensions**
 * DotGit
 * Link Gopher
 * Http Header Live
@@ -145,6 +153,7 @@ date: 2023-10-28 20:47:07
 * **KeyFinder**
 * Web scan
 * Wappalyzer
+* SingleFile | Salvar um site inteiro incluindo imagens, estilos, frames, fontes, etc. num único arquivo HTML.
 
 **Pentest (DAST)**
 * https://www.zaproxy.org/ ([scripts link](https://github.com/zaproxy/community-scripts))
@@ -234,6 +243,7 @@ ls -lh /usr/share/seclists/
 * https://gofile.io/
 * https://pastebin.com/
 * http://dontpad.com/
+* https://onionshare.org/
 
 **Emissão de certificado Https baixo ou nenhum custo**
 * https://letsencrypt.org/
@@ -332,6 +342,8 @@ https://rules.sonarsource.com/csharp
 * https://www.mindthesec.com.br/
 * https://www.cybersecuritysummit.com.br/
 * **https://nullbyte-con.org/**
+* https://speakfy.io/ | Site que concentra eventos de SI:
+
 
 ## Security Awareness
 
@@ -354,6 +366,10 @@ https://rules.sonarsource.com/csharp
 * https://security-code-scan.github.io/
 
 ## Guides
+
+**Red e Blue Team Tools List**
+https://github.com/A-poc/RedTeam-Tools
+https://github.com/A-poc/BlueTeam-Tools
 
 **HackTricks**
 https://book.hacktricks.xyz
