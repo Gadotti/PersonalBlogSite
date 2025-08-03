@@ -11,7 +11,6 @@ date: 2024-07-17 00:00:00
 * https://cgreinhold.dev/
 * https://snyk.io/blog/
 * https://www.troyhunt.com/
-* https://samy.pl/
 * https://www.malwaretech.com/
 * https://minutodaseguranca.blog.br/
 * https://www.welivesecurity.com
@@ -19,7 +18,6 @@ date: 2024-07-17 00:00:00
 * https://eskelsen.medium.com/
 * https://www.adico.me/
 * https://mayfly277.github.io/
-* https://www.kitploit.com/
 * https://www.felipeprado1975.com/
 * https://securityonline.info/
 
@@ -42,16 +40,13 @@ date: 2024-07-17 00:00:00
 * Whonix | Navegação anônima - https://www.whonix.org/
 * Tails | Navegação anônima - https://tails.boum.org/index.pt.html
 * REMnux | Malware Analysis - https://remnux.org/ (doc tools https://docs.remnux.org, eg. https://docs.remnux.org/discover-the-tools/analyze+documents/pdf)
-* Santoku | Distro focada em forense para mobile - https://santoku-linux.com/about-santoku/
-* VMs com CVE exploitable - https://www.vulnmachines.com/about
+* VMs com CVE exploitable - https://www.vulnmachines.com/
 
 **Web Scanners**
-* https://gf.dev/toolbox/ | Canivete suiço para ambientes Web
 * https://www.ssllabs.com/ssltest/ | Diversas verificações para sistemas Web
 * https://hstspreload.org/ | Teste para HSTS simples e direto
 * https://observatory.mozilla.org/ | Diversas verificações para sistemas Web
 * https://securityheaders.com/ | Verificações focadas em HTTP Headers necessários
-* https://www.securityscore.com.br/ | Scan que vai além do sistema web, consulta e-mails e portas associadas ao domínio
 
 **Vazamento de Senhas e Dados - Leaks - Threat Intelligence**
 * **https://www.ransomlook.io/recent** - Melhor site que está centralizando notícias de vários grupos e empresas afetadas.
@@ -60,14 +55,12 @@ date: 2024-07-17 00:00:00
 * http://pwndb2am4tzkvold.onion/ | Consulta à base de vazamentos
 * http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion/ | Consulta à base de vazamentos (DeepSearch)
 * http://ransomwr3tsydeii4q43vazm7wofla5ujdajquitomtd47cxjtfgwyyd.onion/| Ransomware Group Sites 
-* https://breached.vc/ | Antigo raidforums.com desativado - Forum com exposição de vazamentos 
 
 **OSINT**
 * https://search.censys.io/ | Scan de IPs e portas
 * https://www.shodan.io/ | Scan de IPs e portas
 * https://wigle.net/ | Mapeamento mundial de redes wifi
 * https://osintframework.com/ | Grande indexador de ferramentas e OSINT's para reconhecimento e pentest
-* https://gf.dev/whois-hosting | Descobrir caminhos de IPs de um site
 * https://github.com/sherlock-project/sherlock | Busca de usuário em várias redes sociais públicas
 * https://start.me/p/BnBb5v/jornadas-osint | Reune vários links OSINTs, buscadores de nicks, de imagens, de pessoas, etc
 * https://www.osintessentials.com/
@@ -102,10 +95,10 @@ date: 2024-07-17 00:00:00
 * https://nmap.org/
 * https://docs.microsoft.com/en-us/sysinternals/ | Canivete suiço de ferramentas de análise de ambiente
 * https://github.com/globocom/huskyCI | Ferramenta feito pela Globo. Orquestrador de análise de código de repositório para rodar junto com um CI
-* https://github.com/Genymobile/scrcpy | Solução para transmitir a tela do celular para o computador
 * https://www.postman.com/ | Monta requisições Http sob demanda
 * https://dbeaver.io/ | Conector com banco de dados universal
 * https://github.com/Abdulrahman-Kamel/tokenScanner | Token Scanner - Passa um token para o scanner e ele identifica que tipo de token é de forma simples, informa do que se possivelmente trata o token e já passa uma url de como fazer o exploit e testar
+* https://github.com/joke2k/faker | Faker is a Python package that generates fake data for you. Whether you need to bootstrap your database, create good-looking XML documents, fill-in your persistence to stress test it, or anonymize data taken from a production service, Faker is for you.
 
 **Pentest & Recon**
 * https://www.kali.org/tools/sublist3r/ / https://github.com/aboul3la/Sublist3r | Procura por subdomínios. Exemplo ```sublist3r -d kali.org```
@@ -169,7 +162,6 @@ wafw00f -a 'https://enderecosistemas.com.br'
 
 **Mobile**
 * https://github.com/Genymobile/scrcpy | Solução para transmitir a tela do celular para o computador
-* Santoku | Distro focada em forense para mobile - https://santoku-linux.com/about-santoku/
 * **https://www.youtube.com/watch?v=hFSuMySq2dA&ab_channel=HackingnaWeb | Como interceptar tráfego de app android, fazendo repack tranpondo seguraça compilação com certificado.**
 
 **Listas**
@@ -191,20 +183,16 @@ ls -lh /usr/share/seclists/
 
 **Sobre API keys**
 * https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks
-* https://community.turgensec.com/finding-hidden-api-keys-how-to-use-them/
 
-**Sobre AWS**
-* Buckets: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/AWS%20Amazon%20Bucket%20S3
-* Security Check: https://awscheck.fyi/
+**Sobre AWS & Buckets**
+* https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Cloud%20-%20AWS%20Pentest.md
 
 **Criptografia, Hash databases e crackers**
 * https://hashdecryption.com/
 * https://emn178.github.io/online-tools/
-* https://hashtoolkit.com/
 * https://www.perturb.org/content/hashes/
 * https://md5hashing.net/
 * https://sha1.gromweb.com/
-* https://www.boxentriq.com/code-breaking/cipher-identifier/ | Analisador de possível tipo de cifra utilizado
 * https://www.openwall.com/john/ | John the Ripper password cracker
 * https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm | Base para download
 
@@ -223,6 +211,8 @@ ls -lh /usr/share/seclists/
 * https://cve.circl.lu/ | CVE Search database
 
 **Verificação de DNS**
+* https://dnsdumpster.com/ | Ferramenta web gratuita para enumeração de subdomínios via consulta DNS e outras técnicas.
+* https://github.com/owasp-amass/amass/blob/master/doc/user_guide.md | Enumeração de domínios poderoso
 * https://toolbox.googleapps.com/apps/dig/
 * https://dnslytics.com/
 
@@ -267,7 +257,7 @@ ls -lh /usr/share/seclists/
 * https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CSP
 
 **Lax vs Strict**
-https://blog.benpri.me/blog/2019/05/13/samesite-cookies-in-practice/
+* https://blog.benpri.me/blog/2019/05/13/samesite-cookies-in-practice/
 
 **CTF - Security Games & Learning**
 * https://tryhackme.com/room/ohsint
@@ -314,10 +304,6 @@ https://rules.sonarsource.com/csharp
 - https://history.paypal.com/cgi-bin/webscr/attack.css?cmd=_history-details
 ```
 
-**Services**
-* https://www.kvstore.io/ | *a simple key/value API based storage service*
-* https://nordvpn.com/ | VPN para comunicação segura - Pago
-
 **.Net**
 * https://github.com/pwntester/ysoserial.net | Exploit unsafe .NET object deserialization
 
@@ -330,18 +316,15 @@ https://rules.sonarsource.com/csharp
 * https://github.com/juliocesarfort/public-pentesting-reports
 * https://github.com/hmaverickadams/TCM-Security-Sample-Pentest-Report/tree/master
 
-**Eventos**
-* https://bekk.christmas/
-* https://tryhackme.com/room/25daysofchristmas
-
 **Eventos/Conferências Brasileiras de SI**
+* **https://github.com/IncursioHack/Eventos-Infosec-Brasil**
 * https://www.h2hc.com.br/
-* **https://bhack.com.br**
+* https://bhack.com.br
 * https://www.ysts.org/
 * https://www.roadsec.com.br/
 * https://www.mindthesec.com.br/
 * https://www.cybersecuritysummit.com.br/
-* **https://nullbyte-con.org/**
+* https://nullbyte-con.org/
 * https://speakfy.io/ | Site que concentra eventos de SI:
 
 
@@ -357,9 +340,9 @@ https://rules.sonarsource.com/csharp
 * https://phishingquiz.withgoogle.com/ | Quiz do Google
 * https://github.com/mrd0x/BITB | Browser inside a Browser - https://mrd0x.com/browser-in-the-browser-phishing-attack/
 * https://getgophish.com/ | Gerenciamento de campanhas de phishing
-* https://github.com/thewhiteh4t/seeker | Criação de phishing que colate localização de GPS precisas
+* https://github.com/thewhiteh4t/seeker | Criação de phishing que coleta localização de GPS precisas
 
-**IA geradore de perfis que não existem**
+**IA gerador de perfis que não existem**
 * https://thispersondoesnotexist.com/
 
 **Critérios de segurança no código**
@@ -388,9 +371,6 @@ https://www.bekk.christmas/post/2021/14/segment-your-home-network-today
 
 **Bugbounty Tips**
 https://github.com/KingOfBugbounty/KingOfBugBountyTips
-
-**Verificação de assinaturas de arquivos**
-https://www.garykessler.net/library/file_sigs.html
 
 **Analisando mensagens HTTP com Burp Suite e FoxyProxy**
 https://luan-cf-bnu.medium.com/analisando-mensagens-http-com-burp-suite-e-foxyproxy-9fb0a32d6fa4
