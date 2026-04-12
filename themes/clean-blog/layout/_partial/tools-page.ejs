@@ -1,0 +1,347 @@
+<header class="intro-header" style="background-image: url('<%- theme.index_cover %>')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1><%- page.title %></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container tools-page">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+
+            <!-- Search, view toggle, and filter bar -->
+            <div class="tools-controls">
+                <div class="tools-controls-top">
+                    <input type="text" id="tools-search" class="tools-search-input" placeholder="Buscar ferramentas..." />
+                    <div class="tools-view-toggle" id="tools-view-toggle">
+                        <button class="tools-view-btn active" data-view="cards" title="Cards">
+                            <i class="fa fa-th-large"></i>
+                        </button>
+                        <button class="tools-view-btn" data-view="list" title="Lista">
+                            <i class="fa fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="tools-categories-filter" id="tools-categories-filter">
+                    <button class="tools-filter-btn active" data-category="all">Todas</button>
+                </div>
+            </div>
+
+            <div class="tools-count" id="tools-count"></div>
+
+            <!-- Tools content area -->
+            <div id="tools-grid" class="tools-grid"></div>
+            <div id="tools-list" class="tools-list" style="display:none;"></div>
+
+            <div class="tools-empty" id="tools-empty" style="display:none;">
+                Nenhuma ferramenta encontrada.
+            </div>
+        </div>
+    </div>
+</div>
+
+<%
+// Parse the markdown content to extract tools data
+var rawContent = page.raw || '';
+var lines = rawContent.split('\n');
+var categories = [];
+var currentCategory = null;
+var currentItem = null;
+
+for (var i = 0; i < lines.length; i++) {
+    var line = lines[i];
+
+    // Category header (## Title)
+    var catMatch = line.match(/^##\s+(.+)/);
+    if (catMatch) {
+        currentCategory = { name: catMatch[1].trim(), items: [] };
+        categories.push(currentCategory);
+        currentItem = null;
+        continue;
+    }
+
+    if (!currentCategory) continue;
+
+    // Tool entry lines
+    var nameMatch = line.match(/^-\s+name:\s+(.+)/);
+    if (nameMatch) {
+        currentItem = { name: nameMatch[1].trim(), url: '', description: '', type: 'tool', notes: '' };
+        currentCategory.items.push(currentItem);
+        continue;
+    }
+
+    if (!currentItem) continue;
+
+    var urlMatch = line.match(/^\s+url:\s+(.+)/);
+    if (urlMatch) {
+        currentItem.url = urlMatch[1].trim();
+        continue;
+    }
+
+    var typeMatch = line.match(/^\s+type:\s+(.+)/);
+    if (typeMatch) {
+        currentItem.type = typeMatch[1].trim();
+        continue;
+    }
+
+    var descMatch = line.match(/^\s+description:\s+(.+)/);
+    if (descMatch) {
+        currentItem.description = descMatch[1].trim();
+        continue;
+    }
+
+    var notesMatch = line.match(/^\s+notes:\s+"(.*)"/);
+    if (notesMatch) {
+        currentItem.notes = notesMatch[1].replace(/\\n/g, '\n');
+        continue;
+    }
+    var notesSingle = line.match(/^\s+notes:\s+(.+)/);
+    if (notesSingle) {
+        currentItem.notes = notesSingle[1].trim();
+        continue;
+    }
+}
+%>
+
+<script>
+(function() {
+    var toolsData = <%- JSON.stringify(categories) %>;
+
+    var grid = document.getElementById('tools-grid');
+    var listEl = document.getElementById('tools-list');
+    var searchInput = document.getElementById('tools-search');
+    var filterContainer = document.getElementById('tools-categories-filter');
+    var viewToggle = document.getElementById('tools-view-toggle');
+    var emptyMsg = document.getElementById('tools-empty');
+    var countEl = document.getElementById('tools-count');
+    var activeCategory = 'all';
+    var currentView = 'cards';
+
+    // Build category filter buttons
+    toolsData.forEach(function(cat) {
+        var btn = document.createElement('button');
+        btn.className = 'tools-filter-btn';
+        btn.setAttribute('data-category', cat.name);
+        btn.textContent = cat.name;
+        filterContainer.appendChild(btn);
+    });
+
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    function linkifyText(text) {
+        return escapeHtml(text).replace(
+            /(https?:\/\/[^\s<]+)/g,
+            '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+        );
+    }
+
+    function getFilteredData() {
+        var query = searchInput.value.toLowerCase().trim();
+        var result = [];
+        toolsData.forEach(function(cat) {
+            if (activeCategory !== 'all' && cat.name !== activeCategory) return;
+            var filteredItems = cat.items.filter(function(item) {
+                if (!query) return true;
+                return item.name.toLowerCase().indexOf(query) !== -1 ||
+                       item.description.toLowerCase().indexOf(query) !== -1 ||
+                       cat.name.toLowerCase().indexOf(query) !== -1 ||
+                       (item.notes && item.notes.toLowerCase().indexOf(query) !== -1);
+            });
+            if (filteredItems.length > 0) {
+                result.push({ name: cat.name, items: filteredItems });
+            }
+        });
+        return result;
+    }
+
+    function renderCards() {
+        var filtered = getFilteredData();
+        grid.innerHTML = '';
+        var totalVisible = 0;
+
+        filtered.forEach(function(cat) {
+            var section = document.createElement('div');
+            section.className = 'tools-section';
+
+            var heading = document.createElement('h2');
+            heading.className = 'tools-section-title';
+            heading.textContent = cat.name;
+
+            var badge = document.createElement('span');
+            badge.className = 'tools-section-count';
+            badge.textContent = cat.items.length;
+            heading.appendChild(badge);
+            section.appendChild(heading);
+
+            var cardsContainer = document.createElement('div');
+            cardsContainer.className = 'tools-cards';
+
+            cat.items.forEach(function(item) {
+                var card = document.createElement('div');
+                var isInfo = item.type === 'info';
+                card.className = 'tools-card' + (isInfo ? ' tools-card--info' : '');
+
+                // Card top: clickable link area
+                var link = document.createElement('a');
+                link.className = 'tools-card-link';
+                link.href = item.url && item.url !== '#' ? item.url : 'javascript:void(0)';
+                if (item.url && item.url !== '#') {
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                }
+
+                var cardHeader = document.createElement('div');
+                cardHeader.className = 'tools-card-header';
+
+                if (isInfo) {
+                    var infoTag = document.createElement('span');
+                    infoTag.className = 'tools-card-tag tools-card-tag--info';
+                    infoTag.textContent = 'info';
+                    cardHeader.appendChild(infoTag);
+                }
+
+                var cardName = document.createElement('div');
+                cardName.className = 'tools-card-name';
+                cardName.textContent = item.name;
+                cardHeader.appendChild(cardName);
+
+                if (item.url && item.url !== '#') {
+                    var extIcon = document.createElement('span');
+                    extIcon.className = 'tools-card-external';
+                    extIcon.innerHTML = '<i class="fa fa-external-link"></i>';
+                    cardHeader.appendChild(extIcon);
+                }
+
+                link.appendChild(cardHeader);
+
+                var cardDesc = document.createElement('div');
+                cardDesc.className = 'tools-card-desc';
+                cardDesc.textContent = item.description;
+                link.appendChild(cardDesc);
+
+                card.appendChild(link);
+
+                // Notes toggle
+                if (item.notes) {
+                    var notesToggle = document.createElement('button');
+                    notesToggle.className = 'tools-card-notes-toggle';
+                    notesToggle.innerHTML = '<i class="fa fa-comment-o"></i> Notas';
+                    notesToggle.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        var notesEl = this.nextElementSibling;
+                        var isVisible = notesEl.style.display !== 'none';
+                        notesEl.style.display = isVisible ? 'none' : 'block';
+                        this.classList.toggle('active', !isVisible);
+                    });
+                    card.appendChild(notesToggle);
+
+                    var notesContent = document.createElement('div');
+                    notesContent.className = 'tools-card-notes';
+                    notesContent.style.display = 'none';
+                    notesContent.innerHTML = '<pre>' + linkifyText(item.notes) + '</pre>';
+                    card.appendChild(notesContent);
+                }
+
+                cardsContainer.appendChild(card);
+            });
+
+            section.appendChild(cardsContainer);
+            grid.appendChild(section);
+            totalVisible += cat.items.length;
+        });
+
+        emptyMsg.style.display = totalVisible === 0 ? 'block' : 'none';
+        countEl.textContent = totalVisible + (totalVisible === 1 ? ' ferramenta' : ' ferramentas');
+    }
+
+    function renderList() {
+        var filtered = getFilteredData();
+        var totalVisible = 0;
+        var html = '';
+
+        filtered.forEach(function(cat) {
+            html += '<h2>' + escapeHtml(cat.name) + '</h2>\n';
+            cat.items.forEach(function(item) {
+                var isInfo = item.type === 'info';
+                var tag = isInfo ? ' <span class="tools-list-tag">[info]</span>' : '';
+                if (item.url && item.url !== '#') {
+                    html += '<p><strong><a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.name) + '</a></strong>' + tag + '<br>';
+                } else {
+                    html += '<p><strong>' + escapeHtml(item.name) + '</strong>' + tag + '<br>';
+                }
+                html += escapeHtml(item.description);
+                if (item.notes) {
+                    html += '<br><em class="tools-list-notes">' + linkifyText(item.notes).replace(/\n/g, '<br>') + '</em>';
+                }
+                html += '</p>\n';
+            });
+            totalVisible += cat.items.length;
+        });
+
+        listEl.innerHTML = html;
+        emptyMsg.style.display = totalVisible === 0 ? 'block' : 'none';
+        countEl.textContent = totalVisible + (totalVisible === 1 ? ' ferramenta' : ' ferramentas');
+    }
+
+    function render() {
+        if (currentView === 'cards') {
+            grid.style.display = '';
+            listEl.style.display = 'none';
+            renderCards();
+        } else {
+            grid.style.display = 'none';
+            listEl.style.display = '';
+            renderList();
+        }
+    }
+
+    // Event: search
+    searchInput.addEventListener('input', function() {
+        render();
+    });
+
+    // Event: ESC clears search
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            this.value = '';
+            render();
+        }
+    });
+
+    // Event: category filter
+    filterContainer.addEventListener('click', function(e) {
+        var btn = e.target;
+        if (!btn.classList.contains('tools-filter-btn')) return;
+        filterContainer.querySelectorAll('.tools-filter-btn').forEach(function(b) {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+        activeCategory = btn.getAttribute('data-category');
+        render();
+    });
+
+    // Event: view toggle
+    viewToggle.addEventListener('click', function(e) {
+        var btn = e.target.closest('.tools-view-btn');
+        if (!btn) return;
+        viewToggle.querySelectorAll('.tools-view-btn').forEach(function(b) {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+        currentView = btn.getAttribute('data-view');
+        render();
+    });
+
+    // Initial render
+    render();
+})();
+</script>

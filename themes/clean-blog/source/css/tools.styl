@@ -1,0 +1,279 @@
+@import "variables.styl"
+
+.tools-page
+  margin-bottom 60px
+
+.tools-controls
+  margin-bottom 20px
+
+.tools-controls-top
+  display flex
+  gap 10px
+  align-items center
+
+.tools-search-input
+  flex 1
+  padding 12px 16px
+  font-size 16px
+  border 2px solid color-border
+  border-radius 6px
+  outline none
+  transition border-color 0.2s
+  &:focus
+    border-color brand-primary
+
+.tools-view-toggle
+  display flex
+  border 1px solid color-border
+  border-radius 6px
+  overflow hidden
+  flex-shrink 0
+
+.tools-view-btn
+  padding 10px 14px
+  background white
+  border none
+  color gray
+  cursor pointer
+  font-size 16px
+  transition all 0.2s
+  &:hover
+    color brand-primary
+  &.active
+    background brand-primary
+    color white
+
+.tools-categories-filter
+  margin-top 14px
+  display flex
+  flex-wrap wrap
+  gap 8px
+
+.tools-filter-btn
+  padding 6px 14px
+  font-size 13px
+  font-weight 600
+  text-transform uppercase
+  letter-spacing 0.5px
+  border 1px solid color-border
+  border-radius 20px
+  background white
+  color gray-dark
+  cursor pointer
+  transition all 0.2s
+  &:hover
+    border-color brand-primary
+    color brand-primary
+  &.active
+    background brand-primary
+    border-color brand-primary
+    color white
+
+.tools-count
+  font-size 14px
+  color gray
+  margin-bottom 20px
+
+// --- Card view ---
+
+.tools-section
+  margin-bottom 40px
+
+.tools-section-title
+  font-size 24px
+  font-weight 700
+  margin-bottom 16px
+  padding-bottom 8px
+  border-bottom 2px solid brand-primary
+  color gray-dark
+
+.tools-section-count
+  display inline-block
+  font-size 13px
+  font-weight 600
+  background brand-primary
+  color white
+  border-radius 50%
+  width 26px
+  height 26px
+  line-height 26px
+  text-align center
+  margin-left 8px
+  vertical-align middle
+
+.tools-cards
+  display grid
+  grid-template-columns repeat(auto-fill, minmax(280px, 1fr))
+  gap 16px
+
+.tools-card
+  display flex
+  flex-direction column
+  background white
+  border 1px solid color-border
+  border-radius 8px
+  transition all 0.2s
+  overflow hidden
+  &:hover
+    border-color brand-primary
+    box-shadow 0 4px 12px rgba(0, 0, 0, 0.08)
+    transform translateY(-2px)
+
+.tools-card--info
+  border-left 3px solid #f0ad4e
+
+.tools-card-link
+  display block
+  position relative
+  padding 16px 40px 16px 16px
+  text-decoration none !important
+  color gray-dark
+  flex 1
+  &:hover, &:focus
+    color gray-dark
+    text-decoration none
+
+.tools-card-header
+  display flex
+  align-items center
+  gap 6px
+  margin-bottom 6px
+
+.tools-card-name
+  font-size 16px
+  font-weight 700
+  flex 1
+
+.tools-card-tag
+  font-size 10px
+  font-weight 700
+  text-transform uppercase
+  padding 2px 6px
+  border-radius 3px
+  flex-shrink 0
+
+.tools-card-tag--info
+  background #fcf8e3
+  color #8a6d3b
+  border 1px solid #f0ad4e
+
+.tools-card-desc
+  font-size 14px
+  line-height 1.4
+  color gray
+
+.tools-card-external
+  position absolute
+  top 14px
+  right 14px
+  color color-meta
+  font-size 12px
+
+.tools-card-notes-toggle
+  display block
+  width 100%
+  padding 8px 16px
+  background #f8f8f8
+  border none
+  border-top 1px solid color-border
+  color color-meta
+  font-size 13px
+  cursor pointer
+  text-align left
+  transition all 0.2s
+  &:hover
+    background #f0f0f0
+    color gray-dark
+  &.active
+    color brand-primary
+  i
+    margin-right 4px
+
+.tools-card-notes
+  padding 10px 16px
+  background #fafafa
+  border-top 1px solid color-border
+  pre
+    margin 0
+    padding 0
+    font-family font-mono
+    font-size 13px
+    line-height 1.5
+    white-space pre-wrap
+    word-wrap break-word
+    background transparent
+    border none
+    color gray-dark
+    a
+      color brand-primary
+      text-decoration underline
+
+// --- List view ---
+
+.tools-list
+  h2
+    font-size 22px
+    font-weight 700
+    margin-top 30px
+    margin-bottom 12px
+    padding-bottom 6px
+    border-bottom 2px solid brand-primary
+    color gray-dark
+  p
+    margin 0 0 12px
+    padding 10px 14px
+    background white
+    border 1px solid color-border
+    border-radius 6px
+    font-size 14px
+    line-height 1.5
+    a
+      color brand-primary
+      text-decoration underline
+      font-weight 700
+    strong
+      font-size 15px
+
+.tools-list-tag
+  font-size 11px
+  font-weight 600
+  color #8a6d3b
+  background #fcf8e3
+  padding 1px 5px
+  border-radius 3px
+  margin-left 6px
+
+.tools-list-notes
+  display block
+  margin-top 6px
+  padding 6px 10px
+  background #f8f8f8
+  border-left 3px solid brand-primary
+  font-style normal
+  font-size 13px
+  color gray-dark
+  a
+    color brand-primary
+
+// --- Empty ---
+
+.tools-empty
+  text-align center
+  font-size 18px
+  color gray
+  padding 60px 0
+
+// --- Responsive ---
+
+@media only screen and (max-width: 768px)
+  .tools-cards
+    grid-template-columns 1fr
+  .tools-categories-filter
+    gap 6px
+  .tools-filter-btn
+    font-size 11px
+    padding 5px 10px
+  .tools-controls-top
+    flex-wrap wrap
+  .tools-search-input
+    min-width 0

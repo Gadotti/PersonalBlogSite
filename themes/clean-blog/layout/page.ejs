@@ -3,6 +3,7 @@
     var title = '';
     var isTagIndex = page.type === 'tags' || page.type === 'tag';
     var isCategoryIndex = page.type === 'categories' || page.type === 'category';
+    var isToolsPage = page.type === 'tools';
     if (isTagIndex) {
         items = site.tags;
         title = __('tags');
@@ -12,7 +13,9 @@
     }
 %>
 
-<% if (isTagIndex || isCategoryIndex) { %>
+<% if (isToolsPage) { %>
+    <%- partial('_partial/tools-page') %>
+<% } else if (isTagIndex || isCategoryIndex) { %>
     <header class="intro-header" style="background-image: url('<%- theme.index_cover %>')">
         <div class="container">
             <div class="row">

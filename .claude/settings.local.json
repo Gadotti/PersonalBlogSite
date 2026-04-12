@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npx hexo:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:4000/tools/)",
+      "Bash(curl -s http://localhost:4000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/about/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/tags/)",
+      "Bash(curl -s http://localhost:4000/css/tools.css)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/tools/)"
+    ]
+  }
+}
