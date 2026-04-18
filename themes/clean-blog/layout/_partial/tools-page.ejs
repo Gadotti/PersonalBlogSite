@@ -321,11 +321,20 @@ for (var i = 0; i < lines.length; i++) {
     filterContainer.addEventListener('click', function(e) {
         var btn = e.target;
         if (!btn.classList.contains('tools-filter-btn')) return;
-        filterContainer.querySelectorAll('.tools-filter-btn').forEach(function(b) {
-            b.classList.remove('active');
-        });
-        btn.classList.add('active');
-        activeCategory = btn.getAttribute('data-category');
+        var clicked = btn.getAttribute('data-category');
+        if (clicked !== 'all' && clicked === activeCategory) {
+            // Deselect current category → back to "Todas"
+            activeCategory = 'all';
+            filterContainer.querySelectorAll('.tools-filter-btn').forEach(function(b) {
+                b.classList.toggle('active', b.getAttribute('data-category') === 'all');
+            });
+        } else {
+            filterContainer.querySelectorAll('.tools-filter-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+            activeCategory = clicked;
+        }
         render();
     });
 
