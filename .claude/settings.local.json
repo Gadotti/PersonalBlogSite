@@ -11,12 +11,7 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/tags/)",
       "Bash(curl -s http://localhost:4000/css/tools.css)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/tools/)",
-      "Bash(node -e \"const s = require\\('e:/Eduardo/Sistemas/PersonalBlogSite/node_modules/stylus'\\); console.log\\(s.version || require\\('e:/Eduardo/Sistemas/PersonalBlogSite/node_modules/stylus/package.json'\\).version\\)\")",
-      "Bash(npm show *)",
-      "Bash(node -e \"const v=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const arr=JSON.parse\\(v\\); console.log\\('latest versions:', arr.slice\\(-5\\).join\\(', '\\)\\)\")",
-      "Bash(npm install *)",
-      "Bash(node -e \"require\\('e:/Eduardo/Sistemas/PersonalBlogSite/node_modules/stylus'\\)\")",
-      "Bash(node -e \"console.log\\(require\\('e:/Eduardo/Sistemas/PersonalBlogSite/node_modules/stylus/package.json'\\).version\\)\")"
+      "Bash(npm show *)"
     ]
   }
 }
