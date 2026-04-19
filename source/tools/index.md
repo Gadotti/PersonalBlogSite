@@ -562,6 +562,12 @@ type: tools
 - name: Bitwarden
   url: https://bitwarden.com/
   description: Cofre de senhas open source e seguro.
+- name: Crontab Guru
+  url: https://crontab.guru/
+  description: The quick and simple editor for cron schedule expressions
+- name: Cronitor
+  url: https://github.com/cronitorio/cronitor-cli
+  description: Painel para gerenciamento facilitador de crons no Linux
 
 
 ## Mobile
