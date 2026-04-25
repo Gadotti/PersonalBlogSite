@@ -1,7 +1,7 @@
 ---
 title: "IA everywhere: Teorias, aprendizados e vibe-coding"
 date: 2026-04-05 14:37:14
-tags:
+tags: ["ia"]
 ---
 
 ## Introdução
