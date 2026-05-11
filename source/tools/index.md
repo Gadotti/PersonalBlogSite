@@ -4,7 +4,7 @@ date: 2026-04-11 00:00:00
 type: tools
 ---
 
-## Blogs
+## Notícias & Comunidade
 - name: SecNHack
   url: https://secnhack.in/
   type: info
@@ -61,8 +61,6 @@ type: tools
   url: https://securityonline.info/
   type: info
   description: Notícias e ferramentas de segurança.
-
-## Youtubers
 - name: LiveOverflowCTF
   url: https://youtube.com/LiveOverflowCTF
   type: info
@@ -83,8 +81,6 @@ type: tools
   url: https://youtube.com/c/GabrielPato/
   type: info
   description: Canal brasileiro sobre hacking e segurança.
-
-## Github Profiles
 - name: carlospolop
   url: https://github.com/carlospolop
   type: info
@@ -101,8 +97,40 @@ type: tools
   url: https://github.com/VitorOriel
   type: info
   description: Perfil com projetos de segurança.
+- name: Eventos InfoSec Brasil
+  url: https://github.com/IncursioHack/Eventos-Infosec-Brasil
+  type: info
+  description: Lista de eventos de InfoSec no Brasil.
+- name: BHack
+  url: https://bhack.com.br
+  type: info
+  description: Conferência de segurança em Belo Horizonte.
+- name: YSTS
+  url: https://www.ysts.org/
+  type: info
+  description: You Sh0t The Sheriff - conferência de segurança.
+- name: Roadsec
+  url: https://www.roadsec.com.br/
+  type: info
+  description: Evento itinerante de hacking e segurança do Brasil.
+- name: Mind The Sec
+  url: https://www.mindthesec.com.br/
+  type: info
+  description: Conferência de segurança da informação corporativa.
+- name: Cyber Security Summit
+  url: https://www.cybersecuritysummit.com.br/
+  type: info
+  description: Summit de cibersegurança.
+- name: NullByte Con
+  url: https://nullbyte-con.org/
+  type: info
+  description: Conferência de segurança.
+- name: Speakfy
+  url: https://speakfy.io/
+  type: info
+  description: Site que concentra eventos de Segurança da Informação.
 
-## VMs & Distros
+## Ambientes & Laboratórios
 - name: Kali Linux
   url: https://www.kali.org/
   description: Distribuição Linux para pentesting e segurança ofensiva.
@@ -122,25 +150,23 @@ type: tools
 - name: VulnMachines
   url: https://www.vulnmachines.com/
   description: VMs com CVEs exploráveis para prática de pentesting.
+- name: Hack The Box
+  url: https://www.hackthebox.com/
+  description: Em ambiente controle para invadir ambientes a partir do reconhecimento e exploração de vulnerabilidades
+- name: TryHackMe OSINT
+  url: https://tryhackme.com/room/ohsint
+  description: Room de OSINT no TryHackMe.
+- name: XSS Game
+  url: https://xss-game.appspot.com
+  description: Jogo para praticar ataques XSS.
+- name: OverTheWire Natas
+  url: https://overthewire.org/wargames/natas/natas0.html
+  description: Wargame de web hacking.
+- name: OverTheWire Bandit
+  url: https://overthewire.org/wargames/bandit/bandit0.html
+  description: Wargame de hacking em ambiente Linux/SSH.
 
-## Web Scanners
-- name: SSL Labs
-  url: https://www.ssllabs.com/ssltest/
-  description: Diversas verificações de segurança para sistemas Web e certificados SSL/TLS.
-- name: HSTS Preload
-  url: https://hstspreload.org/
-  description: Teste para HSTS simples e direto.
-- name: Mozilla Observatory
-  url: https://observatory.mozilla.org/
-  description: Diversas verificações de segurança para sistemas Web pela Mozilla.
-- name: Security Headers
-  url: https://securityheaders.com/
-  description: Verificações focadas em HTTP Headers necessários para segurança.
-- name: Public Firing Range
-  url: http://public-firing-range.appspot.com/
-  description: Aplicação para validação e teste de web scanners.
-
-## OSINT
+## OSINT & Reconhecimento
 - name: Wigle
   url: https://wigle.net/
   description: Mapeamento mundial de redes Wi-Fi.
@@ -162,28 +188,20 @@ type: tools
 - name: GeoEstimation
   url: https://labs.tib.eu/geoestimation/
   description: Estimativa de localização a partir de imagens usando IA.
+- name: DNSDumpster
+  url: https://dnsdumpster.com/
+  description: Enumeração de subdomínios via consulta DNS gratuita.
+- name: Amass
+  url: https://github.com/owasp-amass/amass/blob/master/doc/user_guide.md
+  description: Enumeração de domínios e subdomínios poderoso da OWASP.
+- name: Google Dig
+  url: https://toolbox.googleapps.com/apps/dig/
+  description: Ferramenta de consulta DNS do Google.
+- name: DNSlytics
+  url: https://dnslytics.com/
+  description: Análise de DNS, IPs e domínios.
 
-## Vazamento de Dados & Threat Intelligence
-- name: Ransomlook
-  url: https://www.ransomlook.io/recent
-  description: Centraliza notícias de vários grupos ransomware e empresas afetadas.
-- name: Have I Been Pwned
-  url: https://haveibeenpwned.com/
-  description: Verificação de vazamento de senhas e e-mails.
-- name: IntelX
-  url: https://intelx.io/
-  description: Consulta à base de dados de vazamentos e inteligência.
-- name: PwnDB
-  url: http://pwndb2am4tzkvold.onion/
-  description: Consulta à base de vazamentos (acesso via Tor).
-- name: DeepSearch
-  url: http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion/
-  description: Consulta à base de vazamentos (acesso via Tor).
-- name: Ransomware Group Sites
-  url: http://ransomwr3tsydeii4q43vazm7wofla5ujdajquitomtd47cxjtfgwyyd.onion/
-  description: Listagem de sites de grupos de ransomware (acesso via Tor).
-
-## Pentest & Recon
+## Pentest & Scanning
 - name: Nmap
   url: https://nmap.org/
   description: Scanner de rede e auditoria de segurança.
@@ -231,8 +249,6 @@ type: tools
 - name: psudohash
   url: https://github.com/t3l3machus/psudohash
   description: Gerador de lista de senhas para orquestrar ataques de força bruta, baseado em uma string inicial.
-
-## Pentest DAST
 - name: OWASP ZAP
   url: https://www.zaproxy.org/
   description: Proxy e scanner de segurança web open source da OWASP.
@@ -244,76 +260,21 @@ type: tools
   url: https://owasp.org/www-community/Vulnerability_Scanning_Tools
   type: info
   description: Lista de várias ferramentas pagas e free para scanning de vulnerabilidades.
-
-## Analisadores de Tráfego
-- name: Burp Suite
-  url: https://portswigger.net/burp/
-  description: Plataforma completa para testes de segurança em aplicações web.
-- name: Charles Proxy
-  url: https://www.charlesproxy.com/
-  description: Proxy HTTP para debug e monitoramento de tráfego.
-- name: Fiddler
-  url: https://www.telerik.com/fiddler
-  description: Proxy de debug para tráfego HTTP/HTTPS.
-- name: Wireshark
-  url: https://www.wireshark.org/
-  description: Analisador de protocolo de rede mais utilizado no mundo.
-
-## Web Tools
-- name: CyberChef
-  url: https://gchq.github.io/CyberChef/
-  description: Canivete suíço para encoding, decoding, hashing e diversas operações de dados.
-- name: Beautifier
-  url: https://beautifier.io/
-  description: Transforma JavaScript minificado para código legível.
-- name: Reverse Shell Generator
-  url: https://www.100security.com.br/rsg
-  description: Gerador de reverse shell para diversas linguagens.
-- name: Report URI Tools
-  url: https://report-uri.com/home/tools
-  description: CSP Analyse, CSP Builder, SRI Hash, Header Analyser e mais.
-- name: Grabify
-  url: https://grabify.link/
-  description: Encurtador de links com IP logger.
-- name: Wayback Machine
-  url: https://archive.org/web/
-  description: Histórico de snapshots de páginas da web.
-- name: Process Library
-  url: https://www.processlibrary.com/en/
-  description: Busca de DLLs e processos do Windows.
-- name: Can I Use
-  url: https://caniuse.com/
-  description: Verificação de compatibilidade de features entre browsers.
-- name: BGP Check
-  url: https://bgp.he.net
-  description: Verificação de rotas e informações BGP.
-
-## Utilitários
-- name: BeEF
-  url: https://beefproject.com/
-  description: Browser Exploitation Framework para testes de segurança client-side.
-- name: Sysinternals
-  url: https://docs.microsoft.com/en-us/sysinternals/
-  description: Canivete suíço de ferramentas de análise de ambiente Windows.
-- name: Token Scanner
-  url: https://github.com/Abdulrahman-Kamel/tokenScanner
-  description: Identifica tipo de token, informa do que se trata e sugere exploits.
-  notes: Passa um token para o scanner e ele identifica que tipo de token é de forma simples, informa do que se possivelmente trata o token e já passa uma url de como fazer o exploit e testar.
-- name: Faker
-  url: https://github.com/joke2k/faker
-  description: Gerador de dados fictícios para testes e anonimização.
-- name: HuskyCI
-  url: https://github.com/globocom/huskyCI
-  description: Orquestrador de análise de código de repositório para rodar junto com CI.
-  notes: Ferramenta feita pela Globo.
-- name: Postman
-  url: https://www.postman.com/
-  description: Monta requisições HTTP sob demanda para testes de API.
-- name: DBeaver
-  url: https://dbeaver.io/
-  description: Conector com banco de dados universal.
-
-## Fuzzing
+- name: SSL Labs
+  url: https://www.ssllabs.com/ssltest/
+  description: Diversas verificações de segurança para sistemas Web e certificados SSL/TLS.
+- name: HSTS Preload
+  url: https://hstspreload.org/
+  description: Teste para HSTS simples e direto.
+- name: Mozilla Observatory
+  url: https://observatory.mozilla.org/
+  description: Diversas verificações de segurança para sistemas Web pela Mozilla.
+- name: Security Headers
+  url: https://securityheaders.com/
+  description: Verificações focadas em HTTP Headers necessários para segurança.
+- name: Public Firing Range
+  url: http://public-firing-range.appspot.com/
+  description: Aplicação para validação e teste de web scanners.
 - name: Wfuzz
   url: https://github.com/xmendez/wfuzz
   description: Fuzzer para enumeração de subdiretórios e parâmetros baseado em wordlists.
@@ -327,7 +288,62 @@ type: tools
   description: Enumeração recursiva de diretórios similar ao gobuster.
   notes: "Instalação e uso:\nsudo apt install -y feroxbuster\nferoxbuster -u https://some-example-site.com"
 
-## Steganography
+## Análise de Tráfego & Proxies
+- name: Burp Suite
+  url: https://portswigger.net/burp/
+  description: Plataforma completa para testes de segurança em aplicações web.
+- name: Charles Proxy
+  url: https://www.charlesproxy.com/
+  description: Proxy HTTP para debug e monitoramento de tráfego.
+- name: Fiddler
+  url: https://www.telerik.com/fiddler
+  description: Proxy de debug para tráfego HTTP/HTTPS.
+- name: Wireshark
+  url: https://www.wireshark.org/
+  description: Analisador de protocolo de rede mais utilizado no mundo.
+- name: DotGit
+  url: #
+  description: Detecta repositórios .git expostos em websites.
+- name: Wappalyzer
+  url: #
+  description: Identifica tecnologias utilizadas em websites.
+- name: KeyFinder
+  url: #
+  description: Busca por chaves e segredos expostos em páginas web.
+- name: HTTP Header Live
+  url: #
+  description: Visualiza headers HTTP em tempo real.
+- name: SingleFile
+  url: #
+  description: Salva um site inteiro incluindo imagens, estilos, frames, fontes, etc. num único arquivo HTML.
+- name: Link Gopher
+  url: #
+  description: Extrai todos os links de uma página web.
+- name: JS Beautifier
+  url: #
+  description: Formata código JavaScript minificado diretamente no browser.
+- name: Web Scan
+  url: #
+  description: Extensão para scanning de segurança web.
+
+## Análise de Malware & Forense Digital
+- name: ANY.RUN
+  url: https://app.any.run
+  description: Sandbox interativo para análise de malware em tempo real.
+- name: Triage
+  url: https://tria.ge/
+  description: Sandbox automatizado para análise de malware.
+- name: REMnux
+  url: https://remnux.org/
+  description: Distribuição Linux especializada em análise de malware.
+  notes: Doc tools: https://docs.remnux.org - Ex: https://docs.remnux.org/discover-the-tools/analyze+documents/pdf
+- name: ID Ransomware
+  url: https://id-ransomware.malwarehunterteam.com/
+  description: Identificação de ransomware a partir de amostras.
+- name: Malware Samples
+  url: https://github.com/malwares
+  type: info
+  description: Repositório de amostras de malware para estudo.
 - name: Aperi'Solve
   url: https://www.aperisolve.com
   description: Reúne várias ferramentas de análise esteganográfica em uma única requisição.
@@ -359,63 +375,25 @@ type: tools
   type: info
   description: Artigo sobre a importância dos metadados para a segurança.
 
-## DNS
-- name: DNSDumpster
-  url: https://dnsdumpster.com/
-  description: Enumeração de subdomínios via consulta DNS gratuita.
-- name: Amass
-  url: https://github.com/owasp-amass/amass/blob/master/doc/user_guide.md
-  description: Enumeração de domínios e subdomínios poderoso da OWASP.
-- name: Google Dig
-  url: https://toolbox.googleapps.com/apps/dig/
-  description: Ferramenta de consulta DNS do Google.
-- name: DNSlytics
-  url: https://dnslytics.com/
-  description: Análise de DNS, IPs e domínios.
-
-## Criptografia & Hash
-- name: CrackStation
-  url: https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm
-  description: Base de dados para download e cracking de hashes.
-- name: John the Ripper
-  url: https://www.openwall.com/john/
-  description: Password cracker clássico e poderoso.
-- name: Hash Decryption
-  url: https://hashdecryption.com/
-  description: Decodificação online de hashes comuns.
-- name: Online Tools
-  url: https://emn178.github.io/online-tools/
-  description: Coleção de ferramentas online para hashing e encoding.
-- name: Perturb Hashes
-  url: https://www.perturb.org/content/hashes/
-  description: Base de dados de hashes.
-- name: MD5 Hashing
-  url: https://md5hashing.net/
-  description: Decodificação e encoding de hashes MD5 e outros.
-- name: SHA1 Gromweb
-  url: https://sha1.gromweb.com/
-  description: Lookup reverso de hashes SHA1.
-
-## Malware Analysis
-- name: ANY.RUN
-  url: https://app.any.run
-  description: Sandbox interativo para análise de malware em tempo real.
-- name: Triage
-  url: https://tria.ge/
-  description: Sandbox automatizado para análise de malware.
-- name: REMnux
-  url: https://remnux.org/
-  description: Distribuição Linux especializada em análise de malware.
-  notes: Doc tools: https://docs.remnux.org - Ex: https://docs.remnux.org/discover-the-tools/analyze+documents/pdf
-- name: ID Ransomware
-  url: https://id-ransomware.malwarehunterteam.com/
-  description: Identificação de ransomware a partir de amostras.
-- name: Malware Samples
-  url: https://github.com/malwares
-  type: info
-  description: Repositório de amostras de malware para estudo.
-
-## Vulnerability Databases
+## Inteligência de Ameaças & Vulnerabilidades
+- name: Ransomlook
+  url: https://www.ransomlook.io/recent
+  description: Centraliza notícias de vários grupos ransomware e empresas afetadas.
+- name: Have I Been Pwned
+  url: https://haveibeenpwned.com/
+  description: Verificação de vazamento de senhas e e-mails.
+- name: IntelX
+  url: https://intelx.io/
+  description: Consulta à base de dados de vazamentos e inteligência.
+- name: PwnDB
+  url: http://pwndb2am4tzkvold.onion/
+  description: Consulta à base de vazamentos (acesso via Tor).
+- name: DeepSearch
+  url: http://xjypo5vzgmo7jca6b322dnqbsdnp3amd24ybx26x5nxbusccjkm4pwid.onion/
+  description: Consulta à base de vazamentos (acesso via Tor).
+- name: Ransomware Group Sites
+  url: http://ransomwr3tsydeii4q43vazm7wofla5ujdajquitomtd47cxjtfgwyyd.onion/
+  description: Listagem de sites de grupos de ransomware (acesso via Tor).
 - name: Snyk Vuln DB
   url: https://snyk.io/vuln
   description: Base de vulnerabilidades de bibliotecas e pacotes.
@@ -435,8 +413,17 @@ type: tools
 - name: Audit.NET
   url: https://www.nuget.org/packages/Audit.NET/
   description: Extensão para Visual Studio para auditoria de segurança .NET.
+- name: OWASP Risk Rating
+  url: https://beaglesecurity.com/owasp-risk-calculator
+  description: Calculadora de risco de vulnerabilidades OWASP.
+- name: CVSS v3 Calculator (FIRST)
+  url: https://www.first.org/cvss/calculator/3.0
+  description: Calculadora oficial CVSS v3 da FIRST.
+- name: CVSS v3 Calculator (NVD)
+  url: https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
+  description: Calculadora CVSS v3 do NVD/NIST.
 
-## Headers & Cookies Web
+## Segurança Web & Headers
 - name: CSPer Evaluator
   url: https://csper.io/evaluator
   description: Avaliador de Content Security Policy.
@@ -462,8 +449,40 @@ type: tools
   url: https://blog.benpri.me/blog/2019/05/13/samesite-cookies-in-practice/
   type: info
   description: Artigo prático sobre SameSite Cookies - Lax vs Strict.
+- name: deps.dev
+  url: https://deps.dev/
+  description: Verificação de vulnerabilidades por versão de biblioteca.
+  notes: "Mais simples de ver quais vulnerabilidades. Exemplo: https://deps.dev/npm/jquery/2.2.1"
+- name: Subresource Integrity (MDN)
+  url: https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
+  type: info
+  description: Documentação sobre Subresource Integrity para proteger recursos de terceiros.
+- name: SRI Hash Generator
+  url: https://www.srihash.org/
+  description: Gerador de hash SRI para inclusão segura de bibliotecas externas.
 
-## Wordlists
+## Criptografia, Hash & Wordlists
+- name: CrackStation
+  url: https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm
+  description: Base de dados para download e cracking de hashes.
+- name: John the Ripper
+  url: https://www.openwall.com/john/
+  description: Password cracker clássico e poderoso.
+- name: Hash Decryption
+  url: https://hashdecryption.com/
+  description: Decodificação online de hashes comuns.
+- name: Online Tools
+  url: https://emn178.github.io/online-tools/
+  description: Coleção de ferramentas online para hashing e encoding.
+- name: Perturb Hashes
+  url: https://www.perturb.org/content/hashes/
+  description: Base de dados de hashes.
+- name: MD5 Hashing
+  url: https://md5hashing.net/
+  description: Decodificação e encoding de hashes MD5 e outros.
+- name: SHA1 Gromweb
+  url: https://sha1.gromweb.com/
+  description: Lookup reverso de hashes SHA1.
 - name: Assetnote Wordlists
   url: https://wordlists.assetnote.io/
   description: Coleção de wordlists para pentest e fuzzing.
@@ -481,33 +500,7 @@ type: tools
   url: https://github.com/Abdulrahman-Kamel/httpAuth
   description: Wordlist focada em autenticação HTTP.
 
-## Browser Extensions
-- name: DotGit
-  url: #
-  description: Detecta repositórios .git expostos em websites.
-- name: Wappalyzer
-  url: #
-  description: Identifica tecnologias utilizadas em websites.
-- name: KeyFinder
-  url: #
-  description: Busca por chaves e segredos expostos em páginas web.
-- name: HTTP Header Live
-  url: #
-  description: Visualiza headers HTTP em tempo real.
-- name: SingleFile
-  url: #
-  description: Salva um site inteiro incluindo imagens, estilos, frames, fontes, etc. num único arquivo HTML.
-- name: Link Gopher
-  url: #
-  description: Extrai todos os links de uma página web.
-- name: JS Beautifier
-  url: #
-  description: Formata código JavaScript minificado diretamente no browser.
-- name: Web Scan
-  url: #
-  description: Extensão para scanning de segurança web.
-
-## Phishing & Social Engineering
+## Phishing & Engenharia Social
 - name: GoPhish
   url: https://getgophish.com/
   description: Plataforma open source para gerenciamento de campanhas de phishing.
@@ -524,139 +517,43 @@ type: tools
 - name: This Person Does Not Exist
   url: https://thispersondoesnotexist.com/
   description: IA que gera perfis/fotos de pessoas que não existem.
-
-## E-mail Analysis
 - name: MXToolbox
   url: https://mxtoolbox.com/
   description: Diagnóstico completo de e-mail, DNS e domínios.
 
-## Misc
-- name: API Key Leaks
-  url: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks
+## Ataques & Exploits
+- name: Sniping Insecure Cookies with XSS
+  url: https://breakdev.org/sniping-insecure-cookies-with-xss/
   type: info
-  description: Referência sobre vazamento de API keys e como explorar.
-- name: AWS Pentest Guide
-  url: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Cloud%20-%20AWS%20Pentest.md
+  description: Artigo sobre captura de cookies inseguros via XSS.
+- name: Angular Template Injection
+  url: https://portswigger.net/research/xss-without-html-client-side-template-injection-with-angularjs
   type: info
-  description: Guia de pentesting em ambientes AWS e buckets S3.
-- name: Let's Encrypt
-  url: https://letsencrypt.org/
-  description: Emissão gratuita de certificados HTTPS/TLS.
-- name: I Know What You Download
-  url: https://iknowwhatyoudownload.com/en/peer/
-  description: Monitoramento de downloads torrent por IP.
-- name: Security Code Scan
-  url: https://security-code-scan.github.io/
+  description: XSS sem HTML via Client-Side Template Injection com AngularJS.
+  notes: "Procurar por 'ng-app'. Vídeo: https://www.youtube.com/watch?v=19gqZU953pY"
+- name: Web Cache Deception
+  url: http://omergil.blogspot.com/2017/02/web-cache-deception-attack.html
   type: info
-  description: Critérios de segurança e análise estática para código .NET.
-- name: MindMeister
-  url: https://www.mindmeister.com/
-  description: Ferramenta online de mapas mentais.
-- name: Miro
-  url: https://miro.com/app/
-  description: Plataforma colaborativa de diagramas e prototipação.
-- name: Personal Security Checklist
-  url: https://github.com/Lissy93/personal-security-checklist
+  description: Artigo sobre Web Cache Deception Attack.
+  notes: "Exemplos de páginas vulneráveis no passado:\nhttps://www.paypal.com/myaccount/home/attack.css\nhttps://www.paypal.com/myaccount/settings/notifications/attack.css\nhttps://history.paypal.com/cgi-bin/webscr/attack.css?cmd=_history-details"
+- name: ysoserial.net
+  url: https://github.com/pwntester/ysoserial.net
+  description: Exploit para deserialização insegura de objetos .NET.
+- name: OWASP Reverse Tabnabbing
+  url: https://owasp.org/www-community/attacks/Reverse_Tabnabbing
   type: info
-  description: Checklist de segurança pessoal abrangente.
-- name: Bitwarden
-  url: https://bitwarden.com/
-  description: Cofre de senhas open source e seguro.
-- name: Crontab Guru
-  url: https://crontab.guru/
-  description: The quick and simple editor for cron schedule expressions
-- name: Cronitor
-  url: https://github.com/cronitorio/cronitor-cli
-  description: Painel para gerenciamento facilitador de crons no Linux
+  description: Explicação do ataque Reverse Tabnabbing pela OWASP.
+- name: Reverse Tabnabbing CheatSheet
+  url: https://github.com/OWASP/www-community/blob/master/pages/attacks/Reverse_Tabnabbing.md
+  type: info
+  description: Cheatsheet sobre prevenção de Reverse Tabnabbing.
+- name: CVE-2021-44228 - Log4j
+  url: https://youtu.be/7qoPDq41xhQ
+  type: info
+  description: Vídeo explicativo sobre a vulnerabilidade Log4Shell.
+  notes: "Exploit Demo: https://github.com/leonjza/log4jpwn\nShell Check: https://log4shell.huntress.com/"
 
-
-## Mobile
-- name: scrcpy
-  url: https://github.com/Genymobile/scrcpy
-  description: Solução para transmitir a tela do celular Android para o computador.
-- name: Interceptar tráfego Android
-  url: https://www.youtube.com/watch?v=hFSuMySq2dA&ab_channel=HackingnaWeb
-  type: info
-  description: Como interceptar tráfego de app Android, fazendo repack transpondo segurança de compilação com certificado.
-
-## Listas & Indexadores
-- name: Pentest Wiki
-  url: https://github.com/nixawk/pentest-wiki
-  type: info
-  description: Indexador e guia para recon e pentests.
-- name: Awesome Pentest
-  url: https://github.com/enaqx/awesome-pentest
-  type: info
-  description: GitHub para pentesters - lista curada de recursos.
-- name: Awesome Security
-  url: https://github.com/sindresorhus/awesome#security
-  type: info
-  description: Indexador de materiais para pentest, recon, etc.
-- name: Awesome Hacking
-  url: https://github.com/carpedm20/awesome-hacking#readme
-  type: info
-  description: Indexador de materiais para pentest, recon, etc.
-- name: Awesome Web Security
-  url: https://github.com/qazbnm456/awesome-web-security#readme
-  type: info
-  description: Indexador de materiais para segurança web.
-- name: Awesome Security (sbilly)
-  url: https://github.com/sbilly/awesome-security#web
-  type: info
-  description: Indexador de materiais para pentest e segurança.
-- name: Router Passwords
-  url: https://www.routerpasswords.com/
-  description: Lista de senhas padrões de dispositivos de rede.
-- name: Lista de Ferramentas de Pentest
-  url: https://minutodaseguranca.blog.br/lista-completa-de-ferramentas-de-teste-de-penetracao-e-hacking/
-  type: info
-  description: Lista completa de ferramentas de penetração e hacking.
-
-## Compartilhamento de Arquivos
-- name: GoFile
-  url: https://gofile.io/
-  description: Compartilhamento de arquivos gratuito e sem limite.
-- name: Pastebin
-  url: https://pastebin.com/
-  description: Compartilhamento de textos e snippets de código.
-- name: Dontpad
-  url: http://dontpad.com/
-  description: Bloco de notas online simples e sem registro.
-- name: OnionShare
-  url: https://onionshare.org/
-  description: Compartilhamento de arquivos seguro via rede Tor.
-
-## Third Party Libraries
-- name: deps.dev
-  url: https://deps.dev/
-  description: Verificação de vulnerabilidades por versão de biblioteca.
-  notes: "Mais simples de ver quais vulnerabilidades. Exemplo: https://deps.dev/npm/jquery/2.2.1"
-- name: Subresource Integrity (MDN)
-  url: https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
-  type: info
-  description: Documentação sobre Subresource Integrity para proteger recursos de terceiros.
-- name: SRI Hash Generator
-  url: https://www.srihash.org/
-  description: Gerador de hash SRI para inclusão segura de bibliotecas externas.
-
-## CTF - Security Games & Learning
-- name: Hack The Box
-  url: https://www.hackthebox.com/
-  description: Em ambiente controle para invadir ambientes a partir do reconhecimento e exploração de vulnerabilidades
-- name: TryHackMe OSINT
-  url: https://tryhackme.com/room/ohsint
-  description: Room de OSINT no TryHackMe.
-- name: XSS Game
-  url: https://xss-game.appspot.com
-  description: Jogo para praticar ataques XSS.
-- name: OverTheWire Natas
-  url: https://overthewire.org/wargames/natas/natas0.html
-  description: Wargame de web hacking.
-- name: OverTheWire Bandit
-  url: https://overthewire.org/wargames/bandit/bandit0.html
-  description: Wargame de hacking em ambiente Linux/SSH.
-
-## CheatSheets & Prevenções
+## Guias, CheatSheets & Referências
 - name: OWASP CheatSheet Series
   url: https://cheatsheetseries.owasp.org/index.html
   type: info
@@ -697,99 +594,6 @@ type: tools
   url: https://github.com/Ignitetechnologies/BurpSuite-For-Pentester
   type: info
   description: Guia de uso do BurpSuite para pentesters.
-
-## Ataques Específicos
-- name: Sniping Insecure Cookies with XSS
-  url: https://breakdev.org/sniping-insecure-cookies-with-xss/
-  type: info
-  description: Artigo sobre captura de cookies inseguros via XSS.
-- name: Angular Template Injection
-  url: https://portswigger.net/research/xss-without-html-client-side-template-injection-with-angularjs
-  type: info
-  description: XSS sem HTML via Client-Side Template Injection com AngularJS.
-  notes: "Procurar por 'ng-app'. Vídeo: https://www.youtube.com/watch?v=19gqZU953pY"
-- name: Web Cache Deception
-  url: http://omergil.blogspot.com/2017/02/web-cache-deception-attack.html
-  type: info
-  description: Artigo sobre Web Cache Deception Attack.
-  notes: "Exemplos de páginas vulneráveis no passado:\nhttps://www.paypal.com/myaccount/home/attack.css\nhttps://www.paypal.com/myaccount/settings/notifications/attack.css\nhttps://history.paypal.com/cgi-bin/webscr/attack.css?cmd=_history-details"
-- name: ysoserial.net
-  url: https://github.com/pwntester/ysoserial.net
-  description: Exploit para deserialização insegura de objetos .NET.
-- name: OWASP Reverse Tabnabbing
-  url: https://owasp.org/www-community/attacks/Reverse_Tabnabbing
-  type: info
-  description: Explicação do ataque Reverse Tabnabbing pela OWASP.
-- name: Reverse Tabnabbing CheatSheet
-  url: https://github.com/OWASP/www-community/blob/master/pages/attacks/Reverse_Tabnabbing.md
-  type: info
-  description: Cheatsheet sobre prevenção de Reverse Tabnabbing.
-- name: CVE-2021-44228 - Log4j
-  url: https://youtu.be/7qoPDq41xhQ
-  type: info
-  description: Vídeo explicativo sobre a vulnerabilidade Log4Shell.
-  notes: "Exploit Demo: https://github.com/leonjza/log4jpwn\nShell Check: https://log4shell.huntress.com/"
-
-## Calcular Nível de Vulnerabilidades
-- name: OWASP Risk Rating
-  url: https://beaglesecurity.com/owasp-risk-calculator
-  description: Calculadora de risco de vulnerabilidades OWASP.
-- name: CVSS v3 Calculator (FIRST)
-  url: https://www.first.org/cvss/calculator/3.0
-  description: Calculadora oficial CVSS v3 da FIRST.
-- name: CVSS v3 Calculator (NVD)
-  url: https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
-  description: Calculadora CVSS v3 do NVD/NIST.
-
-## Relatórios de Pentest
-- name: Public Pentesting Reports
-  url: https://github.com/juliocesarfort/public-pentesting-reports
-  type: info
-  description: Coleção de relatórios públicos de pentests.
-- name: TCM Security Sample Report
-  url: https://github.com/hmaverickadams/TCM-Security-Sample-Pentest-Report/tree/master
-  type: info
-  description: Relatório de pentest exemplo da TCM Security.
-- name: 4 Coisas em Todo Relatório de Pentest
-  url: https://rhinosecuritylabs.com/penetration-testing/four-things-every-penetration-test-report/
-  type: info
-  description: Itens essenciais que todo relatório de pentest deve ter.
-
-## Eventos & Conferências Brasil
-- name: Eventos InfoSec Brasil
-  url: https://github.com/IncursioHack/Eventos-Infosec-Brasil
-  type: info
-  description: Lista de eventos de InfoSec no Brasil.
-- name: BHack
-  url: https://bhack.com.br
-  type: info
-  description: Conferência de segurança em Belo Horizonte.
-- name: YSTS
-  url: https://www.ysts.org/
-  type: info
-  description: You Sh0t The Sheriff - conferência de segurança.
-- name: Roadsec
-  url: https://www.roadsec.com.br/
-  type: info
-  description: Evento itinerante de hacking e segurança do Brasil.
-- name: Mind The Sec
-  url: https://www.mindthesec.com.br/
-  type: info
-  description: Conferência de segurança da informação corporativa.
-- name: Cyber Security Summit
-  url: https://www.cybersecuritysummit.com.br/
-  type: info
-  description: Summit de cibersegurança.
-- name: NullByte Con
-  url: https://nullbyte-con.org/
-  type: info
-  description: Conferência de segurança.
-- name: Speakfy
-  url: https://speakfy.io/
-  type: info
-  description: Site que concentra eventos de Segurança da Informação.
-
-## Guides & Referências
 - name: Red Team Tools
   url: https://github.com/A-poc/RedTeam-Tools
   type: info
@@ -860,20 +664,51 @@ type: tools
   url: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals?redirectedfrom=MSDN#background_server_garbage_collection
   type: info
   description: Fundamentos do Garbage Collection no .NET.
-
-
-
-## Livros
-- name: The Code Book
-  url: #
+- name: Public Pentesting Reports
+  url: https://github.com/juliocesarfort/public-pentesting-reports
   type: info
-  description: The Code Book - The Secrets Behind Codebreaking.
-- name: The Art of Deception
-  url: #
+  description: Coleção de relatórios públicos de pentests.
+- name: TCM Security Sample Report
+  url: https://github.com/hmaverickadams/TCM-Security-Sample-Pentest-Report/tree/master
   type: info
-  description: The Art of Deception - Kevin Mitnick.
+  description: Relatório de pentest exemplo da TCM Security.
+- name: 4 Coisas em Todo Relatório de Pentest
+  url: https://rhinosecuritylabs.com/penetration-testing/four-things-every-penetration-test-report/
+  type: info
+  description: Itens essenciais que todo relatório de pentest deve ter.
+- name: Pentest Wiki
+  url: https://github.com/nixawk/pentest-wiki
+  type: info
+  description: Indexador e guia para recon e pentests.
+- name: Awesome Pentest
+  url: https://github.com/enaqx/awesome-pentest
+  type: info
+  description: GitHub para pentesters - lista curada de recursos.
+- name: Awesome Security
+  url: https://github.com/sindresorhus/awesome#security
+  type: info
+  description: Indexador de materiais para pentest, recon, etc.
+- name: Awesome Hacking
+  url: https://github.com/carpedm20/awesome-hacking#readme
+  type: info
+  description: Indexador de materiais para pentest, recon, etc.
+- name: Awesome Web Security
+  url: https://github.com/qazbnm456/awesome-web-security#readme
+  type: info
+  description: Indexador de materiais para segurança web.
+- name: Awesome Security (sbilly)
+  url: https://github.com/sbilly/awesome-security#web
+  type: info
+  description: Indexador de materiais para pentest e segurança.
+- name: Router Passwords
+  url: https://www.routerpasswords.com/
+  description: Lista de senhas padrões de dispositivos de rede.
+- name: Lista de Ferramentas de Pentest
+  url: https://minutodaseguranca.blog.br/lista-completa-de-ferramentas-de-teste-de-penetracao-e-hacking/
+  type: info
+  description: Lista completa de ferramentas de penetração e hacking.
 
-## Cursos & Certificados Gratuitos
+## Aprendizado, Cursos & Recursos
 - name: EC-Council CodeRed
   url: https://codered.eccouncil.org/
   type: info
@@ -982,8 +817,6 @@ type: tools
   url: https://training.linuxfoundation.org/training/developing-secure-software-lfd121/
   type: info
   description: Curso de desenvolvimento seguro da Linux Foundation.
-
-## Vídeos - Frameworks de Segurança
 - name: ISO 27001 Full Review
   url: https://youtu.be/Ou8cFdjMYWw?si=TeTT47YGVYCzCb3n
   type: info
@@ -996,3 +829,119 @@ type: tools
   url: https://www.youtube.com/watch?v=OIRrDbuRfO8&ab_channel=risk3sixty
   type: info
   description: "We spend an hour covering all 12 PCI DSS requirements. There is also a great breakdown of common assessment findings we see often during audits."
+- name: The Code Book
+  url: #
+  type: info
+  description: The Code Book - The Secrets Behind Codebreaking.
+- name: The Art of Deception
+  url: #
+  type: info
+  description: The Art of Deception - Kevin Mitnick.
+
+## Utilitários & Ferramentas
+- name: CyberChef
+  url: https://gchq.github.io/CyberChef/
+  description: Canivete suíço para encoding, decoding, hashing e diversas operações de dados.
+- name: Beautifier
+  url: https://beautifier.io/
+  description: Transforma JavaScript minificado para código legível.
+- name: Reverse Shell Generator
+  url: https://www.100security.com.br/rsg
+  description: Gerador de reverse shell para diversas linguagens.
+- name: Report URI Tools
+  url: https://report-uri.com/home/tools
+  description: CSP Analyse, CSP Builder, SRI Hash, Header Analyser e mais.
+- name: Grabify
+  url: https://grabify.link/
+  description: Encurtador de links com IP logger.
+- name: Wayback Machine
+  url: https://archive.org/web/
+  description: Histórico de snapshots de páginas da web.
+- name: Process Library
+  url: https://www.processlibrary.com/en/
+  description: Busca de DLLs e processos do Windows.
+- name: Can I Use
+  url: https://caniuse.com/
+  description: Verificação de compatibilidade de features entre browsers.
+- name: BGP Check
+  url: https://bgp.he.net
+  description: Verificação de rotas e informações BGP.
+- name: BeEF
+  url: https://beefproject.com/
+  description: Browser Exploitation Framework para testes de segurança client-side.
+- name: Sysinternals
+  url: https://docs.microsoft.com/en-us/sysinternals/
+  description: Canivete suíço de ferramentas de análise de ambiente Windows.
+- name: Token Scanner
+  url: https://github.com/Abdulrahman-Kamel/tokenScanner
+  description: Identifica tipo de token, informa do que se trata e sugere exploits.
+  notes: Passa um token para o scanner e ele identifica que tipo de token é de forma simples, informa do que se possivelmente trata o token e já passa uma url de como fazer o exploit e testar.
+- name: Faker
+  url: https://github.com/joke2k/faker
+  description: Gerador de dados fictícios para testes e anonimização.
+- name: HuskyCI
+  url: https://github.com/globocom/huskyCI
+  description: Orquestrador de análise de código de repositório para rodar junto com CI.
+  notes: Ferramenta feita pela Globo.
+- name: Postman
+  url: https://www.postman.com/
+  description: Monta requisições HTTP sob demanda para testes de API.
+- name: DBeaver
+  url: https://dbeaver.io/
+  description: Conector com banco de dados universal.
+- name: GoFile
+  url: https://gofile.io/
+  description: Compartilhamento de arquivos gratuito e sem limite.
+- name: Pastebin
+  url: https://pastebin.com/
+  description: Compartilhamento de textos e snippets de código.
+- name: Dontpad
+  url: http://dontpad.com/
+  description: Bloco de notas online simples e sem registro.
+- name: OnionShare
+  url: https://onionshare.org/
+  description: Compartilhamento de arquivos seguro via rede Tor.
+- name: API Key Leaks
+  url: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks
+  type: info
+  description: Referência sobre vazamento de API keys e como explorar.
+- name: AWS Pentest Guide
+  url: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Cloud%20-%20AWS%20Pentest.md
+  type: info
+  description: Guia de pentesting em ambientes AWS e buckets S3.
+- name: Let's Encrypt
+  url: https://letsencrypt.org/
+  description: Emissão gratuita de certificados HTTPS/TLS.
+- name: I Know What You Download
+  url: https://iknowwhatyoudownload.com/en/peer/
+  description: Monitoramento de downloads torrent por IP.
+- name: Security Code Scan
+  url: https://security-code-scan.github.io/
+  type: info
+  description: Critérios de segurança e análise estática para código .NET.
+- name: MindMeister
+  url: https://www.mindmeister.com/
+  description: Ferramenta online de mapas mentais.
+- name: Miro
+  url: https://miro.com/app/
+  description: Plataforma colaborativa de diagramas e prototipação.
+- name: Personal Security Checklist
+  url: https://github.com/Lissy93/personal-security-checklist
+  type: info
+  description: Checklist de segurança pessoal abrangente.
+- name: Bitwarden
+  url: https://bitwarden.com/
+  description: Cofre de senhas open source e seguro.
+- name: Crontab Guru
+  url: https://crontab.guru/
+  description: The quick and simple editor for cron schedule expressions
+- name: Cronitor
+  url: https://github.com/cronitorio/cronitor-cli
+  description: Painel para gerenciamento facilitador de crons no Linux
+- name: scrcpy
+  url: https://github.com/Genymobile/scrcpy
+  description: Solução para transmitir a tela do celular Android para o computador.
+- name: Interceptar tráfego Android
+  url: https://www.youtube.com/watch?v=hFSuMySq2dA&ab_channel=HackingnaWeb
+  type: info
+  description: Como interceptar tráfego de app Android, fazendo repack transpondo segurança de compilação com certificado.
