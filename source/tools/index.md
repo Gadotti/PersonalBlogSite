@@ -422,6 +422,10 @@ type: tools
 - name: CVSS v3 Calculator (NVD)
   url: https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
   description: Calculadora CVSS v3 do NVD/NIST.
+- name: ShadowServer
+  url: https://dashboard.shadowserver.org/
+  description: Monitoramento de ameaças globais (SOC)
+  notes: "Dados coletados atrvés de honeypots com dashboards de explorações e CVEs por região, vendor e outras opções"
 
 ## Segurança Web & Headers
 - name: CSPer Evaluator
