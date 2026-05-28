@@ -606,10 +606,6 @@ type: tools
   url: https://github.com/A-poc/BlueTeam-Tools
   type: info
   description: Lista de ferramentas para Blue Team.
-- name: HackTricks
-  url: https://book.hacktricks.xyz
-  type: info
-  description: Enciclopédia de técnicas de hacking e pentesting.
 - name: NCSC
   url: https://www.ncsc.gov.uk/
   type: info
