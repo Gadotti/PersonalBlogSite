@@ -711,6 +711,10 @@ type: tools
   url: https://minutodaseguranca.blog.br/lista-completa-de-ferramentas-de-teste-de-penetracao-e-hacking/
   type: info
   description: Lista completa de ferramentas de penetração e hacking.
+- name: HackTricks 
+  url: https://hacktricks.wiki
+  type: info
+  description: Wiki de cibersegurança gratuita e de código aberto. Payloads, hardening, práticas e técnicas. Verdadeira enciclopédia do hacking.
 
 ## Aprendizado, Cursos & Recursos
 - name: EC-Council CodeRed
