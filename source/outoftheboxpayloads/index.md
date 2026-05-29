@@ -313,3 +313,60 @@ O AnonFiles é o mais utilizado atualmente, mas também encontra coisas interess
 
 *jus.br intext:"usuario" | "senha" | "username" | "password" | "mysql"
 ```
+
+## Hardenings
+
+### NPM Best Practices
+1. Ativar configurações no arquivo ```.npmrc```
+
+```
+# npm security best practices
+# Source: https://github.com/lirantal/npm-security-best-practices
+
+# SECURITY: do not run any lifecycle scripts (postinstall) etc
+ignore-scripts=true
+
+# SECURITY: reject git-source dependencies (git+ssh:// etc)
+allow-git=none
+
+# SECURITY: block packages newer than 30 days
+min-release-age=7
+```
+
+Ou diretamente via linha de comando:
+```bash
+npm config set ignore-scripts true
+npm config set min-release-age 7
+npm config set allow-git none
+```
+
+2. Procurar trabalhar com versão exata 
+> (+ lockfile com versão exata, sem ^ e sem ~)
+
+3. Confirmar configurações
+```bash
+npm config list
+```
+
+4. Use ```npm ci```
+```
+Use npm ci instead of npm install for deterministic installations:
+$ npm ci
+
+For automated environments like CI/CD, always use the deterministic installation command:
+# In your CI/CD pipeline
+$ npm ci --only=production
+```
+
+5. Se a versão do ```npm``` for menor que 11.10.0, é necessário atualizar:
+```
+npm --version
+npm install -g npm@latest
+
+npm --version
+# Deve mostrar 11.10.0 ou superior
+```
+6. Fontes:
+https://www.youtube.com/watch?v=sMdBtiiE8k0&list=WL&index=1
+https://cheatsheetseries.owasp.org/cheatsheets/NPM_Security_Cheat_Sheet.html
+https://github.com/lirantal/npm-security-best-practices
