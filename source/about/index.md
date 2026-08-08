@@ -1,10 +1,17 @@
 ---
 title: Sobre mim
+cover: /imgs/about/perfil-banner.png
 ---
-Mais conhecido simplesmente como *Gadotti*, sou entusiasta da tecnologia e de como as coisas funcionam. Venho trabalhando com desenvolvimento de sistemas profissionalmente desde 2006, mas me aventurando nesse mundo ainda mais cedo. Ao longo dos anos acabei focando em sistemas voltado para o ambiente web, mas adoro brincar com apps em Flutter nas horas vagas.
+## Eduardo Gadotti
 
-Sempre fui provocado pela curiosidade interna em imaginar como vulnerabilidades e falhas de sistemas eram exploradas, como vazamentos e invasões aconteciam. Então desde 2017, voltei meus esforços e foco para me tornar um pesquisador da área da segurança da informação, assumindo lideranças voltadas à segurança ofensiva, prevenções e melhores práticas dentro do desenvolvimento seguro, principalmente web.
+Atuo como Cybersecurity Manager, gero valor ao negócio através da segurança da informação, com mais de 20 anos de experiência em tecnologia, sendo os últimos anos dedicados integralmente à liderança em ambientes corporativos. Minha trajetória combina uma base em desenvolvimento e análise de sistemas com uma visão estratégica e ofensiva de segurança, o que me permite atuar tanto na identificação de vulnerabilidades quanto na construção de programas robustos de proteção.
 
-Amo música o suficiente para não me limitar a ser apenas um ouvinte, adoro viajar para conhecer lugares novos sempre que possível e me perco em boas leituras.
+Ao longo da minha gestão, conduzi processos de certificação e auditorias ISO 27001, estruturei equipes de compliance e governança, e atuei diretamente na interface com clientes e fornecedores, traduzindo requisitos técnicos de segurança em acordos e entendimentos claros para diferentes perfis de interlocutores.
+
+Forte ênfase à liderança de pessoas, construindo e desenvolvendo equipes de segurança por meio de expectativas de desempenho claras e feedback estruturado. Tenho experiência em planejamento de capacidade de ponta a ponta, prevendo necessidades de contratação e garantindo cobertura adequada nos domínios de segurança corporativa e de produção. Lidero pela clareza de intenção, e não pelo microgerenciamento, e gerencio os ciclos de performance de ponta a ponta, incluindo definição de metas (OKRs, KPIs, etc.), em alinhamento com as expectativas organizacionais.
+
+Tenho forte atuação em Application Security e segurança ofensiva, com experiência prática em pentest, análise de vulnerabilidades e desenvolvimento seguro baseado em frameworks como OWASP. Acredito que segurança começa no código e se consolida na cultura, e é nessa interseção que concentro minha energia.
+
+Avalio ativamente o impacto das ferramentas de IA no ecossistema de desenvolvimento e segurança, compreendendo seus riscos e possibilidades, e as integrando de forma responsável em ambientes que exigem maturidade de segurança.
 
 Até mais e obrigado pelos peixes!
