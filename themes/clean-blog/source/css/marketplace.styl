@@ -1,0 +1,330 @@
+@import "variables.styl"
+
+.marketplace-page
+  margin-bottom 60px
+
+// --- Controls ---
+
+.mk-controls
+  margin-bottom 20px
+
+.mk-search-input
+  width 100%
+  padding 12px 16px
+  font-size 16px
+  border 2px solid color-border
+  border-radius 6px
+  outline none
+  transition border-color 0.2s
+  &:focus
+    border-color brand-primary
+
+.mk-categories-filter
+  margin-top 14px
+  display flex
+  flex-wrap wrap
+  gap 8px
+
+.mk-filter-btn
+  padding 6px 14px
+  font-size 13px
+  font-weight 600
+  text-transform uppercase
+  letter-spacing 0.5px
+  border 1px solid color-border
+  border-radius 20px
+  background white
+  color gray-dark
+  cursor pointer
+  transition all 0.2s
+  &:hover
+    border-color brand-primary
+    color brand-primary
+  &.active
+    background brand-primary
+    border-color brand-primary
+    color white
+
+.mk-count
+  font-size 14px
+  color gray
+  margin-bottom 20px
+
+// --- Sections ---
+
+.mk-section
+  margin-bottom 45px
+
+.mk-section-title
+  font-size 24px
+  font-weight 700
+  margin-bottom 20px
+  padding-bottom 8px
+  border-bottom 2px solid brand-primary
+  color gray-dark
+
+.mk-section-count
+  display inline-block
+  font-size 13px
+  font-weight 600
+  background brand-primary
+  color white
+  border-radius 50%
+  width 26px
+  height 26px
+  line-height 26px
+  text-align center
+  margin-left 8px
+  vertical-align middle
+
+.mk-cards
+  display grid
+  grid-template-columns repeat(auto-fill, minmax(300px, 1fr))
+  gap 24px
+  align-items stretch
+
+// --- Card ---
+
+.mk-card
+  display flex
+  flex-direction column
+  background white
+  border 1px solid color-border
+  border-radius 10px
+  overflow hidden
+  transition all 0.25s
+  &:hover
+    border-color brand-primary
+    box-shadow 0 8px 20px rgba(0, 0, 0, 0.1)
+    transform translateY(-3px)
+
+.mk-card--featured
+  border 2px solid brand-primary
+  box-shadow 0 4px 14px rgba(0, 133, 161, 0.14)
+
+.mk-card--soldout
+  opacity 0.65
+
+// --- Card media ---
+
+.mk-card-media
+  position relative
+  height 120px
+  display flex
+  align-items center
+  justify-content center
+  background linear-gradient(135deg, brand-primary 0%, darken(brand-primary, 35%) 100%)
+  background-size cover
+  background-position center
+  i
+    font-size 46px
+    color rgba(255, 255, 255, 0.9)
+
+.mk-card-media--image
+  &:after
+    content ''
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background rgba(0, 0, 0, 0.15)
+
+.mk-card-kind
+  position absolute
+  top 10px
+  left 10px
+  z-index 2
+  font-size 10px
+  font-weight 700
+  text-transform uppercase
+  letter-spacing 0.6px
+  padding 3px 8px
+  border-radius 3px
+  background rgba(255, 255, 255, 0.92)
+
+.mk-card-kind--servico
+  color #0d6b7d
+
+.mk-card-kind--produto
+  color #8a5a00
+
+.mk-card-badge
+  position absolute
+  top 10px
+  right 10px
+  z-index 2
+  font-size 10px
+  font-weight 700
+  text-transform uppercase
+  letter-spacing 0.6px
+  padding 3px 8px
+  border-radius 3px
+  background #f0ad4e
+  color #fff
+
+// --- Card body ---
+
+.mk-card-body
+  padding 16px 18px 12px
+  flex 1
+
+.mk-card-title
+  font-size 18px
+  font-weight 700
+  color gray-dark
+  margin 0 0 8px
+
+.mk-card-status
+  display inline-block
+  font-size 11px
+  font-weight 600
+  padding 2px 8px
+  border-radius 10px
+  margin-bottom 8px
+
+.mk-card-status--sob-consulta
+  background #fcf8e3
+  color #8a6d3b
+  border 1px solid #f0ad4e
+
+.mk-card-status--esgotado
+  background #f5f5f5
+  color gray
+  border 1px solid color-border
+
+.mk-card-desc
+  font-size 14px
+  line-height 1.5
+  color gray
+  margin 0 0 12px
+
+.mk-card-features
+  list-style none
+  padding 0
+  margin 0
+  li
+    font-size 13px
+    line-height 1.5
+    color gray-dark
+    padding 3px 0
+    i
+      color brand-primary
+      font-size 11px
+      margin-right 2px
+
+// --- Card footer ---
+
+.mk-card-footer
+  display flex
+  align-items center
+  justify-content space-between
+  gap 10px
+  padding 14px 18px
+  border-top 1px solid color-border
+  background #fafafa
+
+.mk-card-price
+  display flex
+  flex-direction column
+  line-height 1.2
+  min-width 0
+
+.mk-card-price-value
+  font-size 17px
+  font-weight 700
+  color gray-dark
+
+.mk-card-price-note
+  font-size 12px
+  color color-meta
+
+.mk-card-cta
+  flex-shrink 0
+  padding 9px 18px
+  font-size 13px
+  font-weight 700
+  text-transform uppercase
+  letter-spacing 0.5px
+  border-radius 5px
+  background brand-primary
+  color white !important
+  text-decoration none !important
+  transition all 0.2s
+  &:hover, &:focus
+    background darken(brand-primary, 15%)
+    color white !important
+    text-decoration none
+
+.mk-card-cta--disabled
+  background #e0e0e0
+  color gray !important
+  cursor not-allowed
+  &:hover
+    background #e0e0e0
+
+// --- Card notes ---
+
+.mk-card-notes-toggle
+  display block
+  width 100%
+  padding 8px 18px
+  background #f4f4f4
+  border none
+  border-top 1px solid color-border
+  color color-meta
+  font-size 13px
+  cursor pointer
+  text-align left
+  transition all 0.2s
+  &:hover
+    background #eee
+    color gray-dark
+  &.active
+    color brand-primary
+  i
+    margin-right 4px
+
+.mk-card-notes
+  padding 10px 18px
+  background #fafafa
+  border-top 1px solid color-border
+  pre
+    margin 0
+    padding 0
+    font-family font-mono
+    font-size 13px
+    line-height 1.5
+    white-space pre-wrap
+    word-wrap break-word
+    background transparent
+    border none
+    color gray-dark
+    a
+      color brand-primary
+      text-decoration underline
+
+// --- Empty ---
+
+.mk-empty
+  text-align center
+  font-size 18px
+  color gray
+  padding 60px 0
+
+// --- Responsive ---
+
+@media only screen and (max-width: 768px)
+  .mk-cards
+    grid-template-columns 1fr
+  .mk-categories-filter
+    gap 6px
+  .mk-filter-btn
+    font-size 11px
+    padding 5px 10px
+  .mk-card-footer
+    flex-direction column
+    align-items stretch
+    gap 12px
+  .mk-card-cta
+    text-align center

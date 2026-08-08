@@ -1,0 +1,351 @@
+<header class="intro-header" style="background-image: url('<%- theme.index_cover %>')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1><%- page.title %></h1>
+                    <% if (page.subtitle) { %>
+                        <hr class="small">
+                        <span class="subheading"><%- page.subtitle %></span>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container marketplace-page">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+
+            <div class="mk-controls">
+                <input type="text" id="mk-search" class="mk-search-input" placeholder="Buscar produto ou serviço..." />
+                <div class="mk-categories-filter" id="mk-categories-filter">
+                    <button class="mk-filter-btn active" data-category="all">Todos</button>
+                </div>
+            </div>
+
+            <div class="mk-count" id="mk-count"></div>
+
+            <div id="mk-grid"></div>
+
+            <div class="mk-empty" id="mk-empty" style="display:none;">
+                Nenhum item encontrado.
+            </div>
+        </div>
+    </div>
+</div>
+
+<%
+// Parse the markdown content to extract marketplace data.
+// Format: "## Category" headings, then "- name: X" items with indented "key: value" fields.
+var rawContent = page.raw || '';
+var mkLines = rawContent.split('\n');
+var mkCategories = [];
+var mkCategory = null;
+var mkItem = null;
+
+for (var i = 0; i < mkLines.length; i++) {
+    var line = mkLines[i];
+
+    var catMatch = line.match(/^##\s+(.+)/);
+    if (catMatch) {
+        mkCategory = { name: catMatch[1].trim(), items: [] };
+        mkCategories.push(mkCategory);
+        mkItem = null;
+        continue;
+    }
+
+    if (!mkCategory) continue;
+
+    var nameMatch = line.match(/^-\s+name:\s+(.+)/);
+    if (nameMatch) {
+        mkItem = { name: nameMatch[1].trim() };
+        mkCategory.items.push(mkItem);
+        continue;
+    }
+
+    if (!mkItem) continue;
+
+    // Quoted value with escaped line breaks: key: "line 1\nline 2"
+    var quoted = line.match(/^\s+([a-z_]+):\s+"(.*)"\s*$/);
+    if (quoted) {
+        mkItem[quoted[1]] = quoted[2].replace(/\\n/g, '\n');
+        continue;
+    }
+
+    var field = line.match(/^\s+([a-z_]+):\s+(.+)/);
+    if (field) {
+        mkItem[field[1]] = field[2].trim();
+        continue;
+    }
+}
+
+// Normalize each item so the client script can stay simple
+mkCategories.forEach(function(cat) {
+    cat.items.forEach(function(item) {
+        item.kind = (item.kind || 'produto').toLowerCase();
+        item.status = (item.status || 'disponivel').toLowerCase();
+        item.featured = String(item.featured || '').toLowerCase() === 'true';
+        item.cta = item.cta || 'Tenho interesse';
+        item.description = item.description || '';
+        item.featureList = (item.features || '')
+            .split('|')
+            .map(function(f) { return f.trim(); })
+            .filter(function(f) { return f.length > 0; });
+    });
+});
+%>
+
+<script>
+(function() {
+    var data = <%- JSON.stringify(mkCategories) %>;
+
+    var grid = document.getElementById('mk-grid');
+    var searchInput = document.getElementById('mk-search');
+    var filterContainer = document.getElementById('mk-categories-filter');
+    var emptyMsg = document.getElementById('mk-empty');
+    var countEl = document.getElementById('mk-count');
+    var activeCategory = 'all';
+
+    var KIND_LABEL = { servico: 'Serviço', 'serviço': 'Serviço', produto: 'Produto' };
+    var STATUS_LABEL = {
+        disponivel: 'Disponível',
+        'sob-consulta': 'Sob consulta',
+        esgotado: 'Esgotado'
+    };
+
+    data.forEach(function(cat) {
+        var btn = document.createElement('button');
+        btn.className = 'mk-filter-btn';
+        btn.setAttribute('data-category', cat.name);
+        btn.textContent = cat.name;
+        filterContainer.appendChild(btn);
+    });
+
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.textContent = str == null ? '' : str;
+        return div.innerHTML;
+    }
+
+    function linkifyText(text) {
+        return escapeHtml(text).replace(
+            /(https?:\/\/[^\s<]+)/g,
+            '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+        );
+    }
+
+    function matches(item, cat, query) {
+        if (!query) return true;
+        var haystack = [item.name, item.description, item.features, item.badge, cat.name]
+            .join(' ')
+            .toLowerCase();
+        return haystack.indexOf(query) !== -1;
+    }
+
+    function getFilteredData() {
+        var query = searchInput.value.toLowerCase().trim();
+        var result = [];
+        data.forEach(function(cat) {
+            if (activeCategory !== 'all' && cat.name !== activeCategory) return;
+            var items = cat.items.filter(function(item) { return matches(item, cat, query); });
+            if (items.length > 0) result.push({ name: cat.name, items: items });
+        });
+        return result;
+    }
+
+    function buildMedia(item) {
+        var media = document.createElement('div');
+        media.className = 'mk-card-media';
+
+        if (item.image) {
+            media.classList.add('mk-card-media--image');
+            media.style.backgroundImage = 'url("' + item.image + '")';
+        } else {
+            var icon = document.createElement('i');
+            icon.className = 'fa fa-' + (item.icon || 'cube');
+            media.appendChild(icon);
+        }
+
+        var kindTag = document.createElement('span');
+        kindTag.className = 'mk-card-kind mk-card-kind--' + item.kind;
+        kindTag.textContent = KIND_LABEL[item.kind] || item.kind;
+        media.appendChild(kindTag);
+
+        if (item.badge) {
+            var badge = document.createElement('span');
+            badge.className = 'mk-card-badge';
+            badge.textContent = item.badge;
+            media.appendChild(badge);
+        }
+
+        return media;
+    }
+
+    function buildFooter(item) {
+        var footer = document.createElement('div');
+        footer.className = 'mk-card-footer';
+
+        var priceBox = document.createElement('div');
+        priceBox.className = 'mk-card-price';
+        if (item.price) {
+            var value = document.createElement('span');
+            value.className = 'mk-card-price-value';
+            value.textContent = item.price;
+            priceBox.appendChild(value);
+        }
+        if (item.price_note) {
+            var note = document.createElement('span');
+            note.className = 'mk-card-price-note';
+            note.textContent = item.price_note;
+            priceBox.appendChild(note);
+        }
+        footer.appendChild(priceBox);
+
+        var soldOut = item.status === 'esgotado';
+        var cta = document.createElement(item.url && !soldOut ? 'a' : 'span');
+        cta.className = 'mk-card-cta' + (soldOut ? ' mk-card-cta--disabled' : '');
+        cta.textContent = soldOut ? 'Indisponível' : item.cta;
+        if (item.url && !soldOut) {
+            cta.href = item.url;
+            if (item.url.indexOf('http') === 0) {
+                cta.target = '_blank';
+                cta.rel = 'noopener noreferrer';
+            }
+        }
+        footer.appendChild(cta);
+
+        return footer;
+    }
+
+    function buildCard(item) {
+        var card = document.createElement('div');
+        card.className = 'mk-card'
+            + (item.featured ? ' mk-card--featured' : '')
+            + (item.status === 'esgotado' ? ' mk-card--soldout' : '');
+
+        card.appendChild(buildMedia(item));
+
+        var body = document.createElement('div');
+        body.className = 'mk-card-body';
+
+        var title = document.createElement('h3');
+        title.className = 'mk-card-title';
+        title.textContent = item.name;
+        body.appendChild(title);
+
+        if (item.status && item.status !== 'disponivel') {
+            var status = document.createElement('span');
+            status.className = 'mk-card-status mk-card-status--' + item.status;
+            status.textContent = STATUS_LABEL[item.status] || item.status;
+            body.appendChild(status);
+        }
+
+        if (item.description) {
+            var desc = document.createElement('p');
+            desc.className = 'mk-card-desc';
+            desc.textContent = item.description;
+            body.appendChild(desc);
+        }
+
+        if (item.featureList && item.featureList.length) {
+            var ul = document.createElement('ul');
+            ul.className = 'mk-card-features';
+            item.featureList.forEach(function(f) {
+                var li = document.createElement('li');
+                li.innerHTML = '<i class="fa fa-check"></i>';
+                li.appendChild(document.createTextNode(' ' + f));
+                ul.appendChild(li);
+            });
+            body.appendChild(ul);
+        }
+
+        card.appendChild(body);
+        card.appendChild(buildFooter(item));
+
+        if (item.notes) {
+            var toggle = document.createElement('button');
+            toggle.className = 'mk-card-notes-toggle';
+            toggle.innerHTML = '<i class="fa fa-info-circle"></i> Detalhes';
+            toggle.addEventListener('click', function() {
+                var notesEl = this.nextElementSibling;
+                var isVisible = notesEl.style.display !== 'none';
+                notesEl.style.display = isVisible ? 'none' : 'block';
+                this.classList.toggle('active', !isVisible);
+            });
+            card.appendChild(toggle);
+
+            var notes = document.createElement('div');
+            notes.className = 'mk-card-notes';
+            notes.style.display = 'none';
+            notes.innerHTML = '<pre>' + linkifyText(item.notes) + '</pre>';
+            card.appendChild(notes);
+        }
+
+        return card;
+    }
+
+    function render() {
+        var filtered = getFilteredData();
+        grid.innerHTML = '';
+        var total = 0;
+
+        filtered.forEach(function(cat) {
+            var section = document.createElement('div');
+            section.className = 'mk-section';
+
+            var heading = document.createElement('h2');
+            heading.className = 'mk-section-title';
+            heading.textContent = cat.name;
+
+            var badge = document.createElement('span');
+            badge.className = 'mk-section-count';
+            badge.textContent = cat.items.length;
+            heading.appendChild(badge);
+            section.appendChild(heading);
+
+            var cards = document.createElement('div');
+            cards.className = 'mk-cards';
+            cat.items.forEach(function(item) { cards.appendChild(buildCard(item)); });
+
+            section.appendChild(cards);
+            grid.appendChild(section);
+            total += cat.items.length;
+        });
+
+        emptyMsg.style.display = total === 0 ? 'block' : 'none';
+        countEl.textContent = total + (total === 1 ? ' item' : ' itens');
+    }
+
+    searchInput.addEventListener('input', render);
+
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            this.value = '';
+            render();
+        }
+    });
+
+    filterContainer.addEventListener('click', function(e) {
+        var btn = e.target;
+        if (!btn.classList.contains('mk-filter-btn')) return;
+        var clicked = btn.getAttribute('data-category');
+        if (clicked !== 'all' && clicked === activeCategory) {
+            activeCategory = 'all';
+            filterContainer.querySelectorAll('.mk-filter-btn').forEach(function(b) {
+                b.classList.toggle('active', b.getAttribute('data-category') === 'all');
+            });
+        } else {
+            filterContainer.querySelectorAll('.mk-filter-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+            activeCategory = clicked;
+        }
+        render();
+    });
+
+    render();
+})();
+</script>
