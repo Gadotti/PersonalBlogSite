@@ -73,6 +73,10 @@
                     <% } %>
                 </ul>
                 <p class="copyright text-muted">&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br></p>
+
+                <% if (theme.show_build_info && build_info()) { %>
+                    <p class="build-info text-muted"><%= build_info() %></p>
+                <% } %>
             </div>
         </div>
     </div>

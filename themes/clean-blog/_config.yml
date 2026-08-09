@@ -34,6 +34,9 @@ default_post_title: Untitled
 # Comments. Choose one by filling up the information
 comments: false
 
+# Show build date and commit hash below the copyright line
+show_build_info: true
+
 # Google Analytics Tracking ID
 google_analytics: G-7TZDPE0QBV
 
