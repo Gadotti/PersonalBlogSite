@@ -12,6 +12,19 @@ The blog is written in **Brazilian Portuguese** and covers cybersecurity, InfoSe
 
 - `hexo server` — Start local dev server (localhost:4000)
 - `hexo new page` — Generate static site to `source/_posts`
+- `npm test` — Run the test suite (builds the site via `hexo generate` first, then validates generated output, internal links, and the `hexo server` smoke test)
+
+## Testing
+
+**Run `npm test` after every change** (dependency updates, theme/layout edits, config changes, custom scripts) to confirm nothing broke. This matters especially for Dependabot package bumps (hexo, renderers, generators, etc.), since the risk from those updates is entirely in the build pipeline and rendered output — there's no other safety net for them.
+
+The suite lives in `test/` and covers:
+
+- `test/output.test.js` — asserts key pages are generated correctly (home, archives, tags, special pages, the post linked from the theme menu) and that the RSS feed is valid and matches generated files
+- `test/links.test.js` — crawls `public/` for broken internal links/assets
+- `test/server.test.js` — starts `hexo server` and hits key routes (exercises `hexo-server`/`morgan`)
+
+CI (`.github/workflows/ci.yml`) runs the same suite on every push/PR, including Dependabot PRs, on Node 18 to mirror the Netlify build environment.
 
 ## Architecture
 

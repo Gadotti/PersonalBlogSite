@@ -6,7 +6,9 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "pretest": "hexo clean && hexo generate",
+    "test": "node --test \"test/**/*.test.js\""
   },
   "hexo": {
     "version": "7.2.0"
@@ -25,5 +27,9 @@
     "hexo-server": "^1.0.0",
     "marked": "^4.0.11",
     "picomatch": "^2.3.2"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "linkinator": "^8.1.0"
   }
 }
