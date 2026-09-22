@@ -3,11 +3,13 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const path = require('node:path');
-const { LinkChecker } = require('linkinator');
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 
 test('links e assets internos do HTML gerado nao estao quebrados', async () => {
+  // linkinator so publica build ESM; em Node < 22 o require() sincrono desse
+  // pacote falha com ERR_REQUIRE_ESM, entao ele precisa ser carregado via import().
+  const { LinkChecker } = await import('linkinator');
   const checker = new LinkChecker();
   const result = await checker.check({
     path: PUBLIC_DIR,

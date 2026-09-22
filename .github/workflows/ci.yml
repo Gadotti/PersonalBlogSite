@@ -13,9 +13,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          # Mesma versao de Node usada pelo build do Netlify (netlify.toml),
-          # para que o resultado do CI reflita o que realmente vai para producao.
-          node-version: '18'
+          # As ferramentas de teste (cheerio/linkinator, devDependencies) exigem
+          # Node mais novo que o 18 do Netlify (netlify.toml) - o "hexo generate"
+          # em si e puro JS e nao e sensivel a versao do Node, entao essa diferenca
+          # nao afeta o que realmente vai para producao.
+          node-version: '22'
           cache: 'npm'
 
       - run: npm ci
