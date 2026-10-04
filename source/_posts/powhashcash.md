@@ -2,6 +2,7 @@
 title: 'Proof-of-work com hashcash. Evitando bloqueios de acesso.'
 date: 2021-04-19 11:18:44
 tags: ["security","hacking"]
+translation_key: powhashcash
 ---
 
 A notícia correu: ["Falha" do WhatsApp permite que qualquer um bloqueie sua conta](https://macmagazine.com.br/post/2021/04/12/falha-no-whatsapp-permite-que-qualquer-um-bloqueie-sua-conta/). Isto ocorre porque como parte da estratégia de vários sistemas (e não somente o WhatsApp) para mitigar o ataque de força bruta para quebra de credenciais, é bloquear o acesso à conta após "N" tentativas erradas de login por "X" tempo.

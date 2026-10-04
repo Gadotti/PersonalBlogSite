@@ -1,5 +1,8 @@
 prev: Older Posts
 next: Newer Posts
 comment: Comments
+date_format: MMMM D, YYYY
+translated_ai_reviewed: Translated from Portuguese with AI assistance and reviewed by the author.
+read_original: Read the original (PT)
 archive_a: Archives
 archive_b: "Archives: %s"

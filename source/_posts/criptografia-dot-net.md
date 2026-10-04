@@ -2,6 +2,7 @@
 title: Criptografia simétrica com .Net
 date: 2022-06-04 13:52:35
 tags: ["security", "dev", ".net"]
+translation_key: criptografia-dot-net
 ---
 
 # Sumário

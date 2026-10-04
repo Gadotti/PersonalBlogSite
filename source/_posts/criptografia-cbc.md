@@ -2,6 +2,7 @@
 title: 'Manipulando blocos cifrados: explorando ECB para escalar até um SQLi'
 date: 2026-06-21 16:02:31
 tags:
+translation_key: criptografia-cbc
 ---
 
 ## Sumário

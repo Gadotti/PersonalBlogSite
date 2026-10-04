@@ -1,6 +1,7 @@
 ---
 title: "Segurança com eficiência: Investindo certo, gastando menos"
 date: 2026-09-05 11:49:29
+translation_key: investindo-certo-gastando-menos
 tags: ["TechLeadership", "DevSecOps"]
 ---
 

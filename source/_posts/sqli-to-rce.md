@@ -2,6 +2,7 @@
 title: Comprometendo um servidor através de um simples SQL Injection
 date: 2022-11-18 17:48:14
 tags: ["hacking", "SQLi"]
+translation_key: sqli-to-rce
 ---
 
 ## Sumário

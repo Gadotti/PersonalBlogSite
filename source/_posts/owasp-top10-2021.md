@@ -2,6 +2,7 @@
 title: Uma visão geral sobre o novo OWASP Top 10 versão 2021
 date: 2021-12-12 16:02:14
 tags: ["security","owasp"]
+translation_key: owasp-top10-2021
 ---
 
 # Uma visão geral sobre o novo OWASP Top 10 versão 2021

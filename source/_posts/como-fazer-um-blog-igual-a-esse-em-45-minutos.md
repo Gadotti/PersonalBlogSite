@@ -3,6 +3,7 @@ title: Como fazer um blog igual a esse em 45 minutos?
 date: 2020-07-14 18:10:17
 tags: ["tools"]
 cover: /imgs/hexo/banner.jpg
+translation_key: como-fazer-um-blog-igual-a-esse-em-45-minutos
 ---
 # Como fazer um blog igual a esse em 45 minutos?
 

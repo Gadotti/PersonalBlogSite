@@ -3,6 +3,7 @@ title: Como facilitar a vida de um hacker mal-intencionado
 date: 2020-07-18 14:27:32
 tags: ["security", "hacking", "tools"]
 cover: /imgs/exposed_data/banner.jpg
+translation_key: como-facilitar-a-vida-de-um-hacker-mal-intencionado
 ---
 # Como facilitar a vida de um hacker mal-intencionado
 

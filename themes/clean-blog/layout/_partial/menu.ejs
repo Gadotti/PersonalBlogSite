@@ -1,3 +1,15 @@
+<%
+    var isEn = page.lang === 'en';
+    var altLang = i18n_alternate();
+    // PT: menu inteiro. EN: itens de texto de menu_en + os itens com icone (redes sociais) de menu.
+    var menuItems = [];
+    if (isEn) {
+        for (var t in (theme.menu_en || {})) { menuItems.push({ label: t, value: theme.menu_en[t] }); }
+        for (var s in theme.menu) { if (theme.menu[s] && theme.menu[s].icon) { menuItems.push({ label: s, value: theme.menu[s] }); } }
+    } else {
+        for (var m in theme.menu) { menuItems.push({ label: m, value: theme.menu[m] }); }
+    }
+%>
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
@@ -9,23 +21,29 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<%- config.root %>"><%- theme.menu_title || config.title || "" %></a>
+            <a class="navbar-brand" href="<%- isEn ? url_for('/en/') : config.root %>"><%- theme.menu_title || config.title || "" %></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <% for (var i in theme.menu){ %>
+                <% menuItems.forEach(function (item) { %>
                     <li>
-                        <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>" class="fa-stack-a">
-                            <% if (theme.menu[i].icon) { %>
-                                <i class="fa fa-<%= theme.menu[i].icon %> fa-stack-2x"></i>
+                        <a href="<%- item.value.url ? url_for(item.value.url) : url_for(item.value) %>" class="fa-stack-a">
+                            <% if (item.value.icon) { %>
+                                <i class="fa fa-<%= item.value.icon %> fa-stack-2x"></i>
                             <% } else { %>
-                                <%= i %>
+                                <%= item.label %>
                             <% } %>
                         </a>
                     </li>
-                <% } %>
+                <% }); %>
+                <!-- Language switch -->
+                <li class="lang-switch">
+                    <a href="<%- url_for('/' + altLang.path) %>" hreflang="<%= altLang.lang %>" lang="<%= altLang.lang %>" title="<%= altLang.title %>" aria-label="<%= altLang.title %>" class="fa-stack-a">
+                        <img src="<%- url_for('/img/flags/' + altLang.flag + '.svg') %>" alt="" width="20" height="14"> <%= altLang.code %>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

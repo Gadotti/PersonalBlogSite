@@ -1,3 +1,4 @@
+<% var uiEn = page.lang === 'en'; var ui = uiEn ? {"search":"Search tools...","all":"All","empty":"No tools found.","notes":"Notes","one":" tool","many":" tools"} : {"search":"Buscar ferramentas...","all":"Todas","empty":"Nenhuma ferramenta encontrada.","notes":"Notas","one":" ferramenta","many":" ferramentas"}; %>
 <header class="intro-header" style="background-image: url('<%- theme.index_cover %>')">
     <div class="container">
         <div class="row">
@@ -13,22 +14,23 @@
 <div class="container tools-page">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
+            <%- partial("_partial/translation-notice") %>
 
             <!-- Search, view toggle, and filter bar -->
             <div class="tools-controls">
                 <div class="tools-controls-top">
-                    <input type="text" id="tools-search" class="tools-search-input" placeholder="Buscar ferramentas..." />
+                    <input type="text" id="tools-search" class="tools-search-input" placeholder="<%= ui.search %>" />
                     <div class="tools-view-toggle" id="tools-view-toggle">
                         <button class="tools-view-btn active" data-view="cards" title="Cards">
                             <i class="fa fa-th-large"></i>
                         </button>
-                        <button class="tools-view-btn" data-view="list" title="Lista">
+                        <button class="tools-view-btn" data-view="list" title="<%= uiEn ? 'List' : 'Lista' %>">
                             <i class="fa fa-list"></i>
                         </button>
                     </div>
                 </div>
                 <div class="tools-categories-filter" id="tools-categories-filter">
-                    <button class="tools-filter-btn active" data-category="all">Todas</button>
+                    <button class="tools-filter-btn active" data-category="all"><%= ui.all %></button>
                 </div>
             </div>
 
@@ -39,7 +41,7 @@
             <div id="tools-list" class="tools-list" style="display:none;"></div>
 
             <div class="tools-empty" id="tools-empty" style="display:none;">
-                Nenhuma ferramenta encontrada.
+                <%= ui.empty %>
             </div>
         </div>
     </div>
@@ -234,7 +236,7 @@ for (var i = 0; i < lines.length; i++) {
                 if (item.notes) {
                     var notesToggle = document.createElement('button');
                     notesToggle.className = 'tools-card-notes-toggle';
-                    notesToggle.innerHTML = '<i class="fa fa-comment-o"></i> Notas';
+                    notesToggle.innerHTML = '<i class="fa fa-comment-o"></i> ' + <%- JSON.stringify(uiEn ? 'Notes' : 'Notas') %>;
                     notesToggle.addEventListener('click', function(e) {
                         e.stopPropagation();
                         var notesEl = this.nextElementSibling;
@@ -260,7 +262,7 @@ for (var i = 0; i < lines.length; i++) {
         });
 
         emptyMsg.style.display = totalVisible === 0 ? 'block' : 'none';
-        countEl.textContent = totalVisible + (totalVisible === 1 ? ' ferramenta' : ' ferramentas');
+        countEl.textContent = totalVisible + (totalVisible === 1 ? <%- JSON.stringify(uiEn ? ' tool' : ' ferramenta') %> : <%- JSON.stringify(uiEn ? ' tools' : ' ferramentas') %>);
     }
 
     function renderList() {
@@ -289,7 +291,7 @@ for (var i = 0; i < lines.length; i++) {
 
         listEl.innerHTML = html;
         emptyMsg.style.display = totalVisible === 0 ? 'block' : 'none';
-        countEl.textContent = totalVisible + (totalVisible === 1 ? ' ferramenta' : ' ferramentas');
+        countEl.textContent = totalVisible + (totalVisible === 1 ? <%- JSON.stringify(uiEn ? ' tool' : ' ferramenta') %> : <%- JSON.stringify(uiEn ? ' tools' : ' ferramentas') %>);
     }
 
     function render() {

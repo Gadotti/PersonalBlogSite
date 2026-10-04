@@ -2,6 +2,7 @@
 title: 'Microsoft Teams não faz logoff?'
 date: 2021-09-07 17:52:00
 tags:
+translation_key: ms-teams
 ---
 # Microsoft Teams não faz logoff?
 

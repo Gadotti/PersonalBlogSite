@@ -2,6 +2,7 @@
 title: Relação entre Cookies, Gerenciamento Sessões Web e Segurança
 date: 2021-11-28 17:15:47
 tags:
+translation_key: cookies-e-sessao
 ---
  
 # Relação entre Cookies, Gerenciamento Sessões Web e Segurança

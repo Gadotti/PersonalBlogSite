@@ -2,6 +2,7 @@
 title: SQL Injection com SQL Server Smuggling Unicode
 date: 2022-11-03 20:22:43
 tags: ["hacking", "SQLi"]
+translation_key: sqlserver-smuggling
 ---
 
 ## Introdução

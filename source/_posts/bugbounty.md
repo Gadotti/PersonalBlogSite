@@ -2,6 +2,7 @@
 title: 'O que não te contam sobre BugBounty'
 date: 2021-08-07 14:30:00
 tags: ["security","bugbounty"]
+translation_key: bugbounty
 ---
 
 ## O que não te contam sobre BugBounty

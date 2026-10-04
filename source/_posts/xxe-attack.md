@@ -2,6 +2,7 @@
 title: XXE Attack. Nem todo XML é inocente!
 date: 2020-11-23 16:17:08
 tags: ["security", "hacking", "dev"]
+translation_key: xxe-attack
 ---
 
 ## Sumário

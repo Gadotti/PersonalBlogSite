@@ -2,6 +2,7 @@
 title: 'Segurança 360: O que aprendi nos últimos anos'
 date: 2025-08-20 18:16:41
 tags:
+translation_key: security-360
 ---
 
 Talvez esse texto não seja para você....

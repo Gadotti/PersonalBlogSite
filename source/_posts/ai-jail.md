@@ -2,6 +2,7 @@
 title: Por que o agente de IA precisa de uma "jaula"
 date: 2026-05-16 14:56:00
 tags: ["ia","security"]
+translation_key: ai-jail
 ---
 
 *O sistema operacional não distingue "o humano digitou" de "o agente mandou". Se você pode executar qualquer comando, o agente também pode.*

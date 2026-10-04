@@ -11,8 +11,8 @@
 
     if (page.description) {
         description = page.description;
-    } else if (config.description) {
-        description = config.description;
+    } else if (site_text('description')) {
+        description = site_text('description');
     } else if (page.excerpt) {
         description = strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '');
     } else if (page.content) {
@@ -118,6 +118,11 @@
     
     <!-- Google Ad -->
     <%- partial('googleautoad') %>
+
+    <!-- Language alternates (so quando ha traducao equivalente da pagina) -->
+    <% i18n_alternate().hreflangs.forEach(function (alt) { %>
+    <link rel="alternate" hreflang="<%= alt.hreflang %>" href="<%- full_url_for('/' + alt.path) %>"/>
+    <% }); %>
 
     <!-- favicon -->
     <% if (theme.favicon) { %>

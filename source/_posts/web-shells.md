@@ -2,6 +2,7 @@
 title: Remote File Inclusion. O que é? Onde vivem? Do que se alimentam?
 date: 2021-01-17 18:00:56
 tags: ["hacking", "security", "tools"]
+translation_key: web-shells
 ---
  
 # Remote File Inclusion. O que é? Onde vivem? Do que se alimentam?

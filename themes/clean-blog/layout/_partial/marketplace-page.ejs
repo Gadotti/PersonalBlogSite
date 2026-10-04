@@ -1,3 +1,4 @@
+<% var uiEn = page.lang === 'en'; var ui = uiEn ? {} : {}; %>
 <header class="intro-header" style="background-image: url('<%- theme.index_cover %>')">
     <div class="container">
         <div class="row">
@@ -17,11 +18,12 @@
 <div class="container marketplace-page">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
+            <%- partial("_partial/translation-notice") %>
 
             <div class="mk-controls">
-                <input type="text" id="mk-search" class="mk-search-input" placeholder="Buscar produto ou serviço..." />
+                <input type="text" id="mk-search" class="mk-search-input" placeholder="<%= uiEn ? 'Search products or services...' : 'Buscar produto ou serviço...' %>" />
                 <div class="mk-categories-filter" id="mk-categories-filter">
-                    <button class="mk-filter-btn active" data-category="all">Todos</button>
+                    <button class="mk-filter-btn active" data-category="all"><%= uiEn ? 'All' : 'Todos' %></button>
                 </div>
             </div>
 
@@ -30,7 +32,7 @@
             <div id="mk-grid"></div>
 
             <div class="mk-empty" id="mk-empty" style="display:none;">
-                Nenhum item encontrado.
+                <%= uiEn ? 'No items found.' : 'Nenhum item encontrado.' %>
             </div>
         </div>
     </div>
@@ -91,7 +93,7 @@ mkCategories.forEach(function(cat) {
         item.kind = (item.kind || 'produto').toLowerCase();
         item.status = (item.status || 'disponivel').toLowerCase();
         item.featured = String(item.featured || '').toLowerCase() === 'true';
-        item.cta = item.cta || 'Tenho interesse';
+        item.cta = item.cta || (uiEn ? "I'm interested" : 'Tenho interesse');
         item.description = item.description || '';
         item.featureList = (item.features || '')
             .split('|')
@@ -112,11 +114,11 @@ mkCategories.forEach(function(cat) {
     var countEl = document.getElementById('mk-count');
     var activeCategory = 'all';
 
-    var KIND_LABEL = { servico: 'Serviço', 'serviço': 'Serviço', produto: 'Produto' };
+    var KIND_LABEL = <%- JSON.stringify(uiEn ? { servico: 'Service', 'serviço': 'Service', produto: 'Product' } : { servico: 'Serviço', 'serviço': 'Serviço', produto: 'Produto' }) %>;
     var STATUS_LABEL = {
-        disponivel: 'Disponível',
-        'sob-consulta': 'Sob consulta',
-        esgotado: 'Esgotado'
+        disponivel: <%- JSON.stringify(uiEn ? 'Available' : 'Disponível') %>,
+        'sob-consulta': <%- JSON.stringify(uiEn ? 'On request' : 'Sob consulta') %>,
+        esgotado: <%- JSON.stringify(uiEn ? 'Sold out' : 'Esgotado') %>
     };
 
     data.forEach(function(cat) {
@@ -210,7 +212,7 @@ mkCategories.forEach(function(cat) {
         var soldOut = item.status === 'esgotado';
         var cta = document.createElement(item.url && !soldOut ? 'a' : 'span');
         cta.className = 'mk-card-cta' + (soldOut ? ' mk-card-cta--disabled' : '');
-        cta.textContent = soldOut ? 'Indisponível' : item.cta;
+        cta.textContent = soldOut ? <%- JSON.stringify(uiEn ? 'Unavailable' : 'Indisponível') %> : item.cta;
         if (item.url && !soldOut) {
             cta.href = item.url;
             if (item.url.indexOf('http') === 0) {
@@ -271,7 +273,7 @@ mkCategories.forEach(function(cat) {
         if (item.notes) {
             var toggle = document.createElement('button');
             toggle.className = 'mk-card-notes-toggle';
-            toggle.innerHTML = '<i class="fa fa-info-circle"></i> Detalhes';
+            toggle.innerHTML = '<i class="fa fa-info-circle"></i> ' + <%- JSON.stringify(uiEn ? 'Details' : 'Detalhes') %>;
             toggle.addEventListener('click', function() {
                 var notesEl = this.nextElementSibling;
                 var isVisible = notesEl.style.display !== 'none';
@@ -319,7 +321,7 @@ mkCategories.forEach(function(cat) {
         });
 
         emptyMsg.style.display = total === 0 ? 'block' : 'none';
-        countEl.textContent = total + (total === 1 ? ' item' : ' itens');
+        countEl.textContent = total + (total === 1 ? <%- JSON.stringify(uiEn ? ' item' : ' item') %> : <%- JSON.stringify(uiEn ? ' items' : ' itens') %>);
     }
 
     searchInput.addEventListener('input', render);

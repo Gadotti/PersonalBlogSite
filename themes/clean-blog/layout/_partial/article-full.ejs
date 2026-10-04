@@ -20,7 +20,7 @@
                             Posted by <%- item.author %> on
                         <% } %>
                         <% if(item.date) { %>
-                            <%= item.date.format(config.date_format) %>
+                            <%= post_date(item.date) %>
                         <% } %>
                     </span>
                 </div>
@@ -57,6 +57,16 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <% if (item.translated_by === 'ai-reviewed') { %>
+                    <% var original = i18n_alternate(); %>
+                    <div class="alert alert-info" role="note">
+                        <%= __('translated_ai_reviewed') %>
+                        <% if (original.exact) { %>
+                            <a href="<%- url_for('/' + original.path) %>" hreflang="<%= original.lang %>"><%= __('read_original') %></a>
+                        <% } %>
+                    </div>
+                <% } %>
+
                 <%- item.content %>
 
                 <% if(theme.addthis) { %>

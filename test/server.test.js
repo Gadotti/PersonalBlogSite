@@ -48,7 +48,17 @@ after(() => {
   if (serverProcess) serverProcess.kill();
 });
 
-const ROTAS_CHAVE = ['/', '/archives/', '/tags/', '/rss2.xml', '/about/', '/2020/12/04/dicionario-seguranca/'];
+const ROTAS_CHAVE = [
+  '/',
+  '/archives/',
+  '/tags/',
+  '/rss2.xml',
+  '/about/',
+  '/2020/12/04/dicionario-seguranca/',
+  // versao em ingles (scripts/i18n.js): home e post traduzido
+  '/en/',
+  '/en/2026/09/05/investing-smartly-spending-less/'
+];
 
 for (const rota of ROTAS_CHAVE) {
   test(`hexo server responde 200 em "${rota}"`, async () => {

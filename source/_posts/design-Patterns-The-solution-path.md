@@ -3,6 +3,7 @@ title: 'Design Patterns: The solution path'
 date: 2017-03-08 18:32:42
 tags: ["patterns"]
 cover: /imgs/design-patterns.jfif
+translation_key: design-Patterns-The-solution-path
 ---
 # Design Patterns: The solution path
 

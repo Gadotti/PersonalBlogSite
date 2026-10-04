@@ -2,6 +2,7 @@
 title: "SameSite: Entenda de uma vez por todas"
 date: 2021-02-13 17:26:24
 tags: ["cookies", "security", "configuration"]
+translation_key: samesite
 ---
 
 Talvez você já tenha reparado que os *cookies* possuem algumas propriedades (*HttpOnly, Secure e SameSite*) ou talvez você já tenha reparado em alertas no consoles informando o mal uso do atributo *SameSite* pela aplicação. 

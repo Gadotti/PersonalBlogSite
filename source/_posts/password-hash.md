@@ -3,6 +3,7 @@ title: A senha do seu usuário está segura? Tem certeza?
 date: 2020-07-05 18:20:57
 tags: ["security", "password"]
 cover: /imgs/hash_password/banner.jfif
+translation_key: password-hash
 ---
 # A senha do seu usuário está segura? Tem certeza?
 

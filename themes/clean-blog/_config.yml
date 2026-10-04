@@ -22,6 +22,16 @@ menu:
     url: https://eduardogadotti.com/rss2.xml
     icon: rss
 
+# Header em ingles (/en/). Aqui entram so os itens de texto que ja existem em EN;
+# os itens com "icon" (redes sociais) sao reaproveitados do menu acima.
+menu_en:
+  About: /en/about/
+  Dictionary: /en/2020/12/04/information-security-dictionary/
+  Links & Tools: /en/tools/
+  Marketplace: /en/marketplace/
+  Out of the Box Payloads: /en/outoftheboxpayloads/
+  Tags: /en/tags/
+
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: 'Home'
 

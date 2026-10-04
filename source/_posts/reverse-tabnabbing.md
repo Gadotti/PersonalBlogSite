@@ -3,6 +3,7 @@ title: 'Já ouviu falar em Reverse Tabnabbing?'
 date: 2020-10-02 18:08:53
 cover: /imgs/reverse_tabnabbing/cover.jpg
 tags: ["hacking", "security"]
+translation_key: reverse-tabnabbing
 ---
 
 ## Já ouviu falar em Reverse Tabnabbing?

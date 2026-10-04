@@ -2,6 +2,7 @@
 title: "IA everywhere: Teorias, aprendizados e vibe-coding - Pt.2"
 date: 2026-04-25 18:04:11
 tags: ["ia"]
+translation_key: IA-everywhere-Teorias-aprendizados-e-vibe-coding-pt2
 ---
 
 ## Introdução

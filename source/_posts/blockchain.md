@@ -3,6 +3,7 @@ title: Como implementar um BlockChain simples
 date: 2020-10-12 13:10:55
 tags: ["security", "dev"]
 cover: /imgs/blockchain/cover.jpg
+translation_key: blockchain
 ---
 
 Você pesquisou sobre **Bockchain**, viu e leu algumas explicações teóricas mas não conseguiu imaginar como fica a implementação dos blocos? Como é a mineração do hash do bloco?

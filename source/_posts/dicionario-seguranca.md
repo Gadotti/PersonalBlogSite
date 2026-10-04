@@ -2,6 +2,7 @@
 title: 'Dicionário da Segurança da Informação'
 date: 2020-12-04 17:15:16
 tags: ["security"]
+translation_key: dicionario-seguranca
 ---
 No universo da segurança da informação, existem muitos termos e siglas que podem não ser de conhecimento de tod@s.
 O desconhecimento gera estranheza e nos afastam, sempre há espaço para deixar claro o que pode parecer simples, aproximando assim as pessoas.

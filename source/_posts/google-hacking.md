@@ -3,6 +3,7 @@ title: 'Google Hacking: O que os olhos não vêem, o Google indexa'
 date: 2020-07-26 15:33:55
 cover: /imgs/google_hacking/banner.jpg
 tags: ["hacking", "security"]
+translation_key: google-hacking
 ---
 # Google Hacking: O que os olhos não vêem, o Google indexa
 

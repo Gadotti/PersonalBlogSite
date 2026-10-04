@@ -6,7 +6,7 @@
     var isToolsPage = page.type === 'tools';
     var isMarketplacePage = page.type === 'marketplace';
     if (isTagIndex) {
-        items = site.tags;
+        items = page.tag_list || site.tags;
         title = __('tags');
     } else if (isCategoryIndex) {
         items = site.categories;

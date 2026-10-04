@@ -9,6 +9,6 @@
         <% if(item.author) { %>
             Posted by <%- item.author %> on
         <% } %>
-        <%= item.date.format(config.date_format) %>
+        <%= post_date(item.date) %>
     </p>
 </div>

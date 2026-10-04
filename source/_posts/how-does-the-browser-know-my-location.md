@@ -3,6 +3,7 @@ title: How does the browser know my location
 date: 2019-07-27 19:44:50
 tags: ["privacy"]
 cover: /imgs/location/banner.jfif
+translation_key: how-does-the-browser-know-my-location
 ---
 # How does the browser know my location
 

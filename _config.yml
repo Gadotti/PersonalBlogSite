@@ -6,6 +6,9 @@
 title: 'Eduardo Gadotti'
 subtitle: 'Artigos, tecnologia e programação'
 description: 'Artigos, tecnologia e programação'
+# Textos do site em ingles (usados em /en/ pelo helper site_text, ver scripts/i18n.js)
+subtitle_en: 'Articles, technology and programming'
+description_en: 'Articles, technology and programming'
 keywords: security, hacking, dev, cybersecurity
 author: 'Eduardo Gadotti'
 language: pt
