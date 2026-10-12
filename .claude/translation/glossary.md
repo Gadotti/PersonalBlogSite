@@ -79,3 +79,15 @@ Rule: industry-standard English terms. The agent appends rows as new recurring t
 | caçadores de cliques | click chasers | |
 | vendedores de curso | course peddlers | pejorative, as in the PT |
 | Google Hacking / Google Dorking | Google Hacking / Google Dorking | keep both names; capitalized |
+| auditar sem travar | audit without blocking | name used in the ai-security-playbook repo |
+| modelo de adoção gradual | gradual adoption model | stages: Observe → Alert → Block |
+| enforcement graduado | graduated enforcement | |
+| níveis de maturidade (playbook) | Absent → Observe → Alert → Enforce → Continuously validated | "Enforçar" = Enforce; match the repo's names |
+| riscos de borda (camadas OWASP LLM) | boundary risks | repo term; not "edge risks" |
+| reidratar (resposta anonimizada) | rehydrate | |
+| explorador visual | visual explorer | |
+| executor (de testes) | runner | e.g. "injection test runner" |
+| simulador didático | teaching simulator | |
+| premissas (princípios de um argumento) | premises | context-dependent; "prerequisites" when it means requirements |
+| marcador `[a verificar]` | `[to verify]` | the repo itself (in English) uses `[to verify]` |
+| já viu esse filme | has seen this movie before | idiom works as-is in EN |
