@@ -22,7 +22,7 @@ const EN_PREFIX = 'en/';
 
 const LANGS = {
   [PT]: { code: 'PT', flag: 'br', title: 'Ler em português' },
-  [EN]: { code: 'EN', flag: 'us', title: 'Read in English' }
+  [EN]: { code: 'EN', flag: 'gb', title: 'Read in English' }
 };
 
 // Conteudo bruto dos .md de source/en/_posts, alimentado pelo processor abaixo.

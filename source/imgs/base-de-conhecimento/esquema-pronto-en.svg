@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 395" role="img" aria-label="The pronto (ready) schema: pronto.fio, one row per ticket with a tsvector and a GIN index; pronto.vetor, one row per chunk with a partial expression HNSW index; pronto.radical with the count for each stem; and the search functions.">
+  <title>The pronto schema in PostgreSQL</title>
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="760" height="395" fill="#ffffff"/>
+  <g font-family="'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif" fill="#333">
+
+    <!-- pronto.fio -->
+    <rect x="15" y="15" width="350" height="215" rx="6" fill="#ffffff" stroke="#888"/>
+    <path d="M15,45 V21 a6,6 0 0 1 6,-6 H359 a6,6 0 0 1 6,6 V45 z" fill="#0085A1"/>
+    <text x="27" y="35" font-size="13" font-weight="700" fill="#ffffff">pronto.fio</text>
+    <text x="353" y="35" font-size="11" fill="#ffffff" text-anchor="end">1 row per ticket</text>
+    <g font-family="Consolas,Menlo,Monaco,monospace" font-size="11.5">
+      <text x="27" y="68">chamado_id</text>
+      <text x="27" y="88">cliente_id, criado_em</text>
+      <text x="27" y="108">faixa, natureza, assunto</text>
+      <text x="27" y="128">modulo, versao</text>
+      <text x="27" y="148">titulo</text>
+      <text x="27" y="168">texto_busca</text>
+      <text x="27" y="188">tsv</text>
+    </g>
+    <g font-size="11" fill="#666">
+      <text x="200" y="68">primary key</text>
+      <text x="200" y="88">filters</text>
+      <text x="200" y="108">filters</text>
+      <text x="200" y="128">filters</text>
+      <text x="200" y="148">text</text>
+      <text x="200" y="168">clean thread, no placeholders</text>
+      <text x="200" y="188">generated tsvector:</text>
+      <text x="200" y="202">title A + thread B</text>
+    </g>
+    <line x1="15" y1="210" x2="365" y2="210" stroke="#ddd"/>
+    <text x="27" y="224" font-size="11.5" font-weight="700" fill="#0085A1">GIN index (tsv): keyword search</text>
+
+    <!-- pronto.vetor -->
+    <rect x="405" y="15" width="340" height="215" rx="6" fill="#ffffff" stroke="#888"/>
+    <path d="M405,45 V21 a6,6 0 0 1 6,-6 H739 a6,6 0 0 1 6,6 V45 z" fill="#0085A1"/>
+    <text x="417" y="35" font-size="13" font-weight="700" fill="#ffffff">pronto.vetor</text>
+    <text x="733" y="35" font-size="11" fill="#ffffff" text-anchor="end">1 row per chunk</text>
+    <g font-family="Consolas,Menlo,Monaco,monospace" font-size="11.5">
+      <text x="417" y="68">chamado_id</text>
+      <text x="417" y="88">modelo, dimensoes</text>
+      <text x="417" y="108">forma, ordem</text>
+      <text x="417" y="128">resumo</text>
+      <text x="417" y="148">vetor</text>
+    </g>
+    <g font-size="11" fill="#666">
+      <text x="565" y="68">linked to fio (cascade)</text>
+      <text x="565" y="88">large, 1024</text>
+      <text x="565" y="108">trecho1000; 0, 1, 2...</text>
+      <text x="565" y="128">md5 of the text sent</text>
+      <text x="565" y="148">vector, no fixed dimension</text>
+    </g>
+    <text x="417" y="170" font-size="10.5" fill="#888">key: ticket, model, dimensions, representation, order</text>
+    <line x1="405" y1="182" x2="745" y2="182" stroke="#ddd"/>
+    <text x="417" y="200" font-size="11.5" font-weight="700" fill="#0085A1">HNSW index, cosine, expression-based, partial</text>
+    <text x="417" y="219" font-family="Consolas,Menlo,Monaco,monospace" font-size="10.5" fill="#0085A1">(vetor::vector(1024)) WHERE production forma</text>
+
+    <!-- N:1 relationship -->
+    <line x1="403" y1="64" x2="367" y2="64" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <text x="385" y="57" font-size="10.5" text-anchor="middle">N : 1</text>
+
+    <!-- pronto.radical -->
+    <rect x="15" y="255" width="350" height="125" rx="6" fill="#ffffff" stroke="#888"/>
+    <path d="M15,285 V261 a6,6 0 0 1 6,-6 H359 a6,6 0 0 1 6,6 V285 z" fill="#0085A1"/>
+    <text x="27" y="275" font-size="13" font-weight="700" fill="#ffffff">pronto.radical</text>
+    <text x="353" y="275" font-size="11" fill="#ffffff" text-anchor="end">1 row per stem</text>
+    <g font-family="Consolas,Menlo,Monaco,monospace" font-size="11.5">
+      <text x="27" y="308">radical</text>
+      <text x="27" y="328">chamados</text>
+    </g>
+    <g font-size="11" fill="#666">
+      <text x="200" y="308">primary key</text>
+      <text x="200" y="328">how many tickets have it</text>
+    </g>
+    <text x="27" y="360" font-size="11" fill="#888">recomputed on every indexing run (ts_stat)</text>
+
+    <!-- functions -->
+    <rect x="405" y="255" width="340" height="125" rx="6" fill="#ffffff" stroke="#888"/>
+    <path d="M405,285 V261 a6,6 0 0 1 6,-6 H739 a6,6 0 0 1 6,6 V285 z" fill="#555"/>
+    <text x="417" y="275" font-size="13" font-weight="700" fill="#ffffff">functions</text>
+    <text x="733" y="275" font-size="11" fill="#ffffff" text-anchor="end">SQL and PL/pgSQL</text>
+    <g font-family="Consolas,Menlo,Monaco,monospace" font-size="11.5">
+      <text x="417" y="308">lexemas(texto)</text>
+      <text x="417" y="328">consulta(texto)</text>
+      <text x="417" y="348">consulta_rara(t, n)</text>
+      <text x="417" y="368">buscar_palavra(...)</text>
+    </g>
+    <g font-size="11" fill="#666">
+      <text x="580" y="308">unaccented Portuguese</text>
+      <text x="580" y="328">stems joined with "OR"</text>
+      <text x="580" y="348">rare ones, up to n tickets</text>
+      <text x="580" y="368">EXECUTE: plans every time</text>
+    </g>
+
+    <line x1="365" y1="338" x2="403" y2="338" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <text x="384" y="331" font-size="10.5" text-anchor="middle">read</text>
+  </g>
+</svg>

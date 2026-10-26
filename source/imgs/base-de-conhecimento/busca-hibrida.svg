@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 610" role="img" aria-label="A busca de produção: a pergunta é limpa com as mesmas regras da base e segue por dois caminhos, palavra pelo índice GIN e sentido pelo índice HNSW, cada um com 50 resultados; as duas listas são juntadas por RRF e as 5 primeiras vão ao atendente.">
+  <title>A busca híbrida de produção</title>
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="760" height="610" fill="#ffffff"/>
+  <g font-family="'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif" fill="#333" text-anchor="middle">
+
+    <rect x="230" y="15" width="300" height="50" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="380" y="37" font-size="13" font-weight="700">Chamado novo</text>
+    <text x="380" y="55" font-size="11.5">título + descrição</text>
+    <line x1="380" y1="65" x2="380" y2="93" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+
+    <rect x="230" y="95" width="300" height="50" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="380" y="117" font-size="13" font-weight="700">Mesma limpeza da base (R2 a R9)</text>
+    <text x="380" y="135" font-size="11.5">segredo e dado pessoal saem antes da busca</text>
+
+    <polyline points="380,145 380,160 195,160 195,193" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <polyline points="380,160 565,160 565,193" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+
+    <!-- coluna palavra -->
+    <text x="205" y="182" font-size="12" font-weight="700" fill="#555" text-anchor="start">por palavra (full-text)</text>
+    <rect x="40" y="195" width="310" height="54" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="195" y="218" font-size="12.5" font-weight="700">radicais mais raros da pergunta</text>
+    <text x="195" y="237" font-size="11.5">até somarem 2.000 chamados (pronto.radical)</text>
+    <line x1="195" y1="249" x2="195" y2="277" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <rect x="40" y="279" width="310" height="54" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="195" y="302" font-size="12.5" font-weight="700">candidatos pelo índice GIN</text>
+    <text x="195" y="321" font-size="11.5">ordem: ts_rank da pergunta inteira</text>
+    <line x1="195" y1="333" x2="195" y2="361" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <rect x="40" y="363" width="310" height="54" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="195" y="386" font-size="12.5" font-weight="700">50 primeiros chamados</text>
+    <text x="195" y="405" font-size="11.5">~0,4 s no histórico inteiro</text>
+
+    <!-- coluna vetor -->
+    <text x="575" y="182" font-size="12" font-weight="700" fill="#555" text-anchor="start">por sentido (pgvector)</text>
+    <rect x="410" y="195" width="310" height="54" rx="6" fill="#ffffff" stroke="#0085A1" stroke-width="2"/>
+    <text x="565" y="218" font-size="12.5" font-weight="700">API de embedding</text>
+    <text x="565" y="237" font-size="11.5" fill="#0085A1">sai só a pergunta limpa; volta 1.024 dim.</text>
+    <line x1="565" y1="249" x2="565" y2="277" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <rect x="410" y="279" width="310" height="54" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="565" y="302" font-size="12.5" font-weight="700">índice HNSW: 500 trechos mais perto</text>
+    <text x="565" y="321" font-size="11.5">ef_search 100, varredura iterativa</text>
+    <line x1="565" y1="333" x2="565" y2="361" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <rect x="410" y="363" width="310" height="54" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="565" y="386" font-size="12.5" font-weight="700">50 primeiros chamados</text>
+    <text x="565" y="405" font-size="11.5">cada um pelo seu trecho mais próximo</text>
+
+    <!-- fusão -->
+    <polyline points="195,417 195,437 360,437 360,455" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <polyline points="565,417 565,437 400,437 400,455" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+    <rect x="200" y="457" width="360" height="54" rx="6" fill="#ffffff" stroke="#0085A1" stroke-width="2"/>
+    <text x="380" y="480" font-size="12.5" font-weight="700" fill="#0085A1">RRF: soma de 1 / (60 + posição)</text>
+    <text x="380" y="499" font-size="11.5">quem aparece bem nas duas listas sobe</text>
+    <line x1="380" y1="511" x2="380" y2="539" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+
+    <rect x="200" y="541" width="360" height="54" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="380" y="564" font-size="12.5" font-weight="700">5 sugestões ao atendente</text>
+    <text x="380" y="583" font-size="11.5">faixa, solução registrada e trecho mais próximo</text>
+  </g>
+</svg>

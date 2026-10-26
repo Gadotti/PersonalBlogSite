@@ -20,6 +20,24 @@ article
           width 100%
           height 100%
           margin-top 0
+      // Tabelas do Markdown (embrulhadas em .table-wrap por scripts/table-wrap.js)
+      .table-wrap
+        overflow-x auto
+        margin 0 0 20px
+        table
+          width 100%
+          border-collapse collapse
+          font-size 0.9em
+        th, td
+          padding 8px 12px
+          text-align left
+          vertical-align top
+          border-bottom 1px solid color-border
+        th
+          font-weight 700
+          border-bottom 2px solid color-border
+        tbody tr:last-child td
+          border-bottom none
       blockquote
         font-style italic
         font-family font-serif

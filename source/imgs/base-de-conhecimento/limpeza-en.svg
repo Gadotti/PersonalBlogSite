@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 307" role="img" aria-label="Order of the cleaning routines: per message, R2, R5, R6a, R6b, R3, R6c, R4 and R7; then, per ticket, R8, R9, R10, R11 and the R13 index. Secrets come out first, and names become placeholders before template detection.">
+  <title>Order of the cleaning routines</title>
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="760" height="307" fill="#ffffff"/>
+  <g font-family="'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif" fill="#333" text-anchor="middle">
+
+    <text x="15" y="40" font-size="13" font-weight="700" text-anchor="start">Per message</text>
+
+    <!-- row 1: x = 15 + i*93, width 80, height 76 (taller than PT to fit 3 lines) -->
+    <rect x="15" y="55" width="80" height="76" rx="6" fill="#ffffff" stroke="#0085A1" stroke-width="2"/>
+    <text x="55" y="78" font-size="14" font-weight="700">R2</text>
+    <text x="55" y="96" font-size="10.5">normalize</text>
+    <text x="55" y="109" font-size="10.5">HTML and</text>
+    <text x="55" y="122" font-size="10.5">line breaks</text>
+
+    <rect x="108" y="55" width="80" height="76" rx="6" fill="#ffffff" stroke="#0085A1" stroke-width="2"/>
+    <text x="148" y="78" font-size="14" font-weight="700">R5</text>
+    <text x="148" y="96" font-size="10.5">secrets</text>
+    <text x="148" y="109" font-size="10.5">password,</text>
+    <text x="148" y="122" font-size="10.5">token</text>
+
+    <rect x="201" y="55" width="80" height="76" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="241" y="78" font-size="14" font-weight="700">R6a</text>
+    <text x="241" y="100" font-size="10.5">rules</text>
+    <text x="241" y="114" font-size="10.5">CPF, email</text>
+
+    <rect x="294" y="55" width="80" height="76" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="334" y="78" font-size="14" font-weight="700">R6b</text>
+    <text x="334" y="100" font-size="10.5">registry</text>
+    <text x="334" y="114" font-size="10.5">name and role</text>
+
+    <rect x="387" y="55" width="80" height="76" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="427" y="78" font-size="14" font-weight="700">R3</text>
+    <text x="427" y="96" font-size="10.5">automated</text>
+    <text x="427" y="109" font-size="10.5">messages and</text>
+    <text x="427" y="122" font-size="10.5">templates</text>
+
+    <rect x="480" y="55" width="80" height="76" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="520" y="78" font-size="14" font-weight="700">R6c</text>
+    <text x="520" y="100" font-size="10.5">spaCy</text>
+    <text x="520" y="114" font-size="10.5">stray names</text>
+
+    <rect x="573" y="55" width="80" height="76" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="613" y="78" font-size="14" font-weight="700">R4</text>
+    <text x="613" y="100" font-size="10.5">greetings,</text>
+    <text x="613" y="114" font-size="10.5">signatures</text>
+
+    <rect x="666" y="55" width="80" height="76" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="706" y="78" font-size="14" font-weight="700">R7</text>
+    <text x="706" y="100" font-size="10.5">stack traces,</text>
+    <text x="706" y="114" font-size="10.5">repeated logs</text>
+
+    <g stroke="#555" stroke-width="1.5">
+      <line x1="95" y1="93" x2="106" y2="93" marker-end="url(#seta)"/>
+      <line x1="188" y1="93" x2="199" y2="93" marker-end="url(#seta)"/>
+      <line x1="281" y1="93" x2="292" y2="93" marker-end="url(#seta)"/>
+      <line x1="374" y1="93" x2="385" y2="93" marker-end="url(#seta)"/>
+      <line x1="467" y1="93" x2="478" y2="93" marker-end="url(#seta)"/>
+      <line x1="560" y1="93" x2="571" y2="93" marker-end="url(#seta)"/>
+      <line x1="653" y1="93" x2="664" y2="93" marker-end="url(#seta)"/>
+    </g>
+
+    <!-- explanatory brackets -->
+    <g fill="none" stroke-width="1.5">
+      <polyline points="15,140 15,146 188,146 188,140" stroke="#0085A1"/>
+      <polyline points="201,140 201,146 374,146 374,140" stroke="#888"/>
+      <polyline points="387,140 387,146 467,146 467,140" stroke="#888"/>
+      <polyline points="573,140 573,146 746,146 746,140" stroke="#888"/>
+    </g>
+    <text x="101.5" y="163" font-size="11" fill="#0085A1">at extraction: bruto is</text>
+    <text x="101.5" y="177" font-size="11" fill="#0085A1">already stored secret-free</text>
+    <text x="287.5" y="163" font-size="11">names become placeholders</text>
+    <text x="287.5" y="177" font-size="11">before the template catalog</text>
+    <text x="427" y="163" font-size="11">20 times in</text>
+    <text x="427" y="177" font-size="11">3+ tickets</text>
+    <text x="659.5" y="163" font-size="11">only on what R3 kept</text>
+
+    <!-- connector to row 2 -->
+    <polyline points="746,93 754,93 754,200 76,200 76,233" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#seta)"/>
+
+    <text x="15" y="222" font-size="13" font-weight="700" text-anchor="start">Per ticket</text>
+
+    <!-- row 2: x = 11 + i*152, width 130 -->
+    <rect x="11" y="235" width="130" height="56" rx="6" fill="#ffffff" stroke="#888" stroke-dasharray="5 4"/>
+    <text x="76" y="257" font-size="13" font-weight="700">R8 attachments</text>
+    <text x="76" y="276" font-size="10.5" fill="#777">OCR, still pending</text>
+
+    <rect x="163" y="235" width="130" height="56" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="228" y="257" font-size="13" font-weight="700">R9 links</text>
+    <text x="228" y="276" font-size="10.5">citations → answer key</text>
+
+    <rect x="315" y="235" width="130" height="56" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="380" y="257" font-size="13" font-weight="700">R10 metadata</text>
+    <text x="380" y="276" font-size="10.5">version, module</text>
+
+    <rect x="467" y="235" width="130" height="56" rx="6" fill="#ffffff" stroke="#888"/>
+    <text x="532" y="257" font-size="13" font-weight="700">R11 tier</text>
+    <text x="532" y="276" font-size="10.5">A, B or C by signals</text>
+
+    <rect x="619" y="235" width="130" height="56" rx="6" fill="#ffffff" stroke="#0085A1" stroke-width="2"/>
+    <text x="684" y="257" font-size="13" font-weight="700" fill="#0085A1">R13 index</text>
+    <text x="684" y="276" font-size="10.5">keyword and vector</text>
+
+    <g stroke="#555" stroke-width="1.5">
+      <line x1="141" y1="263" x2="161" y2="263" marker-end="url(#seta)"/>
+      <line x1="293" y1="263" x2="313" y2="263" marker-end="url(#seta)"/>
+      <line x1="445" y1="263" x2="465" y2="263" marker-end="url(#seta)"/>
+      <line x1="597" y1="263" x2="617" y2="263" marker-end="url(#seta)"/>
+    </g>
+  </g>
+</svg>
