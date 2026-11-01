@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           # As ferramentas de teste (cheerio/linkinator, devDependencies) exigem
           # Node mais novo que o 18 do Netlify (netlify.toml) - o "hexo generate"
