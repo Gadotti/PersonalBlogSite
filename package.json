@@ -27,7 +27,7 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^1.0.0",
     "hexo-util": "^3.3.0",
-    "marked": "^4.0.11",
+    "marked": "^18.1.1",
     "picomatch": "^2.3.2"
   },
   "devDependencies": {
