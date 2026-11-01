@@ -1,0 +1,25 @@
+# Gerado por pr-monitor. Para mudar, ajuste repos.json e rode "npm run setup" de novo.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Espera a versão "amadurecer" antes de propor (mitiga pacotes comprometidos recém-publicados)
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 10
+    groups:
+      minor-e-patch:
+        update-types: ["minor", "patch"]
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Espera a versão "amadurecer" antes de propor (mitiga pacotes comprometidos recém-publicados)
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 10
+    groups:
+      minor-e-patch:
+        update-types: ["minor", "patch"]
