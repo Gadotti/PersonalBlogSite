@@ -1,6 +1,6 @@
 # Site pessoal em formato de blog
  
-Utilziado para divulgação de trabalhos pessoal e artigos
+Utiliziado para divulgação de trabalhos pessoais e artigos
 
 ## Tecnologias
 
