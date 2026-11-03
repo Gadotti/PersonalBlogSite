@@ -56,6 +56,35 @@ describe('paginas geradas pelo build (hexo generate)', () => {
   });
 });
 
+describe('scripts de terceiros', () => {
+  const amostras = ['index.html', '2020/12/04/dicionario-seguranca/index.html', 'en/index.html'];
+
+  test('jQuery, Bootstrap JS e Featherlight nao sao mais carregados de CDN', () => {
+    for (const relativePath of amostras) {
+      const $ = cheerio.load(readPublicFile(relativePath));
+      const srcs = $('script[src], link[href]')
+        .map((_, el) => $(el).attr('src') || $(el).attr('href'))
+        .get();
+      for (const proibido of [/jquery/i, /bootstrap(\.min)?\.js/i, /featherlight/i]) {
+        assert.ok(
+          !srcs.some((s) => proibido.test(s)),
+          `"${relativePath}" voltou a carregar ${proibido} (CodeQL js/functionality-from-untrusted-source)`
+        );
+      }
+    }
+  });
+
+  test('menu mobile usa o navbar.js hospedado no proprio site', () => {
+    readPublicFile('js/navbar.js');
+    for (const relativePath of amostras) {
+      const $ = cheerio.load(readPublicFile(relativePath));
+      assert.ok($('script[src^="/js/navbar.js"]').length === 1, `"${relativePath}" nao carrega /js/navbar.js`);
+      const alvo = $('.navbar-toggle').attr('data-target');
+      assert.ok(alvo && $(alvo).length === 1, `"${relativePath}": alvo do botao do menu (${alvo}) nao existe`);
+    }
+  });
+});
+
 describe('feed RSS (hexo-generator-feed)', () => {
   test('rss2.xml existe e tem estrutura valida com itens', () => {
     const xml = readPublicFile('rss2.xml');

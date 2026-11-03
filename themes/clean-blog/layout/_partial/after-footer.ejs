@@ -1,12 +1,6 @@
 
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- Menu mobile (substitui jQuery + Bootstrap JS, que eram usados so para isso) -->
+<script src="<%- url_for('/js/navbar.js') %>?v=1.0.0"></script>
 
 <!-- Disqus Comments -->
 <% if (theme.comments && theme.comments.disqus_shortname){ %>
