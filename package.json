@@ -37,6 +37,9 @@
   "overrides": {
     "hexo-renderer-ejs": {
       "ejs": "$ejs"
+    },
+    "stylus": {
+      ".": "^0.64.0"
     }
   }
 }
